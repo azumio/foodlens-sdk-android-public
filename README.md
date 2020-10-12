@@ -10,8 +10,8 @@ The framework for recognizing food
 ```
 repositories {
  maven {
-            url = "https://maven.pkg.github.com/azumio/foodlenslibrary"
-      }
+         url = "https://maven.pkg.github.com/azumio/foodlenslibrary"
+       }
 }
 
 dependencies {
@@ -39,6 +39,55 @@ Next time you have to obtain the last authorized instance. The instance is prese
  FoodLens.lastAuthorizedInstance?.let {
                 it.launchCameraActivityForResult(this)
             } 
+```
+
+### Obtaining access token
+
+Example how to obtain access token:
+
+```
+  private fun getAccessToken()
+    {
+        val url = "https://api.foodlens.com/api2/token"
+        val clientId = "GET IT AT https://dev.caloriemama.ai/"
+        val clientSecret = "GET IT AT https://dev.caloriemama.ai/"
+        val userId =  UUID.randomUUID().toString()
+
+        val okHttpClient = OkHttpClient()
+        val formBody: RequestBody = FormBody.Builder()
+            .add("grant_type", "foodapi")
+            .add("client_id",clientId)
+            .add("client_secret",clientSecret)
+            .add("user_id",userId)
+            .build()
+        val request: Request = Request.Builder()
+            .url(url)
+            .post(formBody)
+            .build()
+
+        ...
+
+        okHttpClient.newCall(request).enqueue(object : Callback {
+            override fun onFailure(call: Call, e: IOException) {
+               
+            }
+
+            override fun onResponse(call: Call, response: Response) {
+               ...
+                runOnUiThread {
+                    FoodLens.authorizedInstance(
+                        tokenResponse.accessToken,
+                        onAuthorized = { foodLens: FoodLens?, exception: Exception? ->
+                            foodLens?.launchCameraActivityForResult(this@AIActivity)
+                            btn_ai_camera.isEnabled = true
+
+                        })
+                        ...
+                }
+
+            }
+        })
+    }
 ```
 
 
