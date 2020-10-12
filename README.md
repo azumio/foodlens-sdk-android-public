@@ -132,7 +132,7 @@ The result is a Json format containing following structure
 
 #### :hammer_and_wrench: AIActivity
 
-Demonstrates camera activity features
+Demonstrates camera activity features : https://github.com/azumio/foodlens-sdk-android-example1
 
 
 
