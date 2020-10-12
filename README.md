@@ -7,20 +7,28 @@ The framework for recognizing food
 
 ### Installing
 
-TBD
+repositories {
+ maven {
+            url = "https://maven.pkg.github.com/azumio/foodlenslibrary"
+      }
+}
+
+dependencies {
+    implementation 'com.azumio.android:foodlenslibrary:1.0.0'
+}
 
 ### Start using
 
 For the first time launch you have to obtain access token from the designated web services. And start the SDK like 
 
 ```
- FoodLens.authorizeInstance(
-                    CLIENT_ID,
-                    CLIENT_SECRET,
-                    onAuthorized = { foodLens: FoodLens?, exception: Exception? ->
-                        foodLens?.launchCameraActivityForResult(this)
+   FoodLens.authorizedInstance(
+                        ACCESS_TOKEN,
+                        onAuthorized = { foodLens: FoodLens?, exception: Exception? ->
+                            foodLens?.launchCameraActivityForResult(this@AIActivity)
+                            btn_ai_camera.isEnabled = true
 
-                    })
+                        })
 ```
 
 Next time you have to obtain the last authorized instance. The instance is preserved between app launches
