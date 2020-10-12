@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical"
+    >
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.3dp"
+        android:layout_above="@+id/servingLayout"
+        android:layout_marginLeft="0dp"
+        android:background="@color/serving_text_gray"
+        android:orientation="horizontal"
+        />
+
+    <RelativeLayout
+        android:id="@+id/servingLayout"
+        android:layout_width="match_parent"
+        android:layout_height="129dp"
+        >
+
+        <LinearLayout
+            android:id="@+id/servingview"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            >
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/cell_serving_size"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentLeft="true"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="17dip"
+                android:gravity="center_vertical|center"
+                android:singleLine="true"
+                android:text="@string/serving_size"
+                android:textColor="@color/serving_text_color"
+                android:textSize="15sp"
+                android:textStyle="bold"
+
+                />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/cell_serving_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="17dip"
+                android:gravity="center_vertical|center"
+                android:paddingRight="20dp"
+                android:singleLine="true"
+                android:text="serving size"
+                android:textColor="@color/calories_color"
+                android:textSize="14sp"
+                android:textStyle="normal"
+                android:visibility="gone"
+                />
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/serving_recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="85dp"
+            android:layout_below="@+id/servingview"
+            android:layout_gravity="top"
+            />
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0.3dp"
+        android:layout_below="@+id/proteinLayout"
+        android:layout_marginLeft="0dp"
+        android:background="@color/serving_text_gray"
+        android:orientation="horizontal"
+        />
+
+    <RelativeLayout
+        android:id="@+id/numberservingLayout"
+        android:layout_width="match_parent"
+        android:layout_height="63dp"
+        >
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/cell_servings_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="17dip"
+            android:gravity="center_vertical|center"
+            android:singleLine="true"
+            android:text="@string/number_of_servings"
+            android:textColor="@color/serving_text_color"
+            android:textSize="15sp"
+            android:textStyle="bold"
+
+            />
+
+        <EditText
+            android:id="@+id/editText_number_of_serving"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="17dip"
+            android:background="@android:color/transparent"
+            android:gravity="center_vertical|center"
+            android:inputType="numberDecimal"
+            android:minWidth="56dp"
+            android:minHeight="48dp"
+            android:maxLength="6"
+            android:paddingRight="24dp"
+            android:singleLine="true"
+            android:text="1"
+            android:textColor="@color/calories_color"
+            android:textStyle="normal"
+            />
+    </RelativeLayout>
+
+
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0.3dp"
+        android:background="@color/serving_text_gray"
+        android:orientation="horizontal"
+        />
+
+    <RelativeLayout
+        android:id="@+id/emptyview"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+
+        android:background="@color/serving_background_color"
+
+
+        >
+    <Button
+        android:id="@+id/done_button"
+        android:layout_height="40dp"
+        android:layout_centerInParent="true"
+        android:text="@string/serving_done"
+        android:textColor="@color/white"
+        android:background="@drawable/dialogue_done_button"
+        android:layout_width="wrap_content"></Button>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0.3dp"
+        android:background="@color/serving_text_gray"
+        android:orientation="horizontal"
+        />
+
+</LinearLayout>

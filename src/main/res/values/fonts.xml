@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string name="font_path_argus_set" translatable="false">fonts/argus_font/argus-icon.ttf</string>
+	<string name="font_path_material_design_set" translatable="false">fonts/MaterialDesignIcons_0_5_18/MaterialDesignIcons.ttf</string>
+	<string name="font_path_league_gothic_regular" translatable="false">fonts/league_gothic_regular.ttf</string>
+	<string name="font_path_roboto_medium" translatable="false">fonts/roboto_medium.ttf</string>
+	<string name="font_path_roboto_light">fonts/Roboto-Light.ttf</string>
+	<string name="font_path_textmeone_regular">fonts/TextMeOne-Regular.ttf</string>
+	<string name="font_bebas_regular">fonts/BebasNeue Regular.ttf</string>
+	<string name="font_bebas_book">fonts/BebasNeue Book.ttf</string>
+	<string name="font_path_roboto_regular" translatable="false">fonts/roboto_regular.ttf</string>
+	<string name="font_path_museo_sans" translatable="false">fonts/MuseoSans-300.otf</string>
+	<string name="font_path_sans_francisco_regular" translatable="false">fonts/SanFranciscoDisplay-Regular.otf</string>
+	<string name="font_path_sans_francisco_medium" translatable="false">fonts/SanFranciscoDisplay-Medium.otf</string>
+	<string name="font_path_raleway_medium" translatable="false">fonts/Raleway-Medium.ttf</string>
+	<string name="font_path_raleway_regular" translatable="false">fonts/Raleway-Regular.ttf</string>
+
+
+	<string name="font_path_helvetica_neue" translatable="false">fonts/HelveticaNeue-Light.ttf</string>
+	<string name="font_path_helvetica_neue_medium" translatable="false">fonts/HelveticaNeue-Medium.ttf</string>
+</resources>

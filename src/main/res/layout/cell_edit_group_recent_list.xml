@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical"
+	>
+
+	<RelativeLayout
+		android:id="@+id/menulist"
+		android:layout_width="match_parent"
+		android:layout_height="90dp"
+		android:background="@color/white"
+		>
+
+		<RelativeLayout
+			android:id="@+id/view"
+			android:layout_width="match_parent"
+			android:layout_height="90dp"
+			android:gravity="bottom"
+			android:orientation="horizontal"
+			>
+
+			<LinearLayout
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:layout_marginRight="20dp"
+				android:layout_toLeftOf="@+id/edit_recipe"
+				android:gravity="center_vertical"
+				android:orientation="vertical"
+				>
+
+				<LinearLayout
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:layout_gravity="center_vertical"
+					android:orientation="vertical"
+					>
+
+					<com.azumio.android.foodlenslibrary.views.XMLTypefaceTextView
+						android:id="@+id/cell_recent_lunch_type"
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:layout_above="@+id/cell_verified_text"
+						android:layout_alignParentLeft="true"
+						android:layout_marginLeft="15dp"
+						android:gravity="center_vertical"
+						android:text="Nutrition"
+						android:textColor="@color/text_color"
+						android:textSize="18sp"
+						app:typeface="@string/font_path_roboto_medium"
+						/>
+
+					<RelativeLayout
+						android:id="@+id/verifiedLayout"
+						android:layout_width="match_parent"
+						android:layout_height="15dp"
+						android:layout_marginTop="6sp"
+						android:orientation="horizontal"
+						android:visibility="gone"
+						>
+
+						<TextView
+							android:id="@+id/icon_important"
+							android:layout_width="15dp"
+							android:layout_height="15dp"
+							android:layout_alignParentLeft="true"
+							android:layout_centerVertical="true"
+							android:layout_marginLeft="15dp"
+							android:background="@drawable/checkimg"
+							android:textSize="30dp"
+							/>
+
+						<com.azumio.android.foodlenslibrary.views.XMLTypefaceTextView
+							android:id="@+id/cell_verified_text"
+							android:layout_width="match_parent"
+							android:layout_height="wrap_content"
+							android:layout_alignParentBottom="true"
+							android:layout_marginLeft="5dp"
+							android:layout_toRightOf="@+id/icon_important"
+							android:gravity="center_vertical|bottom"
+							android:singleLine="true"
+							android:text="@string/nutrition_info_text"
+							android:textColor="#4fa239"
+							android:textSize="13sp"
+							android:textStyle="normal"
+							app:typeface="@string/font_path_roboto_regular"
+							/>
+					</RelativeLayout>
+				</LinearLayout>
+			</LinearLayout>
+
+
+			<com.azumio.android.foodlenslibrary.views.CenteredCustomFontView
+				android:id="@+id/edit_recipe"
+				android:layout_width="30dp"
+				android:layout_height="30dp"
+				android:layout_alignParentRight="true"
+				android:layout_centerInParent="true"
+				android:layout_marginRight="15dp"
+				android:textColor="@color/calories_color"
+				android:textSize="30dp"
+				android:visibility="invisible"
+				/>
+
+
+			<TextView
+				android:id="@+id/downarrow"
+				android:layout_width="10dp"
+				android:layout_height="6dp"
+				android:layout_alignParentRight="true"
+				android:layout_centerInParent="true"
+				android:layout_marginRight="15dp"
+				android:background="@drawable/downarrow"
+				android:textColor="@color/calories_color"
+				android:textSize="10dp"
+				android:visibility="visible"
+				/>
+
+		</RelativeLayout>
+
+
+	</RelativeLayout>
+
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="0.3dp"
+		android:layout_below="@+id/view"
+		android:background="@color/text_gray"
+		android:orientation="horizontal"
+		android:visibility="visible"
+		/>
+
+</LinearLayout>

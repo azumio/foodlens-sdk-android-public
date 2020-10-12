@@ -1,0 +1,351 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr format="color" name="statusBarColor"/>
+    <attr format="color" name="toolbarActiveColor"/>
+    <attr format="color" name="toolbarColor"/>
+    <attr format="color" name="toolbarNormalColor"/>
+    <color name="background_color">#eef1f3</color>
+    <color name="black_50_alpha">#80000000</color>
+    <color name="black_transparent">#AA000000</color>
+    <color name="blue_color">#0B184A</color>
+    <color name="bottom_sheet_handle_bar">#D5D5D5</color>
+    <color name="button_color">#333A59</color>
+    <color name="calories_cell_text">#ffdeb8</color>
+    <color name="calories_color">#f07818</color>
+    <color name="calories_label">#7c8298</color>
+    <color name="calories_statusbar_color">#c05500</color>
+    <color name="chart_orange">#FA9001</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="divider_line">#bfbfbf</color>
+    <color name="edit_calories">#283154</color>
+    <color name="edit_calories_light_color">#5F6374</color>
+    <color name="food_label_color">#283154</color>
+    <color name="food_log_delete_color">#ff235d</color>
+    <color name="food_log_swipe_color">#22D8C0</color>
+    <color name="food_serving_size_color">#757575</color>
+    <color name="grey_colortxt">#9195A5</color>
+    <color name="group_cell_text">#283154</color>
+    <color name="icActive">#FFFFFFFF</color>
+    <color name="icFocused">#DDFFFFFF</color>
+    <color name="icPressed">#AAFFFFFF</color>
+    <color name="label">#758692</color>
+    <color name="light_gray_text_color">#757986</color>
+    <color name="light_grey_color">#AAABAB</color>
+    <color name="menu_item_backgroud">#1F2439</color>
+    <color name="progress_circumference_blank">#EEF1F3</color>
+    <color name="result_list_header_item_gradient_end_color">#F79D19</color>
+    <color name="result_list_header_item_gradient_start_color">#E9432F</color>
+    <color name="result_list_header_item_text_color">#f48323</color>
+    <color name="segment_delete">#FF0000</color>
+    <color name="segment_regular">#ffffff</color>
+    <color name="segment_selected">#22D8C0</color>
+    <color name="selected_text_color">#fef8f4</color>
+    <color name="serving_background_color">#eef1f3</color>
+    <color name="serving_selected_text_color">#fef8f4</color>
+    <color name="serving_text_color">#283154</color>
+    <color name="serving_text_gray">#bfbfbf</color>
+    <color name="setup_text_color">#394264</color>
+    <color name="spinner_color">#b9b9b9</color>
+    <color name="text_color">#283154</color>
+    <color name="text_gray">#bfbfbf</color>
+    <color name="trans_color">#D8000000</color>
+    <color name="transparent">#0000</color>
+    <color name="white">#fff</color>
+    <color name="white_80_alpha">#CCFFFFFF</color>
+    <dimen name="action_bar_elevation">4dp</dimen>
+    <dimen name="arrow_text_size">27dp</dimen>
+    <dimen name="calories_margin">120dp</dimen>
+    <dimen name="calories_padding">20dp</dimen>
+    <dimen name="layout_group_height">90dp</dimen>
+    <dimen name="layout_height">63dp</dimen>
+    <dimen name="margin_large">64dp</dimen>
+    <dimen name="margin_medium">48dp</dimen>
+    <dimen name="margin_small">32dp</dimen>
+    <dimen name="margin_xlarge">72dp</dimen>
+    <dimen name="margin_xsmall">16dp</dimen>
+    <dimen name="rect_button_height">24dp</dimen>
+    <dimen name="rect_button_margin">12dp</dimen>
+    <dimen name="rect_button_width">80dp</dimen>
+    <dimen name="result_bottom_sheet_loading_peek_height">90dp</dimen>
+    <dimen name="result_bottom_sheet_max_height">300dp</dimen>
+    <dimen name="result_bottom_sheet_peek_height">200dp</dimen>
+    <dimen name="result_container_bottom_margin">80dp</dimen>
+    <dimen name="round_button_large">92dp</dimen>
+    <dimen name="round_button_medium">72dp</dimen>
+    <dimen name="round_button_small">52dp</dimen>
+    <dimen name="segment_height">90dp</dimen>
+    <dimen name="segment_width">90dp</dimen>
+    <dimen name="serving_unit_text">10sp</dimen>
+    <dimen name="serving_unit_textsize">8.5sp</dimen>
+    <dimen name="shutter_button_margin">60dp</dimen>
+    <dimen name="spacing_large">16dp</dimen>
+    <dimen name="spacing_medium">8dp</dimen>
+    <dimen name="spacing_small">4dp</dimen>
+    <dimen name="stroke_large">12dp</dimen>
+    <dimen name="stroke_medium">8dp</dimen>
+    <dimen name="stroke_small">4dp</dimen>
+    <dimen name="toolbar_text_size">17sp</dimen>
+    <dimen name="viewpager_textsize">38sp</dimen>
+    <string name="action_cancel">Cancel</string>
+    <string name="action_done">Done</string>
+    <string name="action_ok">OK</string>
+    <string name="add">ADD</string>
+    <string name="add_breakfast">Add Breakfast</string>
+    <string name="add_calories">Please add number of calories</string>
+    <string name="add_ingredients_label">Add Ingredients</string>
+    <string name="add_label">Add</string>
+    <string name="add_more">ADD MORE</string>
+    <string name="add_more_text">TAP ON FOOD ITEM ON PICTURE TO ADD</string>
+    <string name="add_servings">Please enter the number of servings</string>
+    <string name="add_valid_servings">Please enter a valid number of servings.</string>
+    <string name="all_items_logged">"LOOKS LIKE ALL FOOD ITEMS ARE LOGGED, YOU CAN EITHER ADD MORE OR SAVE MEAL"</string>
+    <string name="breakfast">breakfast</string>
+    <string name="cal">CAL</string>
+    <string name="cal_total">cal total</string>
+    <string name="calories">CALORIES</string>
+    <string name="calories_label">Calories</string>
+    <string name="carb">CARB</string>
+    <string name="carbs">CARBS</string>
+    <string name="confirm_first_food_item">CONFIRM YOUR FIRST FOOD ITEM</string>
+    <string name="confirm_next_food_item">CONFIRM YOUR NEXT FOOD ITEM</string>
+    <string name="continue_anyway">Continue Anyway</string>
+    <string name="delete_segment_message">Are you sure you want to remove this food item?</string>
+    <string name="edit_entry">Edit Entry</string>
+    <string name="fat">FAT</string>
+    <string name="fats">FATS</string>
+    <string name="fibers">FIBERS</string>
+    <string name="font_bebas_book">fonts/BebasNeue Book.ttf</string>
+    <string name="font_bebas_regular">fonts/BebasNeue Regular.ttf</string>
+    <string name="font_material_design_set_character_camera" translatable="false">\uf178</string>
+    <string name="font_material_design_set_character_check" translatable="false">\uf185</string>
+    <string name="font_material_design_set_character_download_from_cloud" translatable="false">\uf1a8</string>
+    <string name="font_material_design_set_character_search" translatable="false">\ue68e</string>
+    <string name="font_material_design_set_character_trophy" translatable="false">\uf2e6</string>
+    <string name="font_material_design_set_character_upload_to_cloud" translatable="false">\uf1ab</string>
+    <string name="font_material_design_set_character_volume" translatable="false">\uf2f8</string>
+    <string name="font_material_design_set_location" translatable="false">\uf250</string>
+    <string name="font_path_argus_set" translatable="false">fonts/argus_font/argus-icon.ttf</string>
+    <string name="font_path_helvetica_neue" translatable="false">fonts/HelveticaNeue-Light.ttf</string>
+    <string name="font_path_helvetica_neue_medium" translatable="false">fonts/HelveticaNeue-Medium.ttf</string>
+    <string name="font_path_league_gothic_regular" translatable="false">fonts/league_gothic_regular.ttf</string>
+    <string name="font_path_material_design_set" translatable="false">fonts/MaterialDesignIcons_0_5_18/MaterialDesignIcons.ttf</string>
+    <string name="font_path_museo_sans" translatable="false">fonts/MuseoSans-300.otf</string>
+    <string name="font_path_raleway_medium" translatable="false">fonts/Raleway-Medium.ttf</string>
+    <string name="font_path_raleway_regular" translatable="false">fonts/Raleway-Regular.ttf</string>
+    <string name="font_path_roboto_light">fonts/Roboto-Light.ttf</string>
+    <string name="font_path_roboto_medium" translatable="false">fonts/roboto_medium.ttf</string>
+    <string name="font_path_roboto_regular" translatable="false">fonts/roboto_regular.ttf</string>
+    <string name="font_path_sans_francisco_medium" translatable="false">fonts/SanFranciscoDisplay-Medium.otf</string>
+    <string name="font_path_sans_francisco_regular" translatable="false">fonts/SanFranciscoDisplay-Regular.otf</string>
+    <string name="font_path_textmeone_regular">fonts/TextMeOne-Regular.ttf</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="how_much">How Much?</string>
+    <string name="ingredients">Ingredients</string>
+    <string name="library_name">FoodLens</string>
+    <string name="loading">Loading…</string>
+    <string name="log">LOG</string>
+    <string name="log_value">Log</string>
+    <string name="looks_good">LOOKS GOOD</string>
+    <string name="my_recent">MY RECENT</string>
+    <string name="no">No</string>
+    <string name="no_result">No Results Found.</string>
+    <string name="not_food_message">"This does not look like food. Would you like to retake the photo to get more accurate results?"</string>
+    <string name="nothing_was_logged">"LOOKS LIKE NOTHING WAS LOGGED, TAP AND HOLD ON FOOD PHOTO TO ADD YOUR FIRST ITEM"</string>
+    <string name="number_of_servings">Number of servings</string>
+    <string name="nutrition">NUTRITION</string>
+    <string name="nutrition_facts">Nutrition Facts</string>
+    <string name="nutrition_info_text">Nutritional information verified by Argus</string>
+    <string name="photo">PHOTO</string>
+    <string name="protein">PROTEIN</string>
+    <string name="proteins">PROTEINS</string>
+    <string name="quick_add">QUICK ADD</string>
+    <string name="quick_calories">Quick Calories</string>
+    <string name="recent">Recent</string>
+    <string name="retake_photo">"Retake Photo"</string>
+    <string name="save">Save</string>
+    <string name="save_meal">SAVE MEAL</string>
+    <string name="search">SEARCH</string>
+    <string name="search_food">Search Food</string>
+    <string name="search_more">SEARCH MORE</string>
+    <string name="search_results">SEARCH RESULTS:</string>
+    <string name="searching_for">SEARCHING FOR</string>
+    <string name="select_fooditem">Please select food items to save</string>
+    <string name="selected">selected</string>
+    <string name="serving_done">DONE</string>
+    <string name="serving_size">Serving Size</string>
+    <string name="suggestions">SUGGESTIONS</string>
+    <string name="title_activity_add_food">AddFoodActivity</string>
+    <string name="title_activity_camera">CameraActivity</string>
+    <string name="title_activity_edit_food">EditFoodActivity</string>
+    <string name="title_activity_quick_add_food">QuickAddActivity</string>
+    <string name="title_activity_result">ResultActivity</string>
+    <string name="yes">Yes</string>
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light"/>
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar"/>
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light"/>
+    <style name="listviewplain">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:dividerHeight">1dp</item>
+        <item name="android:divider">#CBCBCB</item>
+        <item name="android:childDivider">#CBCBCB</item>
+        <item name="android:fadeEnabled">false</item>
+        <item name="android:groupIndicator">@null</item>
+        <item name="android:scrollingCache">false</item>
+        <item name="android:background">#00000000</item>
+        <item name="android:cacheColorHint">#00000000</item>
+    </style>
+    <declare-styleable name="ButtonBarContainerTheme">
+        <attr format="reference" name="metaButtonBarStyle"/>
+        <attr format="reference" name="metaButtonBarButtonStyle"/>
+    </declare-styleable>
+    <declare-styleable name="CenteredCustomFontView">
+        <attr name="android:checked"/>
+        <attr name="android:clickable"/>
+        <attr name="android:textColor"/>
+        <attr name="android:textSize"/>
+        <attr name="android:text"/>
+        <attr format="string" name="textChecked"/>
+        <attr format="string" name="fontPath"/>
+        <attr format="string" name="fontPathChecked"/>
+        <attr name="android:layout_width"/>
+        <attr name="android:layout_height"/>
+        <attr name="android:textAlignment"/>
+        <attr format="string" name="argusIconMapKey"/>
+    </declare-styleable>
+    <declare-styleable name="Checkable">
+        <attr name="android:checked"/>
+        <attr name="android:clickable"/>
+    </declare-styleable>
+    <declare-styleable name="CheckableTextWithIcon">
+        <attr format="reference" name="custom_text"/>
+    </declare-styleable>
+    <declare-styleable name="CheckablesGroup">
+        <attr name="android:checkedButton"/>
+        <attr name="android:orientation"/>
+        <attr format="boolean" name="nestedCheckables"/>
+    </declare-styleable>
+    <declare-styleable name="CircleProgress">
+        <attr format="color" name="fromColor"/>
+        <attr format="color" name="toColor"/>
+        <attr format="dimension" name="upperTextSize"/>
+        <attr format="dimension" name="lowerTextSize"/>
+        <attr format="integer" name="thicknessFraction"/>
+    </declare-styleable>
+    <declare-styleable name="FloatingActionButton">
+        <attr format="reference" name="fab_icon"/>
+        <attr format="color" name="fab_icon_color"/>
+        <attr format="color" name="fab_icon_color_pressed"/>
+        <attr format="integer" name="fab_icon_rotate_angle"/>
+        <attr format="float" name="fab_icon_scale"/>
+        <attr format="color" name="fab_background_color"/>
+        <attr format="color" name="fab_background_color_pressed"/>
+    </declare-styleable>
+    <declare-styleable name="ImageLayout">
+
+        <!-- The drawable to be used as the background for the view -->
+        <attr format="reference" name="image"/>
+
+        <!-- The width of the image in which the layout coordinates of the children are expressed -->
+        <attr format="integer" name="imageWidth"/>
+
+        <!-- The height of the image in which the layout coordinates of the children are expressed -->
+        <attr format="integer" name="imageHeight"/>
+
+        <!-- Determines how the background image is drawn -->
+        <attr name="fit">
+
+            <!--
+                 The image is made to fill the available vertical space, and may be cropped 
+                 horizontal if there is not enough space. If there is too much horizontal space,
+                 it is left blank. The horizontal position of the image is controlled by the 
+                 android:gravity attribute
+            -->
+            <flag name="vertical" value="0"/>
+            <!--
+                 The image fills the available horizontal space, and may be cropped 
+                 vertically if there is not enough space. If there is too much vertical space,
+                 it is left blank. The vertical position of the image is controlled by the 
+                 android:gravity attribute
+            -->
+            <flag name="horizontal" value="1"/>
+            <!--
+                 The image fills the available space both vertically and horizontally. If the
+                 aspect ratio of the image does not match exactly the aspect ratio of the available
+                 space, the image is cropped either vertically or horizontally, depending of which
+                 provides the best fit
+            -->
+            <flag name="both" value="2"/>
+            <!--
+                 This is the default value. The image fills the available space 
+                 vertically in portrait mode and horizontally in landscape. Note that the
+                 library does not determine the orientation based on the actual device 
+                 orientation, but on the relative aspect ratios of the image and the view
+            -->
+            <flag name="auto" value="3"/>
+        </attr>
+        <attr name="android:gravity"/>
+    </declare-styleable>
+    <declare-styleable name="ImageLayout_Layout">
+        <attr format="integer" name="layout_width"/>
+        <attr format="integer" name="layout_height"/>
+        <attr format="integer" name="layout_maxWidth"/>
+        <attr format="integer" name="layout_maxHeight"/>
+        <attr format="integer" name="layout_centerX"/>
+        <attr format="integer" name="layout_centerY"/>
+        <attr format="integer" name="layout_left"/>
+        <attr format="integer" name="layout_top"/>
+        <attr format="integer" name="layout_right"/>
+        <attr format="integer" name="layout_bottom"/>
+    </declare-styleable>
+    <declare-styleable name="SimpleAmountView">
+        <attr format="dimension" name="simpleCoinIconSize"/>
+        <attr format="dimension" name="simpleAmountTextSize"/>
+        <attr format="dimension" name="simplePrefixTextSize"/>
+        <attr format="color" name="coinColor"/>
+        <attr format="color" name="amountColor"/>
+        <attr format="color" name="prefixColor"/>
+        <attr format="string" name="amountTypeface"/>
+        <attr format="string" name="amountText"/>
+        <attr format="string" name="iconNameArgus"/>
+    </declare-styleable>
+    <declare-styleable name="TextBubbleWidget" parent="XMLCustomTypefaceTextView">
+        <attr format="string" name="bubbleText"/>
+        <attr format="string" name="bubbleSubText"/>
+        <attr format="boolean" name="showTopArrow"/>
+        <attr format="boolean" name="showBottomArrow"/>
+        <attr format="boolean" name="showNext"/>
+        <attr format="string" name="nextButtonText"/>
+        <attr name="textVisibility">
+            <enum name="gone" value="2"/>
+            <enum name="invisible" value="1"/>
+            <enum name="visible" value="0"/>
+        </attr>
+        <attr format="enum" name="bottomArrowPosition">
+            <enum name="right" value="2"/>
+            <enum name="center" value="1"/>
+        </attr>
+    </declare-styleable>
+    <declare-styleable name="ViewPagerTabView">
+        <attr format="color" name="indicator_color"/>
+        <attr format="dimension" name="indicator_height"/>
+        <attr format="color" name="tab_text_color"/>
+        <attr format="dimension" name="tab_text_size"/>
+        <attr format="boolean" name="text_all_caps"/>
+    </declare-styleable>
+    <declare-styleable name="XMLCustomTypefaceButton" parent="@android:style/Button">
+        <attr name="typeface"/>
+    </declare-styleable>
+    <declare-styleable name="XMLCustomTypefaceTextView" parent="@android:style/TextView">
+        <attr format="string" name="typeface"/>
+    </declare-styleable>
+    <declare-styleable name="XMLCustomTypefaceToggleButton" parent="@android:style/ToggleButton">
+        <attr name="typeface"/>
+    </declare-styleable>
+</resources>

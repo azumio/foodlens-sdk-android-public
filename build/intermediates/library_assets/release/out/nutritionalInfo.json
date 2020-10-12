@@ -1,0 +1,271 @@
+{
+    "nutrition": [{
+                  "name": "Calories",
+                  "unit": "cal",
+                  "key": "calories",
+                  "decimal": 0,
+                  "bold": 1
+                  }, {
+                  "name": "Total Fat",
+                  "unit": "g",
+                  "key": "totalFat",
+                  "decimal": 1,
+                  "bold": 1,
+                  "primary": 1
+                  }, {
+                  "name": "Saturated Fat",
+                  "unit": "g",
+                  "key": "saturatedFat",
+                  "decimal": 1,
+                  "tabbed": 1,
+                  "premium":1
+                  }, {
+                  "name": "Trans Fat",
+                  "unit": "g",
+                  "key": "transFat",
+                  "decimal": 1,
+                  "tabbed": 1,
+                  "premium":1
+                  }, {
+                  "name": "Polyunsaturated Fat",
+                  "unit": "g",
+                  "key": "polyunsaturatedFat",
+                  "decimal": 1,
+                  "tabbed": 1,
+                  "premium":1
+                  }, {
+                  "name": "Monounsaturated Fat",
+                  "unit": "g",
+                  "key": "monounsaturatedFat",
+                  "decimal": 1,
+                  "tabbed": 1,
+                  "premium":1
+                  }, {
+                  "name": "Cholesterol",
+                  "unit": "mg",
+                  "key": "cholesterol",
+                  "decimal": 1,
+                  "bold": 1,
+                  "premium":1
+                  }, {
+                  "name": "Sodium",
+                  "unit": "mg",
+                  "key": "sodium",
+                  "decimal": 1,
+                  "bold": 1,
+                  "premium":1
+                  }, {
+                  "name": "Total Carbohydrates",
+                  "unit": "g",
+                  "key": "totalCarbs",
+                  "decimal": 1,
+                  "bold": 1,
+                  "primary": 1
+                  }, {
+                  "name": "Dietary Fiber",
+                  "unit": "g",
+                  "key": "dietaryFiber",
+                  "decimal": 1,
+                  "tabbed": 1,
+                  "premium":1
+                  }, {
+                  "name": "Sugars",
+                  "unit": "g",
+                  "key": "sugars",
+                  "decimal": 1,
+                  "tabbed": 1,
+                  "premium":1
+                  }, {
+                  "name": "Protein",
+                  "unit": "g",
+                  "key": "protein",
+                  "decimal": 1,
+                  "bold": 1,
+                  "primary": 1
+                  }, {
+                  "name": "Potassium",
+                  "unit": "mg",
+                  "key": "potassium",
+                  "decimal": 1,
+                  "premium":1
+                  }, {
+                  "name": "Vitamin A",
+                  "unit": "%",
+                  "key": "vitaminA",
+                  
+                  "decimal": 1,
+                  "premium":1
+                  }, {
+                  "name": "Vitamin C",
+                  "unit": "%",
+                  "key": "vitaminC",
+                  
+                  "decimal": 1,
+                  "premium":1
+                  }, {
+                  "name": "Calcium",
+                  "unit": "%",
+                  "key": "calcium",
+                  
+                  "decimal": 1,
+                  "premium":1
+                  }, {
+                  "name": "Iron",
+                  "unit": "%",
+                  "key": "iron",
+                  
+                  "decimal": 1,
+                  "premium":1
+                  }],
+    "info": {
+        "calcium": {
+            "name": "Calcium",
+            "unit": "%",
+            "drv": "0.001",
+            "recommended": "1000 mg"
+        },
+        "calories": {
+            "name": "Calories",
+            "unit": "cal"
+        },
+        "cholesterol": {
+            "name": "Cholesterol",
+            "unit": "mg",
+            "recommended": "300 mg"
+        },
+        "copper": {
+            "name": "Copper",
+            "unit": "mg"
+        },
+        "folate": {
+            "name": "Folate",
+            "unit": "mg"
+        },
+        "iron": {
+            "name": "Iron",
+            "unit": "%",
+            "drv": "0.000018",
+            "recommended": "8 mg"
+        },
+        "magnesium": {
+            "name": "Magnesium",
+            "unit": "mg"
+        },
+        "manganese": {
+            "name": "Manganese",
+            "unit": "mg"
+        },
+        "monounsaturatedFat": {
+            "name": "MonounsaturatedFat",
+            "unit": "g",
+            "recommended": "0 g"
+        },
+        "niacin": {
+            "name": "Niacin",
+            "unit": "mg"
+        },
+        "pantothenicAcid": {
+            "name": "PantothenicAcid",
+            "unit": "g"
+        },
+        "phosphorus": {
+            "name": "Phosphorus",
+            "unit": "mg"
+        },
+        "polyunsaturatedFat": {
+            "name": "PolyunsaturatedFat",
+            "unit": "g",
+            "recommended": "0 g"
+        },
+        "potassium": {
+            "name": "Potassium",
+            "unit": "mg",
+            "recommended": "4700 mg"
+        },
+        "protein": {
+            "name": "Protein",
+            "unit": "g"
+        },
+        "riboflavin": {
+            "name": "Riboflavin",
+            "unit": "g"
+        },
+        "saturatedFat": {
+            "name": "SaturatedFat",
+            "unit": "g",
+            "recommended": "20 g"
+        },
+        "selenium": {
+            "name": "Selenium",
+            "unit": "mg"
+        },
+        "sodium": {
+            "name": "Sodium",
+            "unit": "mg",
+            "recommended": "2300 mg"
+        },
+        "thiamin": {
+            "name": "Thiamin",
+            "unit": "mg"
+        },
+        "totalFat": {
+            "name": "TotalFat",
+            "unit": "g"
+        },
+        "transFat": {
+            "name": "TransFat",
+            "unit": "g",
+            "recommended": "0 g"
+        },
+        "vitaminA": {
+            "name": "VitaminA",
+            "unit": "%",
+            "drv": "0.0000015",
+            "recommended": "800 mg"
+        },
+        "vitaminB12": {
+            "name": "VitaminB12",
+            "unit": "%"
+        },
+        "vitaminB6": {
+            "name": "VitaminB6",
+            "unit": "%"
+        },
+        "vitaminD": {
+            "name": "VitaminD",
+            "unit": "%"
+        },
+        "vitaminE": {
+            "name": "VitaminE",
+            "unit": "%"
+        },
+        "vitaminC": {
+            "name": "VitaminC",
+            "unit": "%",
+            "drv": "0.00006",
+            "recommended": "80 mg"
+        },
+        "vitaminK": {
+            "name": "VitaminK",
+            "unit": "%"
+        },
+        "zinc": {
+            "name": "Zinc",
+            "unit": "mg"
+        },
+        "totalCarbs": {
+            "name": "TotalCarbs",
+            "unit": "g"
+        },
+        "dietaryFiber": {
+            "name": "DietaryFiber",
+            "unit": "g",
+            "recommended": "32 g"
+        },
+        "sugars": {
+            "name": "Sugars",
+            "unit": "g",
+            "recommended": "0 g"
+        }
+    }
+}

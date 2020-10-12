@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="#000000"
+    android:layout_height="match_parent">
+
+    <com.azumio.android.foodlenslibrary.views.ImageContainerLayout
+        android:id="@+id/image_container"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.6"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/food_image"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:adjustViewBounds="false"
+            android:scaleType="centerCrop"></ImageView>
+
+
+    </com.azumio.android.foodlenslibrary.views.ImageContainerLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@drawable/sheet_rounded_top"
+        android:orientation="vertical"
+        android:elevation="2dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        >
+
+        <Spinner
+            android:id="@+id/spinner_meal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+        </Spinner>
+
+        <LinearLayout
+            android:id="@+id/nutrients_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="5dp"
+            android:paddingRight="15dp"
+            android:orientation="horizontal"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/spinner_meal">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/fats_container"
+
+                android:layout_width="0dp"
+                android:layout_weight="0.25"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:id="@+id/fats_circle"
+                    android:background="@drawable/progress_circle"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <com.azumio.android.foodlenslibrary.views.XMLTypefaceTextView
+                        android:id="@+id/fats_value"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0g"
+                        android:textColor="@color/calories_color"
+                        android:textSize="22sp"
+                        android:textStyle="bold">
+
+                    </com.azumio.android.foodlenslibrary.views.XMLTypefaceTextView>
+
+                </LinearLayout>
+
+                <com.azumio.android.foodlenslibrary.views.XMLTypefaceTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/fats"
+                    android:textSize="14sp"
+                    android:textColor="@color/blue_color"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/fats_circle">
+
+                </com.azumio.android.foodlenslibrary.views.XMLTypefaceTextView>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/protiens_container"
+                android:layout_width="0dp"
+                android:layout_weight="0.25"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:id="@+id/protiens_circle"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:background="@drawable/progress_circle"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <com.azumio.android.foodlenslibrary.views.XMLTypefaceTextView
+                        android:id="@+id/protiens_value"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0g"
+                        android:textColor="@color/calories_color"
+                        android:textSize="22sp"
+                        android:textStyle="bold">
+
+                    </com.azumio.android.foodlenslibrary.views.XMLTypefaceTextView>
+
+                </LinearLayout>
+
+                <com.azumio.android.foodlenslibrary.views.XMLTypefaceTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/proteins"
+                    android:textSize="14sp"
+                    android:textColor="@color/blue_color"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/protiens_circle">
+
+                </com.azumio.android.foodlenslibrary.views.XMLTypefaceTextView>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/carbs_container"
+                android:layout_width="0dp"
+                android:layout_weight="0.25"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:id="@+id/carbs_circle"
+                    android:background="@drawable/progress_circle"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <com.azumio.android.foodlenslibrary.views.XMLTypefaceTextView
+                        android:id="@+id/carbs_value"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0g"
+                        android:textColor="@color/calories_color"
+                        android:textSize="22sp"
+                        android:textStyle="bold">
+
+                    </com.azumio.android.foodlenslibrary.views.XMLTypefaceTextView>
+
+                </LinearLayout>
+
+                <com.azumio.android.foodlenslibrary.views.XMLTypefaceTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/carbs"
+                    android:textSize="14sp"
+                    android:textColor="@color/blue_color"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/carbs_circle">
+
+                </com.azumio.android.foodlenslibrary.views.XMLTypefaceTextView>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/fibers_container"
+                android:layout_width="0dp"
+                android:layout_weight="0.25"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:id="@+id/fibers_circle"
+                    android:background="@drawable/progress_circle"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <com.azumio.android.foodlenslibrary.views.XMLTypefaceTextView
+                        android:id="@+id/fibers_value"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0g"
+                        android:textColor="@color/calories_color"
+                        android:textSize="22sp"
+                        android:textStyle="bold">
+
+                    </com.azumio.android.foodlenslibrary.views.XMLTypefaceTextView>
+
+                </LinearLayout>
+
+                <com.azumio.android.foodlenslibrary.views.XMLTypefaceTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/fibers"
+                    android:textSize="14sp"
+                    android:textColor="@color/blue_color"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/fibers_circle">
+
+                </com.azumio.android.foodlenslibrary.views.XMLTypefaceTextView>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+
+            android:id="@+id/calories_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="15dp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/nutrients_container">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cal_container"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:id="@+id/cal_circle"
+                    android:background="@drawable/progress_circle"
+                    android:layout_width="115dp"
+                    android:layout_height="115dp"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <com.azumio.android.foodlenslibrary.views.XMLTypefaceTextView
+                        android:id="@+id/cal_value"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0g"
+                        android:textColor="@color/calories_color"
+                        android:textSize="36sp"
+                        android:textStyle="bold">
+
+                    </com.azumio.android.foodlenslibrary.views.XMLTypefaceTextView>
+
+                </LinearLayout>
+
+                <com.azumio.android.foodlenslibrary.views.XMLTypefaceTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/calories"
+                    android:textSize="14sp"
+                    android:textColor="@color/blue_color"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/cal_container">
+
+                </com.azumio.android.foodlenslibrary.views.XMLTypefaceTextView>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/looks_good_button"
+            android:layout_width="wrap_content"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/dialogue_done_button"
+            android:text="@string/looks_good"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"></Button>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.azumio.android.foodlenslibrary.views.XMLTypefaceTextView
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	android:layout_width="wrap_content"
+	android:layout_height="wrap_content"
+	android:textSize="16sp"
+	android:textColor="@color/blue_color"
+	android:padding="5dip"
+	android:id="@+id/item"
+	android:gravity="center"
+	app:typeface="@string/font_path_roboto_regular"
+    android:ellipsize="marquee"
+    android:singleLine="true"
+	/>

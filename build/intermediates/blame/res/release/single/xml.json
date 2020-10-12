@@ -1,0 +1,22 @@
+[
+    {
+        "merged": "/Users/sonyjohn/Documents/Projects/HC_Source/food-lens-sdk-android/foodLensLibrary/build/intermediates/res/merged/release/xml/standalone_badge_offset.xml",
+        "source": "/Users/sonyjohn/.gradle/caches/transforms-2/files-2.1/5cb86bfd21901895cfc6356d03b17e72/material-1.2.0/res/xml/standalone_badge_offset.xml"
+    },
+    {
+        "merged": "/Users/sonyjohn/Documents/Projects/HC_Source/food-lens-sdk-android/foodLensLibrary/build/intermediates/res/merged/release/xml/standalone_badge_gravity_bottom_end.xml",
+        "source": "/Users/sonyjohn/.gradle/caches/transforms-2/files-2.1/5cb86bfd21901895cfc6356d03b17e72/material-1.2.0/res/xml/standalone_badge_gravity_bottom_end.xml"
+    },
+    {
+        "merged": "/Users/sonyjohn/Documents/Projects/HC_Source/food-lens-sdk-android/foodLensLibrary/build/intermediates/res/merged/release/xml/standalone_badge_gravity_top_start.xml",
+        "source": "/Users/sonyjohn/.gradle/caches/transforms-2/files-2.1/5cb86bfd21901895cfc6356d03b17e72/material-1.2.0/res/xml/standalone_badge_gravity_top_start.xml"
+    },
+    {
+        "merged": "/Users/sonyjohn/Documents/Projects/HC_Source/food-lens-sdk-android/foodLensLibrary/build/intermediates/res/merged/release/xml/standalone_badge_gravity_bottom_start.xml",
+        "source": "/Users/sonyjohn/.gradle/caches/transforms-2/files-2.1/5cb86bfd21901895cfc6356d03b17e72/material-1.2.0/res/xml/standalone_badge_gravity_bottom_start.xml"
+    },
+    {
+        "merged": "/Users/sonyjohn/Documents/Projects/HC_Source/food-lens-sdk-android/foodLensLibrary/build/intermediates/res/merged/release/xml/standalone_badge.xml",
+        "source": "/Users/sonyjohn/.gradle/caches/transforms-2/files-2.1/5cb86bfd21901895cfc6356d03b17e72/material-1.2.0/res/xml/standalone_badge.xml"
+    }
+]

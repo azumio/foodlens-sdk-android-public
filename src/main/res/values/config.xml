@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string name="font_material_design_set_character_check" translatable="false">\uf185</string>
+	<string name="font_material_design_set_character_trophy" translatable="false">\uf2e6</string>
+	<string name="font_material_design_set_character_volume" translatable="false">\uf2f8</string>
+	<string name="font_material_design_set_character_camera" translatable="false">\uf178</string>
+	<string name="font_material_design_set_character_upload_to_cloud" translatable="false">\uf1ab</string>
+	<string name="font_material_design_set_character_download_from_cloud" translatable="false">\uf1a8</string>
+	<string name="font_material_design_set_location" translatable="false">\uf250</string>
+	<string name="font_material_design_set_character_search" translatable="false">\ue68e</string>
+</resources>

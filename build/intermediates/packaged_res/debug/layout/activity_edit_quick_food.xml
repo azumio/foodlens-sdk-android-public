@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical"
+
+	>
+
+	<com.azumio.android.foodlenslibrary.views.FillingView
+		android:id="@+id/main_menu_toolbars"
+		android:layout_width="match_parent"
+		android:layout_height="?attr/actionBarSize"
+		android:background="?attr/colorPrimary"
+		android:minHeight="?attr/actionBarSize"
+		android:visibility="visible"
+		>
+
+		<RelativeLayout
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			>
+
+			<com.azumio.android.foodlenslibrary.views.CenteredCustomFontView
+				android:id="@+id/toolbar_back_arrow"
+				android:layout_width="30dp"
+				android:layout_height="match_parent"
+				android:layout_alignParentLeft="true"
+				android:layout_marginRight="15dp"
+				android:text="&#8592;"
+				android:textColor="@color/white"
+				android:textSize="@dimen/arrow_text_size"
+				app:fontPath="@string/font_path_material_design_set"
+				/>
+
+			<com.azumio.android.foodlenslibrary.views.XMLTypefaceTextView
+				android:id="@+id/activity_with_fragment_toolbar_textview"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_centerInParent="true"
+				android:textColor="@android:color/white"
+				android:textSize="18dp"
+				android:text="@string/quick_add"
+				app:typeface="@string/font_path_roboto_regular"
+				/>
+
+			<com.azumio.android.foodlenslibrary.views.XMLTypefaceTextView
+				android:id="@+id/activity_save"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_alignParentRight="true"
+				android:layout_marginRight="20dp"
+				android:ellipsize="end"
+				android:gravity="center_vertical"
+				android:layout_centerInParent="true"
+				android:singleLine="true"
+				android:text="@string/save"
+				android:textColor="@android:color/white"
+				android:textSize="16.5dp"
+				app:typeface="@string/font_path_roboto_regular"
+				/>
+		</RelativeLayout>
+	</com.azumio.android.foodlenslibrary.views.FillingView>
+
+	<FrameLayout
+		android:id="@+id/activity_with_fragment_container"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		/>
+
+</LinearLayout>
+
+
