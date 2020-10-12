@@ -9,20 +9,20 @@ public final class ResultListHeaderAdapter extends androidx.recyclerview.widget.
     private final int selectedPosition = 0;
     private final kotlin.jvm.functions.Function1<java.lang.Integer, kotlin.Unit> onSearchClick = null;
     
-    @org.jetbrains.annotations.NotNull()
-    @java.lang.Override()
-    public com.azumio.android.foodlenslibrary.adapter.ResultListHeaderAdapter.ViewHolder onCreateViewHolder(@org.jetbrains.annotations.NotNull()
+    @org.jetbrains.annotations.NotNull
+    @java.lang.Override
+    public com.azumio.android.foodlenslibrary.adapter.ResultListHeaderAdapter.ViewHolder onCreateViewHolder(@org.jetbrains.annotations.NotNull
     android.view.ViewGroup parent, int viewType) {
         return null;
     }
     
-    @java.lang.Override()
+    @java.lang.Override
     public int getItemCount() {
         return 0;
     }
     
-    @java.lang.Override()
-    public void onBindViewHolder(@org.jetbrains.annotations.NotNull()
+    @java.lang.Override
+    public void onBindViewHolder(@org.jetbrains.annotations.NotNull
     com.azumio.android.foodlenslibrary.adapter.ResultListHeaderAdapter.ViewHolder holder, int position) {
     }
     
@@ -30,24 +30,24 @@ public final class ResultListHeaderAdapter extends androidx.recyclerview.widget.
         return 0;
     }
     
-    public ResultListHeaderAdapter(@org.jetbrains.annotations.NotNull()
-    java.util.List<com.azumio.android.foodlenslibrary.model.FoodSuggestionCategory> children, @org.jetbrains.annotations.NotNull()
-    kotlin.jvm.functions.Function2<? super com.azumio.android.foodlenslibrary.model.FoodSuggestionCategory, ? super java.lang.Integer, kotlin.Unit> onclick, int selectedPosition, @org.jetbrains.annotations.NotNull()
+    public ResultListHeaderAdapter(@org.jetbrains.annotations.NotNull
+    java.util.List<com.azumio.android.foodlenslibrary.model.FoodSuggestionCategory> children, @org.jetbrains.annotations.NotNull
+    kotlin.jvm.functions.Function2<? super com.azumio.android.foodlenslibrary.model.FoodSuggestionCategory, ? super java.lang.Integer, kotlin.Unit> onclick, int selectedPosition, @org.jetbrains.annotations.NotNull
     kotlin.jvm.functions.Function1<? super java.lang.Integer, kotlin.Unit> onSearchClick) {
         super();
     }
     
     @kotlin.Metadata(mv = {1, 1, 16}, bv = {1, 0, 3}, k = 1, d1 = {"\u0000\u001a\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0003\b\u0086\u0004\u0018\u00002\u00020\u0001B\r\u0012\u0006\u0010\u0002\u001a\u00020\u0003\u00a2\u0006\u0002\u0010\u0004R\u0011\u0010\u0005\u001a\u00020\u0006\u00a2\u0006\b\n\u0000\u001a\u0004\b\u0007\u0010\b\u00a8\u0006\t"}, d2 = {"Lcom/azumio/android/foodlenslibrary/adapter/ResultListHeaderAdapter$ViewHolder;", "Landroidx/recyclerview/widget/RecyclerView$ViewHolder;", "itemView", "Landroid/view/View;", "(Lcom/azumio/android/foodlenslibrary/adapter/ResultListHeaderAdapter;Landroid/view/View;)V", "groupButton", "Landroid/widget/TextView;", "getGroupButton", "()Landroid/widget/TextView;", "foodLensLibrary_release"})
     public final class ViewHolder extends androidx.recyclerview.widget.RecyclerView.ViewHolder {
-        @org.jetbrains.annotations.NotNull()
+        @org.jetbrains.annotations.NotNull
         private final android.widget.TextView groupButton = null;
         
-        @org.jetbrains.annotations.NotNull()
+        @org.jetbrains.annotations.NotNull
         public final android.widget.TextView getGroupButton() {
             return null;
         }
         
-        public ViewHolder(@org.jetbrains.annotations.NotNull()
+        public ViewHolder(@org.jetbrains.annotations.NotNull
         android.view.View itemView) {
             super(null);
         }

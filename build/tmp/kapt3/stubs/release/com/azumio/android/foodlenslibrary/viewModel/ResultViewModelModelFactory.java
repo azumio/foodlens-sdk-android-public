@@ -6,13 +6,13 @@ import java.lang.System;
 public final class ResultViewModelModelFactory implements androidx.lifecycle.ViewModelProvider.Factory {
     private final android.net.Uri uri = null;
     
-    @java.lang.Override()
-    public <T extends androidx.lifecycle.ViewModel>T create(@org.jetbrains.annotations.NotNull()
+    @java.lang.Override
+    public <T extends androidx.lifecycle.ViewModel>T create(@org.jetbrains.annotations.NotNull
     java.lang.Class<T> modelClass) {
         return null;
     }
     
-    public ResultViewModelModelFactory(@org.jetbrains.annotations.NotNull()
+    public ResultViewModelModelFactory(@org.jetbrains.annotations.NotNull
     android.net.Uri uri) {
         super();
     }

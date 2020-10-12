@@ -8,13 +8,13 @@ public final class CameraActivity extends androidx.appcompat.app.AppCompatActivi
     public static final com.azumio.android.foodlenslibrary.activity.CameraActivity.Companion Companion = null;
     private java.util.HashMap _$_findViewCache;
     
-    @java.lang.Override()
-    protected void onCreate(@org.jetbrains.annotations.Nullable()
+    @java.lang.Override
+    protected void onCreate(@org.jetbrains.annotations.Nullable
     android.os.Bundle savedInstanceState) {
     }
     
-    @java.lang.Override()
-    protected void onActivityResult(int requestCode, int resultCode, @org.jetbrains.annotations.Nullable()
+    @java.lang.Override
+    protected void onActivityResult(int requestCode, int resultCode, @org.jetbrains.annotations.Nullable
     android.content.Intent data) {
     }
     
@@ -28,8 +28,8 @@ public final class CameraActivity extends androidx.appcompat.app.AppCompatActivi
         /**
          * Use external media if it is available, our app's file directory otherwise
          */
-        @org.jetbrains.annotations.NotNull()
-        public final java.io.File getOutputDirectory(@org.jetbrains.annotations.NotNull()
+        @org.jetbrains.annotations.NotNull
+        public final java.io.File getOutputDirectory(@org.jetbrains.annotations.NotNull
         android.content.Context context) {
             return null;
         }

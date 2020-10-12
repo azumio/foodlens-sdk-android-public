@@ -12,41 +12,41 @@ public final class ResultListAdapter extends androidx.recyclerview.widget.Recycl
     private final kotlin.jvm.functions.Function1<com.azumio.android.foodlenslibrary.adapter.ResultListBaseItem, kotlin.Unit> onEditServingClick = null;
     private final kotlin.jvm.functions.Function0<kotlin.Unit> onSearchClick = null;
     
-    public final void setData(@org.jetbrains.annotations.NotNull()
+    public final void setData(@org.jetbrains.annotations.NotNull
     java.util.List<? extends com.azumio.android.foodlenslibrary.adapter.ResultListBaseItem> list) {
     }
     
-    @org.jetbrains.annotations.NotNull()
+    @org.jetbrains.annotations.NotNull
     public final java.util.List<com.azumio.android.foodlenslibrary.adapter.ResultListBaseItem> getData() {
         return null;
     }
     
-    public final void setFoodItems(@org.jetbrains.annotations.NotNull()
+    public final void setFoodItems(@org.jetbrains.annotations.NotNull
     java.util.List<? extends com.azumio.android.foodlenslibrary.adapter.ResultListFoodItem> list) {
     }
     
     public final void unselectHeaders() {
     }
     
-    @java.lang.Override()
+    @java.lang.Override
     public int getItemCount() {
         return 0;
     }
     
-    @java.lang.Override()
+    @java.lang.Override
     public int getItemViewType(int position) {
         return 0;
     }
     
-    @org.jetbrains.annotations.NotNull()
-    @java.lang.Override()
-    public androidx.recyclerview.widget.RecyclerView.ViewHolder onCreateViewHolder(@org.jetbrains.annotations.NotNull()
+    @org.jetbrains.annotations.NotNull
+    @java.lang.Override
+    public androidx.recyclerview.widget.RecyclerView.ViewHolder onCreateViewHolder(@org.jetbrains.annotations.NotNull
     android.view.ViewGroup parent, int viewType) {
         return null;
     }
     
-    @java.lang.Override()
-    public void onBindViewHolder(@org.jetbrains.annotations.NotNull()
+    @java.lang.Override
+    public void onBindViewHolder(@org.jetbrains.annotations.NotNull
     androidx.recyclerview.widget.RecyclerView.ViewHolder holder, int position) {
     }
     
@@ -62,46 +62,46 @@ public final class ResultListAdapter extends androidx.recyclerview.widget.Recycl
     private final void bindHeaderItem(com.azumio.android.foodlenslibrary.adapter.ResultListAdapter.HeaderViewHolder holder, com.azumio.android.foodlenslibrary.adapter.ResultListHeaderItem item) {
     }
     
-    public ResultListAdapter(@org.jetbrains.annotations.NotNull()
-    java.util.List<? extends com.azumio.android.foodlenslibrary.adapter.ResultListBaseItem> dataSet, @org.jetbrains.annotations.NotNull()
-    kotlin.jvm.functions.Function1<? super com.azumio.android.foodlenslibrary.model.FoodSuggestionCategory, kotlin.Unit> onHeaderClick, @org.jetbrains.annotations.NotNull()
-    kotlin.jvm.functions.Function1<? super com.azumio.android.foodlenslibrary.adapter.ResultListBaseItem, kotlin.Unit> onEditServingClick, @org.jetbrains.annotations.NotNull()
+    public ResultListAdapter(@org.jetbrains.annotations.NotNull
+    java.util.List<? extends com.azumio.android.foodlenslibrary.adapter.ResultListBaseItem> dataSet, @org.jetbrains.annotations.NotNull
+    kotlin.jvm.functions.Function1<? super com.azumio.android.foodlenslibrary.model.FoodSuggestionCategory, kotlin.Unit> onHeaderClick, @org.jetbrains.annotations.NotNull
+    kotlin.jvm.functions.Function1<? super com.azumio.android.foodlenslibrary.adapter.ResultListBaseItem, kotlin.Unit> onEditServingClick, @org.jetbrains.annotations.NotNull
     kotlin.jvm.functions.Function0<kotlin.Unit> onSearchClick) {
         super();
     }
     
     @kotlin.Metadata(mv = {1, 1, 16}, bv = {1, 0, 3}, k = 1, d1 = {"\u0000\"\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\u0007\u0018\u00002\u00020\u0001B\r\u0012\u0006\u0010\u0002\u001a\u00020\u0003\u00a2\u0006\u0002\u0010\u0004R\u0011\u0010\u0005\u001a\u00020\u0006\u00a2\u0006\b\n\u0000\u001a\u0004\b\u0007\u0010\bR\u0011\u0010\t\u001a\u00020\n\u00a2\u0006\b\n\u0000\u001a\u0004\b\u000b\u0010\fR\u0011\u0010\r\u001a\u00020\u0006\u00a2\u0006\b\n\u0000\u001a\u0004\b\u000e\u0010\bR\u0011\u0010\u000f\u001a\u00020\u0006\u00a2\u0006\b\n\u0000\u001a\u0004\b\u0010\u0010\b\u00a8\u0006\u0011"}, d2 = {"Lcom/azumio/android/foodlenslibrary/adapter/ResultListAdapter$ItemViewHolder;", "Landroidx/recyclerview/widget/RecyclerView$ViewHolder;", "itemView", "Landroid/view/View;", "(Landroid/view/View;)V", "calories", "Landroid/widget/TextView;", "getCalories", "()Landroid/widget/TextView;", "editButton", "Landroid/widget/ImageButton;", "getEditButton", "()Landroid/widget/ImageButton;", "food_name", "getFood_name", "serving_size", "getServing_size", "foodLensLibrary_release"})
     public static final class ItemViewHolder extends androidx.recyclerview.widget.RecyclerView.ViewHolder {
-        @org.jetbrains.annotations.NotNull()
+        @org.jetbrains.annotations.NotNull
         private final android.widget.TextView food_name = null;
-        @org.jetbrains.annotations.NotNull()
+        @org.jetbrains.annotations.NotNull
         private final android.widget.TextView serving_size = null;
-        @org.jetbrains.annotations.NotNull()
+        @org.jetbrains.annotations.NotNull
         private final android.widget.TextView calories = null;
-        @org.jetbrains.annotations.NotNull()
+        @org.jetbrains.annotations.NotNull
         private final android.widget.ImageButton editButton = null;
         
-        @org.jetbrains.annotations.NotNull()
+        @org.jetbrains.annotations.NotNull
         public final android.widget.TextView getFood_name() {
             return null;
         }
         
-        @org.jetbrains.annotations.NotNull()
+        @org.jetbrains.annotations.NotNull
         public final android.widget.TextView getServing_size() {
             return null;
         }
         
-        @org.jetbrains.annotations.NotNull()
+        @org.jetbrains.annotations.NotNull
         public final android.widget.TextView getCalories() {
             return null;
         }
         
-        @org.jetbrains.annotations.NotNull()
+        @org.jetbrains.annotations.NotNull
         public final android.widget.ImageButton getEditButton() {
             return null;
         }
         
-        public ItemViewHolder(@org.jetbrains.annotations.NotNull()
+        public ItemViewHolder(@org.jetbrains.annotations.NotNull
         android.view.View itemView) {
             super(null);
         }
@@ -109,36 +109,36 @@ public final class ResultListAdapter extends androidx.recyclerview.widget.Recycl
     
     @kotlin.Metadata(mv = {1, 1, 16}, bv = {1, 0, 3}, k = 1, d1 = {"\u0000\"\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\u0007\u0018\u00002\u00020\u0001B\r\u0012\u0006\u0010\u0002\u001a\u00020\u0003\u00a2\u0006\u0002\u0010\u0004R\u0011\u0010\u0005\u001a\u00020\u0006\u00a2\u0006\b\n\u0000\u001a\u0004\b\u0007\u0010\bR\u0011\u0010\t\u001a\u00020\n\u00a2\u0006\b\n\u0000\u001a\u0004\b\u000b\u0010\fR\u0011\u0010\r\u001a\u00020\u0006\u00a2\u0006\b\n\u0000\u001a\u0004\b\u000e\u0010\bR\u0011\u0010\u000f\u001a\u00020\u0006\u00a2\u0006\b\n\u0000\u001a\u0004\b\u0010\u0010\b\u00a8\u0006\u0011"}, d2 = {"Lcom/azumio/android/foodlenslibrary/adapter/ResultListAdapter$SelectedItemViewHolder;", "Landroidx/recyclerview/widget/RecyclerView$ViewHolder;", "itemView", "Landroid/view/View;", "(Landroid/view/View;)V", "calories", "Landroid/widget/TextView;", "getCalories", "()Landroid/widget/TextView;", "editButton", "Landroid/widget/ImageButton;", "getEditButton", "()Landroid/widget/ImageButton;", "food_name", "getFood_name", "serving_size", "getServing_size", "foodLensLibrary_release"})
     public static final class SelectedItemViewHolder extends androidx.recyclerview.widget.RecyclerView.ViewHolder {
-        @org.jetbrains.annotations.NotNull()
+        @org.jetbrains.annotations.NotNull
         private final android.widget.TextView food_name = null;
-        @org.jetbrains.annotations.NotNull()
+        @org.jetbrains.annotations.NotNull
         private final android.widget.TextView serving_size = null;
-        @org.jetbrains.annotations.NotNull()
+        @org.jetbrains.annotations.NotNull
         private final android.widget.TextView calories = null;
-        @org.jetbrains.annotations.NotNull()
+        @org.jetbrains.annotations.NotNull
         private final android.widget.ImageButton editButton = null;
         
-        @org.jetbrains.annotations.NotNull()
+        @org.jetbrains.annotations.NotNull
         public final android.widget.TextView getFood_name() {
             return null;
         }
         
-        @org.jetbrains.annotations.NotNull()
+        @org.jetbrains.annotations.NotNull
         public final android.widget.TextView getServing_size() {
             return null;
         }
         
-        @org.jetbrains.annotations.NotNull()
+        @org.jetbrains.annotations.NotNull
         public final android.widget.TextView getCalories() {
             return null;
         }
         
-        @org.jetbrains.annotations.NotNull()
+        @org.jetbrains.annotations.NotNull
         public final android.widget.ImageButton getEditButton() {
             return null;
         }
         
-        public SelectedItemViewHolder(@org.jetbrains.annotations.NotNull()
+        public SelectedItemViewHolder(@org.jetbrains.annotations.NotNull
         android.view.View itemView) {
             super(null);
         }
@@ -146,26 +146,26 @@ public final class ResultListAdapter extends androidx.recyclerview.widget.Recycl
     
     @kotlin.Metadata(mv = {1, 1, 16}, bv = {1, 0, 3}, k = 1, d1 = {"\u0000\"\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\u0005\u0018\u00002\u00020\u0001B\r\u0012\u0006\u0010\u0002\u001a\u00020\u0003\u00a2\u0006\u0002\u0010\u0004R\u0011\u0010\u0005\u001a\u00020\u0006\u00a2\u0006\b\n\u0000\u001a\u0004\b\u0007\u0010\bR\u001a\u0010\t\u001a\u00020\nX\u0086\u000e\u00a2\u0006\u000e\n\u0000\u001a\u0004\b\u000b\u0010\f\"\u0004\b\r\u0010\u000e\u00a8\u0006\u000f"}, d2 = {"Lcom/azumio/android/foodlenslibrary/adapter/ResultListAdapter$HeaderViewHolder;", "Landroidx/recyclerview/widget/RecyclerView$ViewHolder;", "itemView", "Landroid/view/View;", "(Landroid/view/View;)V", "header_list", "Landroidx/recyclerview/widget/RecyclerView;", "getHeader_list", "()Landroidx/recyclerview/widget/RecyclerView;", "header_title", "Landroidx/appcompat/widget/AppCompatTextView;", "getHeader_title", "()Landroidx/appcompat/widget/AppCompatTextView;", "setHeader_title", "(Landroidx/appcompat/widget/AppCompatTextView;)V", "foodLensLibrary_release"})
     public static final class HeaderViewHolder extends androidx.recyclerview.widget.RecyclerView.ViewHolder {
-        @org.jetbrains.annotations.NotNull()
+        @org.jetbrains.annotations.NotNull
         private final androidx.recyclerview.widget.RecyclerView header_list = null;
-        @org.jetbrains.annotations.NotNull()
+        @org.jetbrains.annotations.NotNull
         private androidx.appcompat.widget.AppCompatTextView header_title;
         
-        @org.jetbrains.annotations.NotNull()
+        @org.jetbrains.annotations.NotNull
         public final androidx.recyclerview.widget.RecyclerView getHeader_list() {
             return null;
         }
         
-        @org.jetbrains.annotations.NotNull()
+        @org.jetbrains.annotations.NotNull
         public final androidx.appcompat.widget.AppCompatTextView getHeader_title() {
             return null;
         }
         
-        public final void setHeader_title(@org.jetbrains.annotations.NotNull()
+        public final void setHeader_title(@org.jetbrains.annotations.NotNull
         androidx.appcompat.widget.AppCompatTextView p0) {
         }
         
-        public HeaderViewHolder(@org.jetbrains.annotations.NotNull()
+        public HeaderViewHolder(@org.jetbrains.annotations.NotNull
         android.view.View itemView) {
             super(null);
         }
@@ -173,19 +173,19 @@ public final class ResultListAdapter extends androidx.recyclerview.widget.Recycl
     
     @kotlin.Metadata(mv = {1, 1, 16}, bv = {1, 0, 3}, k = 1, d1 = {"\u0000\u001a\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0005\u0018\u00002\u00020\u0001B\r\u0012\u0006\u0010\u0002\u001a\u00020\u0003\u00a2\u0006\u0002\u0010\u0004R\u001a\u0010\u0005\u001a\u00020\u0006X\u0086\u000e\u00a2\u0006\u000e\n\u0000\u001a\u0004\b\u0007\u0010\b\"\u0004\b\t\u0010\n\u00a8\u0006\u000b"}, d2 = {"Lcom/azumio/android/foodlenslibrary/adapter/ResultListAdapter$FooterViewHolder;", "Landroidx/recyclerview/widget/RecyclerView$ViewHolder;", "itemView", "Landroid/view/View;", "(Landroid/view/View;)V", "title", "Landroidx/appcompat/widget/AppCompatTextView;", "getTitle", "()Landroidx/appcompat/widget/AppCompatTextView;", "setTitle", "(Landroidx/appcompat/widget/AppCompatTextView;)V", "foodLensLibrary_release"})
     public static final class FooterViewHolder extends androidx.recyclerview.widget.RecyclerView.ViewHolder {
-        @org.jetbrains.annotations.NotNull()
+        @org.jetbrains.annotations.NotNull
         private androidx.appcompat.widget.AppCompatTextView title;
         
-        @org.jetbrains.annotations.NotNull()
+        @org.jetbrains.annotations.NotNull
         public final androidx.appcompat.widget.AppCompatTextView getTitle() {
             return null;
         }
         
-        public final void setTitle(@org.jetbrains.annotations.NotNull()
+        public final void setTitle(@org.jetbrains.annotations.NotNull
         androidx.appcompat.widget.AppCompatTextView p0) {
         }
         
-        public FooterViewHolder(@org.jetbrains.annotations.NotNull()
+        public FooterViewHolder(@org.jetbrains.annotations.NotNull
         android.view.View itemView) {
             super(null);
         }

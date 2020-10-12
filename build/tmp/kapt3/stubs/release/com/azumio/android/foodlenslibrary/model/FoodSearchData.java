@@ -6,55 +6,55 @@ import java.lang.System;
 public class FoodSearchData {
     @com.google.gson.annotations.SerializedName(value = "calories")
     private double calories = 0.0;
-    @org.jetbrains.annotations.NotNull()
+    @org.jetbrains.annotations.NotNull
     @com.google.gson.annotations.SerializedName(value = "id")
     private java.lang.String id = "";
-    @org.jetbrains.annotations.NotNull()
+    @org.jetbrains.annotations.NotNull
     @com.google.gson.annotations.SerializedName(value = "name")
     private java.lang.String name = "";
-    @org.jetbrains.annotations.Nullable()
+    @org.jetbrains.annotations.Nullable
     @com.google.gson.annotations.SerializedName(value = "servingSize")
     private com.azumio.android.foodlenslibrary.model.SegmentResponse.FoodItem.ServingSize servingSize;
-    @org.jetbrains.annotations.Nullable()
+    @org.jetbrains.annotations.Nullable
     @com.google.gson.annotations.SerializedName(value = "servingSizes")
     private java.util.List<com.azumio.android.foodlenslibrary.model.SegmentResponse.FoodItem.ServingSize> servingSizes;
-    @org.jetbrains.annotations.NotNull()
+    @org.jetbrains.annotations.NotNull
     @com.google.gson.annotations.SerializedName(value = "source")
     private java.lang.String source = "";
     @com.google.gson.annotations.SerializedName(value = "validated")
     private boolean validated = false;
-    @org.jetbrains.annotations.Nullable()
+    @org.jetbrains.annotations.Nullable
     @com.google.gson.annotations.SerializedName(value = "statusId")
     private java.lang.String statusId;
-    @org.jetbrains.annotations.Nullable()
+    @org.jetbrains.annotations.Nullable
     @com.google.gson.annotations.SerializedName(value = "category")
     private java.lang.String category;
     @com.google.gson.annotations.SerializedName(value = "important")
     private boolean important = false;
-    @org.jetbrains.annotations.Nullable()
+    @org.jetbrains.annotations.Nullable
     @com.google.gson.annotations.SerializedName(value = "userId")
     private java.lang.String userId;
-    @org.jetbrains.annotations.Nullable()
+    @org.jetbrains.annotations.Nullable
     @com.google.gson.annotations.SerializedName(value = "brand")
     private java.lang.String brand;
     @com.google.gson.annotations.SerializedName(value = "numberOfServings")
-    private double numberOfServings = 1.0;
-    @org.jetbrains.annotations.Nullable()
+    private double numberOfServings;
+    @org.jetbrains.annotations.Nullable
     @com.google.gson.annotations.SerializedName(value = "remoteid")
     private java.lang.String remoteid;
-    @org.jetbrains.annotations.Nullable()
+    @org.jetbrains.annotations.Nullable
     @com.google.gson.annotations.SerializedName(value = "type")
     private java.lang.String type;
-    @org.jetbrains.annotations.Nullable()
+    @org.jetbrains.annotations.Nullable
     @com.google.gson.annotations.SerializedName(value = "parent_id")
     private java.lang.String parentId;
-    @org.jetbrains.annotations.Nullable()
+    @org.jetbrains.annotations.Nullable
     @com.google.gson.annotations.SerializedName(value = "meal")
     private java.lang.String meal;
-    @org.jetbrains.annotations.Nullable()
+    @org.jetbrains.annotations.Nullable
     @com.google.gson.annotations.SerializedName(value = "nutrition")
     private com.azumio.android.foodlenslibrary.model.SegmentResponse.FoodItem.Nutrition nutrition;
-    @org.jetbrains.annotations.Nullable()
+    @org.jetbrains.annotations.Nullable
     @com.google.gson.annotations.SerializedName(value = "foods")
     private java.util.List<? extends com.azumio.android.foodlenslibrary.model.FoodSearchData> foods;
     private boolean nutritionParsed = false;
@@ -68,48 +68,48 @@ public class FoodSearchData {
     public final void setCalories(double p0) {
     }
     
-    @org.jetbrains.annotations.NotNull()
+    @org.jetbrains.annotations.NotNull
     public final java.lang.String getId() {
         return null;
     }
     
-    public final void setId(@org.jetbrains.annotations.NotNull()
+    public final void setId(@org.jetbrains.annotations.NotNull
     java.lang.String p0) {
     }
     
-    @org.jetbrains.annotations.NotNull()
+    @org.jetbrains.annotations.NotNull
     public final java.lang.String getName() {
         return null;
     }
     
-    public final void setName(@org.jetbrains.annotations.NotNull()
+    public final void setName(@org.jetbrains.annotations.NotNull
     java.lang.String p0) {
     }
     
-    @org.jetbrains.annotations.Nullable()
+    @org.jetbrains.annotations.Nullable
     public final com.azumio.android.foodlenslibrary.model.SegmentResponse.FoodItem.ServingSize getServingSize() {
         return null;
     }
     
-    public final void setServingSize(@org.jetbrains.annotations.Nullable()
+    public final void setServingSize(@org.jetbrains.annotations.Nullable
     com.azumio.android.foodlenslibrary.model.SegmentResponse.FoodItem.ServingSize p0) {
     }
     
-    @org.jetbrains.annotations.Nullable()
+    @org.jetbrains.annotations.Nullable
     public final java.util.List<com.azumio.android.foodlenslibrary.model.SegmentResponse.FoodItem.ServingSize> getServingSizes() {
         return null;
     }
     
-    public final void setServingSizes(@org.jetbrains.annotations.Nullable()
+    public final void setServingSizes(@org.jetbrains.annotations.Nullable
     java.util.List<com.azumio.android.foodlenslibrary.model.SegmentResponse.FoodItem.ServingSize> p0) {
     }
     
-    @org.jetbrains.annotations.NotNull()
+    @org.jetbrains.annotations.NotNull
     public final java.lang.String getSource() {
         return null;
     }
     
-    public final void setSource(@org.jetbrains.annotations.NotNull()
+    public final void setSource(@org.jetbrains.annotations.NotNull
     java.lang.String p0) {
     }
     
@@ -120,21 +120,21 @@ public class FoodSearchData {
     public final void setValidated(boolean p0) {
     }
     
-    @org.jetbrains.annotations.Nullable()
+    @org.jetbrains.annotations.Nullable
     public final java.lang.String getStatusId() {
         return null;
     }
     
-    public final void setStatusId(@org.jetbrains.annotations.Nullable()
+    public final void setStatusId(@org.jetbrains.annotations.Nullable
     java.lang.String p0) {
     }
     
-    @org.jetbrains.annotations.Nullable()
+    @org.jetbrains.annotations.Nullable
     public final java.lang.String getCategory() {
         return null;
     }
     
-    public final void setCategory(@org.jetbrains.annotations.Nullable()
+    public final void setCategory(@org.jetbrains.annotations.Nullable
     java.lang.String p0) {
     }
     
@@ -145,21 +145,21 @@ public class FoodSearchData {
     public final void setImportant(boolean p0) {
     }
     
-    @org.jetbrains.annotations.Nullable()
+    @org.jetbrains.annotations.Nullable
     public final java.lang.String getUserId() {
         return null;
     }
     
-    public final void setUserId(@org.jetbrains.annotations.Nullable()
+    public final void setUserId(@org.jetbrains.annotations.Nullable
     java.lang.String p0) {
     }
     
-    @org.jetbrains.annotations.Nullable()
+    @org.jetbrains.annotations.Nullable
     public final java.lang.String getBrand() {
         return null;
     }
     
-    public final void setBrand(@org.jetbrains.annotations.Nullable()
+    public final void setBrand(@org.jetbrains.annotations.Nullable
     java.lang.String p0) {
     }
     
@@ -170,57 +170,57 @@ public class FoodSearchData {
     public final void setNumberOfServings(double p0) {
     }
     
-    @org.jetbrains.annotations.Nullable()
+    @org.jetbrains.annotations.Nullable
     public final java.lang.String getRemoteid() {
         return null;
     }
     
-    public final void setRemoteid(@org.jetbrains.annotations.Nullable()
+    public final void setRemoteid(@org.jetbrains.annotations.Nullable
     java.lang.String p0) {
     }
     
-    @org.jetbrains.annotations.Nullable()
+    @org.jetbrains.annotations.Nullable
     public final java.lang.String getType() {
         return null;
     }
     
-    public final void setType(@org.jetbrains.annotations.Nullable()
+    public final void setType(@org.jetbrains.annotations.Nullable
     java.lang.String p0) {
     }
     
-    @org.jetbrains.annotations.Nullable()
+    @org.jetbrains.annotations.Nullable
     public final java.lang.String getParentId() {
         return null;
     }
     
-    public final void setParentId(@org.jetbrains.annotations.Nullable()
+    public final void setParentId(@org.jetbrains.annotations.Nullable
     java.lang.String p0) {
     }
     
-    @org.jetbrains.annotations.Nullable()
+    @org.jetbrains.annotations.Nullable
     public final java.lang.String getMeal() {
         return null;
     }
     
-    public final void setMeal(@org.jetbrains.annotations.Nullable()
+    public final void setMeal(@org.jetbrains.annotations.Nullable
     java.lang.String p0) {
     }
     
-    @org.jetbrains.annotations.Nullable()
+    @org.jetbrains.annotations.Nullable
     public final com.azumio.android.foodlenslibrary.model.SegmentResponse.FoodItem.Nutrition getNutrition() {
         return null;
     }
     
-    public final void setNutrition(@org.jetbrains.annotations.Nullable()
+    public final void setNutrition(@org.jetbrains.annotations.Nullable
     com.azumio.android.foodlenslibrary.model.SegmentResponse.FoodItem.Nutrition p0) {
     }
     
-    @org.jetbrains.annotations.Nullable()
+    @org.jetbrains.annotations.Nullable
     public final java.util.List<com.azumio.android.foodlenslibrary.model.FoodSearchData> getFoods() {
         return null;
     }
     
-    public final void setFoods(@org.jetbrains.annotations.Nullable()
+    public final void setFoods(@org.jetbrains.annotations.Nullable
     java.util.List<? extends com.azumio.android.foodlenslibrary.model.FoodSearchData> p0) {
     }
     
@@ -231,16 +231,16 @@ public class FoodSearchData {
     public final void setNutritionParsed(boolean p0) {
     }
     
-    public final void setNutritionFromMap(@org.jetbrains.annotations.NotNull()
+    public final void setNutritionFromMap(@org.jetbrains.annotations.NotNull
     java.util.Map<java.lang.String, java.lang.Double> map) {
     }
     
-    @org.jetbrains.annotations.NotNull()
+    @org.jetbrains.annotations.NotNull
     public final java.lang.String jsonString() {
         return null;
     }
     
-    @org.jetbrains.annotations.NotNull()
+    @org.jetbrains.annotations.NotNull
     public final java.util.Map<java.lang.String, java.lang.Double> getNutritionAsMap() {
         return null;
     }
@@ -252,19 +252,19 @@ public class FoodSearchData {
     @kotlin.Metadata(mv = {1, 1, 16}, bv = {1, 0, 3}, k = 1, d1 = {"\u00008\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\b\u0002\n\u0002\u0010\u0006\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000e\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010$\n\u0000\n\u0002\u0010\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0000\b\u0086\u0003\u0018\u00002\u00020\u0001B\u0007\b\u0002\u00a2\u0006\u0002\u0010\u0002J\u000e\u0010\u0005\u001a\u00020\u00062\u0006\u0010\u0007\u001a\u00020\bJ\u001c\u0010\t\u001a\u0004\u0018\u00010\n2\u0012\u0010\u000b\u001a\u000e\u0012\u0004\u0012\u00020\b\u0012\u0004\u0012\u00020\u00040\fJ\u0016\u0010\r\u001a\u00020\u000e2\u0006\u0010\u000f\u001a\u00020\u00062\u0006\u0010\u0010\u001a\u00020\u0011R\u000e\u0010\u0003\u001a\u00020\u0004X\u0086T\u00a2\u0006\u0002\n\u0000\u00a8\u0006\u0012"}, d2 = {"Lcom/azumio/android/foodlenslibrary/model/FoodSearchData$Companion;", "", "()V", "DEFAULT_SERVING_WEIGHT", "", "initFromJson", "Lcom/azumio/android/foodlenslibrary/model/FoodSearchData;", "json", "", "nutritionFromMap", "Lcom/azumio/android/foodlenslibrary/model/SegmentResponse$FoodItem$Nutrition;", "map", "", "updateFoodItemFromIntent", "", "dataItem", "intent", "Landroid/content/Intent;", "foodLensLibrary_release"})
     public static final class Companion {
         
-        public final void updateFoodItemFromIntent(@org.jetbrains.annotations.NotNull()
-        com.azumio.android.foodlenslibrary.model.FoodSearchData dataItem, @org.jetbrains.annotations.NotNull()
+        public final void updateFoodItemFromIntent(@org.jetbrains.annotations.NotNull
+        com.azumio.android.foodlenslibrary.model.FoodSearchData dataItem, @org.jetbrains.annotations.NotNull
         android.content.Intent intent) {
         }
         
-        @org.jetbrains.annotations.NotNull()
-        public final com.azumio.android.foodlenslibrary.model.FoodSearchData initFromJson(@org.jetbrains.annotations.NotNull()
+        @org.jetbrains.annotations.NotNull
+        public final com.azumio.android.foodlenslibrary.model.FoodSearchData initFromJson(@org.jetbrains.annotations.NotNull
         java.lang.String json) {
             return null;
         }
         
-        @org.jetbrains.annotations.Nullable()
-        public final com.azumio.android.foodlenslibrary.model.SegmentResponse.FoodItem.Nutrition nutritionFromMap(@org.jetbrains.annotations.NotNull()
+        @org.jetbrains.annotations.Nullable
+        public final com.azumio.android.foodlenslibrary.model.SegmentResponse.FoodItem.Nutrition nutritionFromMap(@org.jetbrains.annotations.NotNull
         java.util.Map<java.lang.String, java.lang.Double> map) {
             return null;
         }

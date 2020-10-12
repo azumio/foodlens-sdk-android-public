@@ -218,6 +218,7 @@ id add_food_multiselect
 id add_more_button
 id add_more_container
 id addbtn
+id back_arrow
 id bannerImage
 id bannerLayout
 id bannertxt
@@ -431,6 +432,7 @@ layout result_fragment
 layout segment_layout
 navigation nav_graph
 raw banana
+raw test_food_image
 string action_cancel
 string action_done
 string action_ok
@@ -493,6 +495,8 @@ string log_value
 string looks_good
 string my_recent
 string no
+string no_internet
+string no_item_logged
 string no_result
 string not_food_message
 string nothing_was_logged

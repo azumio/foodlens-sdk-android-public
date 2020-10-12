@@ -150,6 +150,8 @@
     <string name="looks_good">LOOKS GOOD</string>
     <string name="my_recent">MY RECENT</string>
     <string name="no">No</string>
+    <string name="no_internet">Unable to connect to recognition system. Please check your Internet Connection</string>
+    <string name="no_item_logged">"Looks like nothing was logged, tap on food item and swipe to log."</string>
     <string name="no_result">No Results Found.</string>
     <string name="not_food_message">"This does not look like food. Would you like to retake the photo to get more accurate results?"</string>
     <string name="nothing_was_logged">"LOOKS LIKE NOTHING WAS LOGGED, TAP AND HOLD ON FOOD PHOTO TO ADD YOUR FIRST ITEM"</string>

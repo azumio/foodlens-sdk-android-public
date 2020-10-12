@@ -7,20 +7,20 @@ public final class ReviewFragment extends androidx.fragment.app.Fragment {
     private android.net.Uri imageURI;
     private java.lang.String imageCacheId;
     private java.util.List<com.azumio.android.foodlenslibrary.model.FoodSegment> foodSegments;
-    @org.jetbrains.annotations.NotNull()
+    @org.jetbrains.annotations.NotNull
     public java.lang.String selectedMeal;
     private final kotlin.Lazy viewModel$delegate = null;
-    @org.jetbrains.annotations.NotNull()
+    @org.jetbrains.annotations.NotNull
     public static final java.lang.String TAG = "ReviewFragment";
     public static final com.azumio.android.foodlenslibrary.fragment.ReviewFragment.Companion Companion = null;
     private java.util.HashMap _$_findViewCache;
     
-    @org.jetbrains.annotations.NotNull()
+    @org.jetbrains.annotations.NotNull
     public final java.lang.String getSelectedMeal() {
         return null;
     }
     
-    public final void setSelectedMeal(@org.jetbrains.annotations.NotNull()
+    public final void setSelectedMeal(@org.jetbrains.annotations.NotNull
     java.lang.String p0) {
     }
     
@@ -28,18 +28,18 @@ public final class ReviewFragment extends androidx.fragment.app.Fragment {
         return null;
     }
     
-    @org.jetbrains.annotations.Nullable()
-    @java.lang.Override()
-    public android.view.View onCreateView(@org.jetbrains.annotations.NotNull()
-    android.view.LayoutInflater inflater, @org.jetbrains.annotations.Nullable()
-    android.view.ViewGroup container, @org.jetbrains.annotations.Nullable()
+    @org.jetbrains.annotations.Nullable
+    @java.lang.Override
+    public android.view.View onCreateView(@org.jetbrains.annotations.NotNull
+    android.view.LayoutInflater inflater, @org.jetbrains.annotations.Nullable
+    android.view.ViewGroup container, @org.jetbrains.annotations.Nullable
     android.os.Bundle savedInstanceState) {
         return null;
     }
     
-    @java.lang.Override()
-    public void onViewCreated(@org.jetbrains.annotations.NotNull()
-    android.view.View view, @org.jetbrains.annotations.Nullable()
+    @java.lang.Override
+    public void onViewCreated(@org.jetbrains.annotations.NotNull
+    android.view.View view, @org.jetbrains.annotations.Nullable
     android.os.Bundle savedInstanceState) {
     }
     
@@ -56,9 +56,9 @@ public final class ReviewFragment extends androidx.fragment.app.Fragment {
         super();
     }
     
-    public ReviewFragment(@org.jetbrains.annotations.NotNull()
-    android.net.Uri imageURI, @org.jetbrains.annotations.NotNull()
-    java.util.List<com.azumio.android.foodlenslibrary.model.FoodSegment> foodSegments, @org.jetbrains.annotations.NotNull()
+    public ReviewFragment(@org.jetbrains.annotations.NotNull
+    android.net.Uri imageURI, @org.jetbrains.annotations.NotNull
+    java.util.List<com.azumio.android.foodlenslibrary.model.FoodSegment> foodSegments, @org.jetbrains.annotations.NotNull
     java.lang.String imageCacheId) {
         super();
     }
@@ -66,10 +66,10 @@ public final class ReviewFragment extends androidx.fragment.app.Fragment {
     @kotlin.Metadata(mv = {1, 1, 16}, bv = {1, 0, 3}, k = 1, d1 = {"\u0000*\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\b\u0002\n\u0002\u0010\u000e\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010 \n\u0002\u0018\u0002\n\u0002\b\u0002\b\u0086\u0003\u0018\u00002\u00020\u0001B\u0007\b\u0002\u00a2\u0006\u0002\u0010\u0002J$\u0010\u0005\u001a\u00020\u00062\u0006\u0010\u0007\u001a\u00020\b2\f\u0010\t\u001a\b\u0012\u0004\u0012\u00020\u000b0\n2\u0006\u0010\f\u001a\u00020\u0004R\u000e\u0010\u0003\u001a\u00020\u0004X\u0086T\u00a2\u0006\u0002\n\u0000\u00a8\u0006\r"}, d2 = {"Lcom/azumio/android/foodlenslibrary/fragment/ReviewFragment$Companion;", "", "()V", "TAG", "", "newInstance", "Lcom/azumio/android/foodlenslibrary/fragment/ReviewFragment;", "imageURI", "Landroid/net/Uri;", "foodSegments", "", "Lcom/azumio/android/foodlenslibrary/model/FoodSegment;", "imageCacheId", "foodLensLibrary_release"})
     public static final class Companion {
         
-        @org.jetbrains.annotations.NotNull()
-        public final com.azumio.android.foodlenslibrary.fragment.ReviewFragment newInstance(@org.jetbrains.annotations.NotNull()
-        android.net.Uri imageURI, @org.jetbrains.annotations.NotNull()
-        java.util.List<com.azumio.android.foodlenslibrary.model.FoodSegment> foodSegments, @org.jetbrains.annotations.NotNull()
+        @org.jetbrains.annotations.NotNull
+        public final com.azumio.android.foodlenslibrary.fragment.ReviewFragment newInstance(@org.jetbrains.annotations.NotNull
+        android.net.Uri imageURI, @org.jetbrains.annotations.NotNull
+        java.util.List<com.azumio.android.foodlenslibrary.model.FoodSegment> foodSegments, @org.jetbrains.annotations.NotNull
         java.lang.String imageCacheId) {
             return null;
         }

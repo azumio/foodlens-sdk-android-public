@@ -8,10 +8,10 @@ public final class CaloriesNutritionData {
     private final int bold = 0;
     @com.google.gson.annotations.SerializedName(value = "decimal")
     private final int decimal = 0;
-    @org.jetbrains.annotations.NotNull()
+    @org.jetbrains.annotations.NotNull
     @com.google.gson.annotations.SerializedName(value = "key")
     private final java.lang.String key = null;
-    @org.jetbrains.annotations.NotNull()
+    @org.jetbrains.annotations.NotNull
     @com.google.gson.annotations.SerializedName(value = "name")
     private final java.lang.String name = null;
     @com.google.gson.annotations.SerializedName(value = "premium")
@@ -20,7 +20,7 @@ public final class CaloriesNutritionData {
     private final int primary = 0;
     @com.google.gson.annotations.SerializedName(value = "tabbed")
     private final int tabbed = 0;
-    @org.jetbrains.annotations.NotNull()
+    @org.jetbrains.annotations.NotNull
     @com.google.gson.annotations.SerializedName(value = "unit")
     private final java.lang.String unit = null;
     
@@ -32,12 +32,12 @@ public final class CaloriesNutritionData {
         return 0;
     }
     
-    @org.jetbrains.annotations.NotNull()
+    @org.jetbrains.annotations.NotNull
     public final java.lang.String getKey() {
         return null;
     }
     
-    @org.jetbrains.annotations.NotNull()
+    @org.jetbrains.annotations.NotNull
     public final java.lang.String getName() {
         return null;
     }
@@ -54,14 +54,14 @@ public final class CaloriesNutritionData {
         return 0;
     }
     
-    @org.jetbrains.annotations.NotNull()
+    @org.jetbrains.annotations.NotNull
     public final java.lang.String getUnit() {
         return null;
     }
     
-    public CaloriesNutritionData(int bold, int decimal, @org.jetbrains.annotations.NotNull()
-    java.lang.String key, @org.jetbrains.annotations.NotNull()
-    java.lang.String name, int premium, int primary, int tabbed, @org.jetbrains.annotations.NotNull()
+    public CaloriesNutritionData(int bold, int decimal, @org.jetbrains.annotations.NotNull
+    java.lang.String key, @org.jetbrains.annotations.NotNull
+    java.lang.String name, int premium, int primary, int tabbed, @org.jetbrains.annotations.NotNull
     java.lang.String unit) {
         super();
     }
@@ -74,12 +74,12 @@ public final class CaloriesNutritionData {
         return 0;
     }
     
-    @org.jetbrains.annotations.NotNull()
+    @org.jetbrains.annotations.NotNull
     public final java.lang.String component3() {
         return null;
     }
     
-    @org.jetbrains.annotations.NotNull()
+    @org.jetbrains.annotations.NotNull
     public final java.lang.String component4() {
         return null;
     }
@@ -96,32 +96,32 @@ public final class CaloriesNutritionData {
         return 0;
     }
     
-    @org.jetbrains.annotations.NotNull()
+    @org.jetbrains.annotations.NotNull
     public final java.lang.String component8() {
         return null;
     }
     
-    @org.jetbrains.annotations.NotNull()
-    public final com.azumio.android.foodlenslibrary.model.CaloriesNutritionData copy(int bold, int decimal, @org.jetbrains.annotations.NotNull()
-    java.lang.String key, @org.jetbrains.annotations.NotNull()
-    java.lang.String name, int premium, int primary, int tabbed, @org.jetbrains.annotations.NotNull()
+    @org.jetbrains.annotations.NotNull
+    public final com.azumio.android.foodlenslibrary.model.CaloriesNutritionData copy(int bold, int decimal, @org.jetbrains.annotations.NotNull
+    java.lang.String key, @org.jetbrains.annotations.NotNull
+    java.lang.String name, int premium, int primary, int tabbed, @org.jetbrains.annotations.NotNull
     java.lang.String unit) {
         return null;
     }
     
-    @org.jetbrains.annotations.NotNull()
-    @java.lang.Override()
+    @org.jetbrains.annotations.NotNull
+    @java.lang.Override
     public java.lang.String toString() {
         return null;
     }
     
-    @java.lang.Override()
+    @java.lang.Override
     public int hashCode() {
         return 0;
     }
     
-    @java.lang.Override()
-    public boolean equals(@org.jetbrains.annotations.Nullable()
+    @java.lang.Override
+    public boolean equals(@org.jetbrains.annotations.Nullable
     java.lang.Object p0) {
         return false;
     }

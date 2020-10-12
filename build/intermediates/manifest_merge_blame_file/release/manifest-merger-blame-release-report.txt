@@ -6,79 +6,83 @@
 6
 7    <uses-sdk
 8        android:minSdkVersion="23"
-8-->/Users/sonyjohn/Documents/Projects/HC_Source/food-lens-sdk-android/foodLensLibrary/src/main/AndroidManifest.xml
+8-->/Users/sonyjohn/Documents/Projects/HC_Source/foodlens-sdk-android-public/src/main/AndroidManifest.xml
 9        android:targetSdkVersion="30" />
-9-->/Users/sonyjohn/Documents/Projects/HC_Source/food-lens-sdk-android/foodLensLibrary/src/main/AndroidManifest.xml
+9-->/Users/sonyjohn/Documents/Projects/HC_Source/foodlens-sdk-android-public/src/main/AndroidManifest.xml
 10
 11    <uses-feature android:name="android.hardware.camera.any" />
-11-->/Users/sonyjohn/Documents/Projects/HC_Source/food-lens-sdk-android/foodLensLibrary/src/main/AndroidManifest.xml:5:5-64
-11-->/Users/sonyjohn/Documents/Projects/HC_Source/food-lens-sdk-android/foodLensLibrary/src/main/AndroidManifest.xml:5:19-61
+11-->/Users/sonyjohn/Documents/Projects/HC_Source/foodlens-sdk-android-public/src/main/AndroidManifest.xml:5:5-64
+11-->/Users/sonyjohn/Documents/Projects/HC_Source/foodlens-sdk-android-public/src/main/AndroidManifest.xml:5:19-61
 12
-13    <uses-permission android:name="android.permission.CAMERA" />
-13-->/Users/sonyjohn/Documents/Projects/HC_Source/food-lens-sdk-android/foodLensLibrary/src/main/AndroidManifest.xml:7:5-65
-13-->/Users/sonyjohn/Documents/Projects/HC_Source/food-lens-sdk-android/foodLensLibrary/src/main/AndroidManifest.xml:7:22-62
-14    <uses-permission android:name="android.permission.INTERNET" />
-14-->/Users/sonyjohn/Documents/Projects/HC_Source/food-lens-sdk-android/foodLensLibrary/src/main/AndroidManifest.xml:8:5-67
-14-->/Users/sonyjohn/Documents/Projects/HC_Source/food-lens-sdk-android/foodLensLibrary/src/main/AndroidManifest.xml:8:22-64
-15
-16    <application>
-16-->/Users/sonyjohn/Documents/Projects/HC_Source/food-lens-sdk-android/foodLensLibrary/src/main/AndroidManifest.xml:10:5-43:19
-17        <activity
-17-->/Users/sonyjohn/Documents/Projects/HC_Source/food-lens-sdk-android/foodLensLibrary/src/main/AndroidManifest.xml:11:9-14:58
-18            android:name="com.azumio.android.foodlenslibrary.activity.ResultActivity"
-18-->/Users/sonyjohn/Documents/Projects/HC_Source/food-lens-sdk-android/foodLensLibrary/src/main/AndroidManifest.xml:11:19-58
-19            android:label="@string/title_activity_result"
-19-->/Users/sonyjohn/Documents/Projects/HC_Source/food-lens-sdk-android/foodLensLibrary/src/main/AndroidManifest.xml:12:13-58
-20            android:screenOrientation="portrait"
-20-->/Users/sonyjohn/Documents/Projects/HC_Source/food-lens-sdk-android/foodLensLibrary/src/main/AndroidManifest.xml:13:13-49
-21            android:theme="@style/AppTheme.NoActionBar" />
-21-->/Users/sonyjohn/Documents/Projects/HC_Source/food-lens-sdk-android/foodLensLibrary/src/main/AndroidManifest.xml:14:13-56
-22        <activity
-22-->/Users/sonyjohn/Documents/Projects/HC_Source/food-lens-sdk-android/foodLensLibrary/src/main/AndroidManifest.xml:15:9-19:59
-23            android:name="com.azumio.android.foodlenslibrary.activity.CameraActivity"
-23-->/Users/sonyjohn/Documents/Projects/HC_Source/food-lens-sdk-android/foodLensLibrary/src/main/AndroidManifest.xml:16:13-52
-24            android:label="@string/title_activity_camera"
-24-->/Users/sonyjohn/Documents/Projects/HC_Source/food-lens-sdk-android/foodLensLibrary/src/main/AndroidManifest.xml:17:13-58
-25            android:screenOrientation="portrait"
-25-->/Users/sonyjohn/Documents/Projects/HC_Source/food-lens-sdk-android/foodLensLibrary/src/main/AndroidManifest.xml:18:13-49
-26            android:theme="@style/AppTheme.NoActionBar" />
-26-->/Users/sonyjohn/Documents/Projects/HC_Source/food-lens-sdk-android/foodLensLibrary/src/main/AndroidManifest.xml:19:13-56
-27        <activity
-27-->/Users/sonyjohn/Documents/Projects/HC_Source/food-lens-sdk-android/foodLensLibrary/src/main/AndroidManifest.xml:20:9-25:77
-28            android:name="com.azumio.android.foodlenslibrary.activity.AddFoodActivity"
-28-->/Users/sonyjohn/Documents/Projects/HC_Source/food-lens-sdk-android/foodLensLibrary/src/main/AndroidManifest.xml:21:13-53
-29            android:label="@string/title_activity_add_food"
-29-->/Users/sonyjohn/Documents/Projects/HC_Source/food-lens-sdk-android/foodLensLibrary/src/main/AndroidManifest.xml:22:13-60
-30            android:screenOrientation="portrait"
-30-->/Users/sonyjohn/Documents/Projects/HC_Source/food-lens-sdk-android/foodLensLibrary/src/main/AndroidManifest.xml:23:13-49
-31            android:theme="@style/AppTheme.NoActionBar"
-31-->/Users/sonyjohn/Documents/Projects/HC_Source/food-lens-sdk-android/foodLensLibrary/src/main/AndroidManifest.xml:24:13-56
-32            android:windowSoftInputMode="stateAlwaysVisible|adjustResize" />
-32-->/Users/sonyjohn/Documents/Projects/HC_Source/food-lens-sdk-android/foodLensLibrary/src/main/AndroidManifest.xml:25:13-74
-33        <activity
-33-->/Users/sonyjohn/Documents/Projects/HC_Source/food-lens-sdk-android/foodLensLibrary/src/main/AndroidManifest.xml:27:9-32:77
-34            android:name="com.azumio.android.foodlenslibrary.activity.EditEntryActivity"
-34-->/Users/sonyjohn/Documents/Projects/HC_Source/food-lens-sdk-android/foodLensLibrary/src/main/AndroidManifest.xml:28:13-55
-35            android:label="@string/title_activity_edit_food"
-35-->/Users/sonyjohn/Documents/Projects/HC_Source/food-lens-sdk-android/foodLensLibrary/src/main/AndroidManifest.xml:29:13-61
-36            android:screenOrientation="portrait"
-36-->/Users/sonyjohn/Documents/Projects/HC_Source/food-lens-sdk-android/foodLensLibrary/src/main/AndroidManifest.xml:30:13-49
-37            android:theme="@style/AppTheme.NoActionBar"
-37-->/Users/sonyjohn/Documents/Projects/HC_Source/food-lens-sdk-android/foodLensLibrary/src/main/AndroidManifest.xml:31:13-56
-38            android:windowSoftInputMode="stateAlwaysVisible|adjustResize" />
-38-->/Users/sonyjohn/Documents/Projects/HC_Source/food-lens-sdk-android/foodLensLibrary/src/main/AndroidManifest.xml:32:13-74
-39        <activity
-39-->/Users/sonyjohn/Documents/Projects/HC_Source/food-lens-sdk-android/foodLensLibrary/src/main/AndroidManifest.xml:34:9-39:77
-40            android:name="com.azumio.android.foodlenslibrary.activity.QuickAddActivity"
-40-->/Users/sonyjohn/Documents/Projects/HC_Source/food-lens-sdk-android/foodLensLibrary/src/main/AndroidManifest.xml:35:13-54
-41            android:label="@string/title_activity_quick_add_food"
-41-->/Users/sonyjohn/Documents/Projects/HC_Source/food-lens-sdk-android/foodLensLibrary/src/main/AndroidManifest.xml:36:13-66
-42            android:screenOrientation="portrait"
-42-->/Users/sonyjohn/Documents/Projects/HC_Source/food-lens-sdk-android/foodLensLibrary/src/main/AndroidManifest.xml:37:13-49
-43            android:theme="@style/AppTheme.NoActionBar"
-43-->/Users/sonyjohn/Documents/Projects/HC_Source/food-lens-sdk-android/foodLensLibrary/src/main/AndroidManifest.xml:38:13-56
-44            android:windowSoftInputMode="stateAlwaysVisible|adjustResize" />
-44-->/Users/sonyjohn/Documents/Projects/HC_Source/food-lens-sdk-android/foodLensLibrary/src/main/AndroidManifest.xml:39:13-74
-45    </application>
-46
-47</manifest>
+13    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+13-->/Users/sonyjohn/Documents/Projects/HC_Source/foodlens-sdk-android-public/src/main/AndroidManifest.xml:7:5-79
+13-->/Users/sonyjohn/Documents/Projects/HC_Source/foodlens-sdk-android-public/src/main/AndroidManifest.xml:7:22-76
+14    <uses-permission android:name="android.permission.CAMERA" />
+14-->/Users/sonyjohn/Documents/Projects/HC_Source/foodlens-sdk-android-public/src/main/AndroidManifest.xml:8:5-65
+14-->/Users/sonyjohn/Documents/Projects/HC_Source/foodlens-sdk-android-public/src/main/AndroidManifest.xml:8:22-62
+15    <uses-permission android:name="android.permission.INTERNET" />
+15-->/Users/sonyjohn/Documents/Projects/HC_Source/foodlens-sdk-android-public/src/main/AndroidManifest.xml:9:5-67
+15-->/Users/sonyjohn/Documents/Projects/HC_Source/foodlens-sdk-android-public/src/main/AndroidManifest.xml:9:22-64
+16
+17    <application android:name="com.azumio.android.foodlenslibrary.FoodLensApplication" >
+17-->/Users/sonyjohn/Documents/Projects/HC_Source/foodlens-sdk-android-public/src/main/AndroidManifest.xml:11:5-45:19
+17-->/Users/sonyjohn/Documents/Projects/HC_Source/foodlens-sdk-android-public/src/main/AndroidManifest.xml:12:9-44
+18        <activity
+18-->/Users/sonyjohn/Documents/Projects/HC_Source/foodlens-sdk-android-public/src/main/AndroidManifest.xml:13:9-16:58
+19            android:name="com.azumio.android.foodlenslibrary.activity.ResultActivity"
+19-->/Users/sonyjohn/Documents/Projects/HC_Source/foodlens-sdk-android-public/src/main/AndroidManifest.xml:13:19-58
+20            android:label="@string/title_activity_result"
+20-->/Users/sonyjohn/Documents/Projects/HC_Source/foodlens-sdk-android-public/src/main/AndroidManifest.xml:14:13-58
+21            android:screenOrientation="portrait"
+21-->/Users/sonyjohn/Documents/Projects/HC_Source/foodlens-sdk-android-public/src/main/AndroidManifest.xml:15:13-49
+22            android:theme="@style/AppTheme.NoActionBar" />
+22-->/Users/sonyjohn/Documents/Projects/HC_Source/foodlens-sdk-android-public/src/main/AndroidManifest.xml:16:13-56
+23        <activity
+23-->/Users/sonyjohn/Documents/Projects/HC_Source/foodlens-sdk-android-public/src/main/AndroidManifest.xml:17:9-21:59
+24            android:name="com.azumio.android.foodlenslibrary.activity.CameraActivity"
+24-->/Users/sonyjohn/Documents/Projects/HC_Source/foodlens-sdk-android-public/src/main/AndroidManifest.xml:18:13-52
+25            android:label="@string/title_activity_camera"
+25-->/Users/sonyjohn/Documents/Projects/HC_Source/foodlens-sdk-android-public/src/main/AndroidManifest.xml:19:13-58
+26            android:screenOrientation="portrait"
+26-->/Users/sonyjohn/Documents/Projects/HC_Source/foodlens-sdk-android-public/src/main/AndroidManifest.xml:20:13-49
+27            android:theme="@style/AppTheme.NoActionBar" />
+27-->/Users/sonyjohn/Documents/Projects/HC_Source/foodlens-sdk-android-public/src/main/AndroidManifest.xml:21:13-56
+28        <activity
+28-->/Users/sonyjohn/Documents/Projects/HC_Source/foodlens-sdk-android-public/src/main/AndroidManifest.xml:22:9-27:77
+29            android:name="com.azumio.android.foodlenslibrary.activity.AddFoodActivity"
+29-->/Users/sonyjohn/Documents/Projects/HC_Source/foodlens-sdk-android-public/src/main/AndroidManifest.xml:23:13-53
+30            android:label="@string/title_activity_add_food"
+30-->/Users/sonyjohn/Documents/Projects/HC_Source/foodlens-sdk-android-public/src/main/AndroidManifest.xml:24:13-60
+31            android:screenOrientation="portrait"
+31-->/Users/sonyjohn/Documents/Projects/HC_Source/foodlens-sdk-android-public/src/main/AndroidManifest.xml:25:13-49
+32            android:theme="@style/AppTheme.NoActionBar"
+32-->/Users/sonyjohn/Documents/Projects/HC_Source/foodlens-sdk-android-public/src/main/AndroidManifest.xml:26:13-56
+33            android:windowSoftInputMode="stateAlwaysVisible|adjustResize" />
+33-->/Users/sonyjohn/Documents/Projects/HC_Source/foodlens-sdk-android-public/src/main/AndroidManifest.xml:27:13-74
+34        <activity
+34-->/Users/sonyjohn/Documents/Projects/HC_Source/foodlens-sdk-android-public/src/main/AndroidManifest.xml:29:9-34:77
+35            android:name="com.azumio.android.foodlenslibrary.activity.EditEntryActivity"
+35-->/Users/sonyjohn/Documents/Projects/HC_Source/foodlens-sdk-android-public/src/main/AndroidManifest.xml:30:13-55
+36            android:label="@string/title_activity_edit_food"
+36-->/Users/sonyjohn/Documents/Projects/HC_Source/foodlens-sdk-android-public/src/main/AndroidManifest.xml:31:13-61
+37            android:screenOrientation="portrait"
+37-->/Users/sonyjohn/Documents/Projects/HC_Source/foodlens-sdk-android-public/src/main/AndroidManifest.xml:32:13-49
+38            android:theme="@style/AppTheme.NoActionBar"
+38-->/Users/sonyjohn/Documents/Projects/HC_Source/foodlens-sdk-android-public/src/main/AndroidManifest.xml:33:13-56
+39            android:windowSoftInputMode="stateAlwaysVisible|adjustResize" />
+39-->/Users/sonyjohn/Documents/Projects/HC_Source/foodlens-sdk-android-public/src/main/AndroidManifest.xml:34:13-74
+40        <activity
+40-->/Users/sonyjohn/Documents/Projects/HC_Source/foodlens-sdk-android-public/src/main/AndroidManifest.xml:36:9-41:77
+41            android:name="com.azumio.android.foodlenslibrary.activity.QuickAddActivity"
+41-->/Users/sonyjohn/Documents/Projects/HC_Source/foodlens-sdk-android-public/src/main/AndroidManifest.xml:37:13-54
+42            android:label="@string/title_activity_quick_add_food"
+42-->/Users/sonyjohn/Documents/Projects/HC_Source/foodlens-sdk-android-public/src/main/AndroidManifest.xml:38:13-66
+43            android:screenOrientation="portrait"
+43-->/Users/sonyjohn/Documents/Projects/HC_Source/foodlens-sdk-android-public/src/main/AndroidManifest.xml:39:13-49
+44            android:theme="@style/AppTheme.NoActionBar"
+44-->/Users/sonyjohn/Documents/Projects/HC_Source/foodlens-sdk-android-public/src/main/AndroidManifest.xml:40:13-56
+45            android:windowSoftInputMode="stateAlwaysVisible|adjustResize" />
+45-->/Users/sonyjohn/Documents/Projects/HC_Source/foodlens-sdk-android-public/src/main/AndroidManifest.xml:41:13-74
+46    </application>
+47
+48</manifest>

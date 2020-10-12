@@ -1766,6 +1766,7 @@ int id alertTitle 0x0
 int id async 0x0
 int id auto 0x0
 int id back 0x0
+int id back_arrow 0x0
 int id bannerImage 0x0
 int id bannerLayout 0x0
 int id bannertxt 0x0
@@ -2333,6 +2334,7 @@ int layout text_view_without_line_height 0x0
 int navigation nav_graph 0x0
 int plurals mtrl_badge_content_description 0x0
 int raw banana 0x0
+int raw test_food_image 0x0
 int string abc_action_bar_home_description 0x0
 int string abc_action_bar_up_description 0x0
 int string abc_action_menu_overflow_description 0x0
@@ -2488,6 +2490,8 @@ int string my_recent 0x0
 int string nav_app_bar_navigate_up_description 0x0
 int string nav_app_bar_open_drawer_description 0x0
 int string no 0x0
+int string no_internet 0x0
+int string no_item_logged 0x0
 int string no_result 0x0
 int string not_food_message 0x0
 int string nothing_was_logged 0x0

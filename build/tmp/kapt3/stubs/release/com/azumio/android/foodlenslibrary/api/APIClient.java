@@ -18,13 +18,13 @@ public final class APIClient {
         return null;
     }
     
-    public final <T extends java.lang.Object>T createService(@org.jetbrains.annotations.Nullable()
+    public final <T extends java.lang.Object>T createService(@org.jetbrains.annotations.Nullable
     java.lang.Class<T> tClass) {
         return null;
     }
     
-    public final <T extends java.lang.Object>T createService(@org.jetbrains.annotations.Nullable()
-    java.lang.Class<T> tClass, @org.jetbrains.annotations.NotNull()
+    public final <T extends java.lang.Object>T createService(@org.jetbrains.annotations.Nullable
+    java.lang.Class<T> tClass, @org.jetbrains.annotations.NotNull
     com.azumio.android.foodlenslibrary.core.ArgusToken token) {
         return null;
     }

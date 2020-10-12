@@ -11,14 +11,14 @@ public final class PermissionsFragment extends androidx.fragment.app.Fragment {
     public static final com.azumio.android.foodlenslibrary.fragment.PermissionsFragment.Companion Companion = null;
     private java.util.HashMap _$_findViewCache;
     
-    @java.lang.Override()
-    public void onCreate(@org.jetbrains.annotations.Nullable()
+    @java.lang.Override
+    public void onCreate(@org.jetbrains.annotations.Nullable
     android.os.Bundle savedInstanceState) {
     }
     
-    @java.lang.Override()
-    public void onRequestPermissionsResult(int requestCode, @org.jetbrains.annotations.NotNull()
-    java.lang.String[] permissions, @org.jetbrains.annotations.NotNull()
+    @java.lang.Override
+    public void onRequestPermissionsResult(int requestCode, @org.jetbrains.annotations.NotNull
+    java.lang.String[] permissions, @org.jetbrains.annotations.NotNull
     int[] grantResults) {
     }
     
@@ -32,7 +32,7 @@ public final class PermissionsFragment extends androidx.fragment.app.Fragment {
         /**
          * Convenience method used to check if all permissions required by this app are granted
          */
-        public final boolean hasPermissions(@org.jetbrains.annotations.NotNull()
+        public final boolean hasPermissions(@org.jetbrains.annotations.NotNull
         android.content.Context context) {
             return false;
         }

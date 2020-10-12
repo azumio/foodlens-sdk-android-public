@@ -7,11 +7,11 @@ public abstract class Continuation<T extends java.lang.Object> implements kotlin
     
     public abstract void resume(T value);
     
-    public abstract void resumeWithException(@org.jetbrains.annotations.NotNull()
+    public abstract void resumeWithException(@org.jetbrains.annotations.NotNull
     java.lang.Throwable exception);
     
-    @java.lang.Override()
-    public void resumeWith(@org.jetbrains.annotations.NotNull()
+    @java.lang.Override
+    public void resumeWith(@org.jetbrains.annotations.NotNull
     java.lang.Object result) {
     }
     

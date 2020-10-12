@@ -6,52 +6,52 @@ import java.lang.System;
 public final class ViewUtils {
     public static final com.azumio.android.foodlenslibrary.utils.ViewUtils INSTANCE = null;
     
-    public static final int extractViewWidth(@org.jetbrains.annotations.NotNull()
+    public static final int extractViewWidth(@org.jetbrains.annotations.NotNull
     android.view.View view) {
         return 0;
     }
     
-    public static final void setWeightToViewHorizontal(@org.jetbrains.annotations.NotNull()
+    public static final void setWeightToViewHorizontal(@org.jetbrains.annotations.NotNull
     android.view.View view, int weight) {
     }
     
-    public static final void setWeightToViewVertical(@org.jetbrains.annotations.NotNull()
+    public static final void setWeightToViewVertical(@org.jetbrains.annotations.NotNull
     android.view.View view, int weight) {
     }
     
-    public static final void setMarginToView(@org.jetbrains.annotations.NotNull()
+    public static final void setMarginToView(@org.jetbrains.annotations.NotNull
     android.view.View view, int left, int top, int right, int bottom) {
     }
     
-    public static final void setRoundedBackgroundToView(@org.jetbrains.annotations.NotNull()
+    public static final void setRoundedBackgroundToView(@org.jetbrains.annotations.NotNull
     android.view.View view, int cornerRadius, int color) {
     }
     
-    public static final void setRoundedBackgroundToView(@org.jetbrains.annotations.NotNull()
-    android.view.View view, @org.jetbrains.annotations.NotNull()
+    public static final void setRoundedBackgroundToView(@org.jetbrains.annotations.NotNull
+    android.view.View view, @org.jetbrains.annotations.NotNull
     float[] cornerRadii, int color) {
     }
     
-    public static final void removeOnGlobalLayoutListener(@org.jetbrains.annotations.NotNull()
-    android.view.ViewTreeObserver viewTreeObserver, @org.jetbrains.annotations.NotNull()
+    public static final void removeOnGlobalLayoutListener(@org.jetbrains.annotations.NotNull
+    android.view.ViewTreeObserver viewTreeObserver, @org.jetbrains.annotations.NotNull
     android.view.ViewTreeObserver.OnGlobalLayoutListener listener) {
     }
     
-    public static final void setLayoutTransitionToAnimateAll(@org.jetbrains.annotations.Nullable()
+    public static final void setLayoutTransitionToAnimateAll(@org.jetbrains.annotations.Nullable
     android.view.ViewGroup viewGroup, boolean animateParentHierarchy) {
     }
     
     /**
      * Adjusts font size to measured height of the TextView, decreasing it slightly
      */
-    public static final void adjustTextSize(@org.jetbrains.annotations.NotNull()
+    public static final void adjustTextSize(@org.jetbrains.annotations.NotNull
     android.widget.TextView textView, double factor) {
     }
     
     /**
      * Adjusts font size to measured height of the TextView, decreasing it slightly
      */
-    public static final void adjustTextSize(@org.jetbrains.annotations.NotNull()
+    public static final void adjustTextSize(@org.jetbrains.annotations.NotNull
     android.widget.TextView textView) {
     }
     
@@ -59,8 +59,8 @@ public final class ViewUtils {
         return 0;
     }
     
-    public static final void setSelectableItemBackground(@org.jetbrains.annotations.NotNull()
-    android.view.View glass, @org.jetbrains.annotations.NotNull()
+    public static final void setSelectableItemBackground(@org.jetbrains.annotations.NotNull
+    android.view.View glass, @org.jetbrains.annotations.NotNull
     android.content.Context context) {
     }
     
@@ -70,12 +70,12 @@ public final class ViewUtils {
      * @param activity
      */
     @kotlin.Suppress(names = {"UNCHECKED_CAST"})
-    public static final void removeActivityFromTransitionManager(@org.jetbrains.annotations.NotNull()
+    public static final void removeActivityFromTransitionManager(@org.jetbrains.annotations.NotNull
     android.app.Activity activity) {
     }
     
-    public static final void tintIfPossible(@org.jetbrains.annotations.NotNull()
-    android.view.View view, @org.jetbrains.annotations.NotNull()
+    public static final void tintIfPossible(@org.jetbrains.annotations.NotNull
+    android.view.View view, @org.jetbrains.annotations.NotNull
     android.content.Context context, int colorToTint) {
     }
     

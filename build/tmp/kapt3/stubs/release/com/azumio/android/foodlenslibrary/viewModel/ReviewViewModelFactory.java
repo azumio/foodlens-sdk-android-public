@@ -6,23 +6,23 @@ import java.lang.System;
 public final class ReviewViewModelFactory implements androidx.lifecycle.ViewModelProvider.Factory {
     private final android.net.Uri uri = null;
     private final java.util.List<com.azumio.android.foodlenslibrary.model.FoodSegment> segments = null;
-    @org.jetbrains.annotations.NotNull()
+    @org.jetbrains.annotations.NotNull
     private final java.lang.String imageCacheId = null;
     
-    @java.lang.Override()
-    public <T extends androidx.lifecycle.ViewModel>T create(@org.jetbrains.annotations.NotNull()
+    @java.lang.Override
+    public <T extends androidx.lifecycle.ViewModel>T create(@org.jetbrains.annotations.NotNull
     java.lang.Class<T> modelClass) {
         return null;
     }
     
-    @org.jetbrains.annotations.NotNull()
+    @org.jetbrains.annotations.NotNull
     public final java.lang.String getImageCacheId() {
         return null;
     }
     
-    public ReviewViewModelFactory(@org.jetbrains.annotations.NotNull()
-    android.net.Uri uri, @org.jetbrains.annotations.NotNull()
-    java.util.List<com.azumio.android.foodlenslibrary.model.FoodSegment> segments, @org.jetbrains.annotations.NotNull()
+    public ReviewViewModelFactory(@org.jetbrains.annotations.NotNull
+    android.net.Uri uri, @org.jetbrains.annotations.NotNull
+    java.util.List<com.azumio.android.foodlenslibrary.model.FoodSegment> segments, @org.jetbrains.annotations.NotNull
     java.lang.String imageCacheId) {
         super();
     }

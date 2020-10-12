@@ -6,19 +6,19 @@ import java.lang.System;
 public final class FoodSegment {
     private boolean deleted = false;
     private boolean custom = false;
-    @org.jetbrains.annotations.NotNull()
+    @org.jetbrains.annotations.NotNull
     private java.util.ArrayList<com.azumio.android.foodlenslibrary.model.FoodLog> foodLogs;
-    @org.jetbrains.annotations.NotNull()
+    @org.jetbrains.annotations.NotNull
     private final java.lang.String identifier = null;
-    @org.jetbrains.annotations.NotNull()
+    @org.jetbrains.annotations.NotNull
     private final com.azumio.android.foodlenslibrary.model.SegmentResponse.TraceSegment.BoundingBox boundingBox = null;
-    @org.jetbrains.annotations.NotNull()
+    @org.jetbrains.annotations.NotNull
     private final com.azumio.android.foodlenslibrary.model.SegmentResponse.TraceSegment.Center center = null;
-    @org.jetbrains.annotations.Nullable()
+    @org.jetbrains.annotations.Nullable
     private com.azumio.android.foodlenslibrary.model.SegmentResponse.TraceSegment.Center userCenter;
     private final boolean isFood = false;
     private final double notFoodRatio = 0.0;
-    @org.jetbrains.annotations.NotNull()
+    @org.jetbrains.annotations.NotNull
     private java.util.List<com.azumio.android.foodlenslibrary.model.FoodSuggestionCategory> categories;
     
     public final boolean getDeleted() {
@@ -35,12 +35,12 @@ public final class FoodSegment {
     public final void setCustom(boolean p0) {
     }
     
-    @org.jetbrains.annotations.NotNull()
+    @org.jetbrains.annotations.NotNull
     public final java.util.ArrayList<com.azumio.android.foodlenslibrary.model.FoodLog> getFoodLogs() {
         return null;
     }
     
-    public final void setFoodLogs(@org.jetbrains.annotations.NotNull()
+    public final void setFoodLogs(@org.jetbrains.annotations.NotNull
     java.util.ArrayList<com.azumio.android.foodlenslibrary.model.FoodLog> p0) {
     }
     
@@ -48,27 +48,27 @@ public final class FoodSegment {
         return false;
     }
     
-    @org.jetbrains.annotations.NotNull()
+    @org.jetbrains.annotations.NotNull
     public final java.lang.String getIdentifier() {
         return null;
     }
     
-    @org.jetbrains.annotations.NotNull()
+    @org.jetbrains.annotations.NotNull
     public final com.azumio.android.foodlenslibrary.model.SegmentResponse.TraceSegment.BoundingBox getBoundingBox() {
         return null;
     }
     
-    @org.jetbrains.annotations.NotNull()
+    @org.jetbrains.annotations.NotNull
     public final com.azumio.android.foodlenslibrary.model.SegmentResponse.TraceSegment.Center getCenter() {
         return null;
     }
     
-    @org.jetbrains.annotations.Nullable()
+    @org.jetbrains.annotations.Nullable
     public final com.azumio.android.foodlenslibrary.model.SegmentResponse.TraceSegment.Center getUserCenter() {
         return null;
     }
     
-    public final void setUserCenter(@org.jetbrains.annotations.Nullable()
+    public final void setUserCenter(@org.jetbrains.annotations.Nullable
     com.azumio.android.foodlenslibrary.model.SegmentResponse.TraceSegment.Center p0) {
     }
     
@@ -80,20 +80,20 @@ public final class FoodSegment {
         return 0.0;
     }
     
-    @org.jetbrains.annotations.NotNull()
+    @org.jetbrains.annotations.NotNull
     public final java.util.List<com.azumio.android.foodlenslibrary.model.FoodSuggestionCategory> getCategories() {
         return null;
     }
     
-    public final void setCategories(@org.jetbrains.annotations.NotNull()
+    public final void setCategories(@org.jetbrains.annotations.NotNull
     java.util.List<com.azumio.android.foodlenslibrary.model.FoodSuggestionCategory> p0) {
     }
     
-    public FoodSegment(@org.jetbrains.annotations.NotNull()
-    java.lang.String identifier, @org.jetbrains.annotations.NotNull()
-    com.azumio.android.foodlenslibrary.model.SegmentResponse.TraceSegment.BoundingBox boundingBox, @org.jetbrains.annotations.NotNull()
-    com.azumio.android.foodlenslibrary.model.SegmentResponse.TraceSegment.Center center, @org.jetbrains.annotations.Nullable()
-    com.azumio.android.foodlenslibrary.model.SegmentResponse.TraceSegment.Center userCenter, boolean isFood, double notFoodRatio, @org.jetbrains.annotations.NotNull()
+    public FoodSegment(@org.jetbrains.annotations.NotNull
+    java.lang.String identifier, @org.jetbrains.annotations.NotNull
+    com.azumio.android.foodlenslibrary.model.SegmentResponse.TraceSegment.BoundingBox boundingBox, @org.jetbrains.annotations.NotNull
+    com.azumio.android.foodlenslibrary.model.SegmentResponse.TraceSegment.Center center, @org.jetbrains.annotations.Nullable
+    com.azumio.android.foodlenslibrary.model.SegmentResponse.TraceSegment.Center userCenter, boolean isFood, double notFoodRatio, @org.jetbrains.annotations.NotNull
     java.util.List<com.azumio.android.foodlenslibrary.model.FoodSuggestionCategory> categories) {
         super();
     }

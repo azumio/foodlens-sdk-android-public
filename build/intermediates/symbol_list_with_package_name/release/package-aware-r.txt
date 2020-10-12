@@ -1767,6 +1767,7 @@ id alertTitle
 id async
 id auto
 id back
+id back_arrow
 id bannerImage
 id bannerLayout
 id bannertxt
@@ -2334,6 +2335,7 @@ layout text_view_without_line_height
 navigation nav_graph
 plurals mtrl_badge_content_description
 raw banana
+raw test_food_image
 string abc_action_bar_home_description
 string abc_action_bar_up_description
 string abc_action_menu_overflow_description
@@ -2489,6 +2491,8 @@ string my_recent
 string nav_app_bar_navigate_up_description
 string nav_app_bar_open_drawer_description
 string no
+string no_internet
+string no_item_logged
 string no_result
 string not_food_message
 string nothing_was_logged
