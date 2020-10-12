@@ -7,6 +7,7 @@ The framework for recognizing food
 
 ### Installing
 
+```
 repositories {
  maven {
             url = "https://maven.pkg.github.com/azumio/foodlenslibrary"
@@ -16,6 +17,7 @@ repositories {
 dependencies {
     implementation 'com.azumio.android:foodlenslibrary:1.0.0'
 }
+```
 
 ### Start using
 
