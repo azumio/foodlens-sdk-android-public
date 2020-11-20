@@ -135,11 +135,6 @@ The result is a Json format containing following structure
 Demonstrates camera activity features : https://github.com/azumio/foodlens-sdk-android-example1
 
 
-
-## License
-
-TBD
-
 ## Copyright
 
 Copyright © 2020 Azumio Inc. All rights reserved.
