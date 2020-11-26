@@ -4,6 +4,21 @@ apply plugin: 'kotlin-android-extensions'
 apply plugin: "androidx.navigation.safeargs"
 apply plugin: 'kotlin-kapt'
 
+buildscript {
+    ext.kotlin_version = '1.4.10'
+    repositories {
+        google()
+        jcenter()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.5.3'
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+        classpath "org.jetbrains.kotlin:kotlin-android-extensions:$kotlin_version"
+        def nav_version = "2.3.1"
+        classpath "androidx.navigation:navigation-safe-args-gradle-plugin:$nav_version"
+    }
+}
+
 android {
     compileSdkVersion 30
     buildToolsVersion "30.0.2"
@@ -107,4 +122,18 @@ dependencies {
     implementation 'com.orhanobut:logger:2.2.0'
 
 }
-apply from: "$rootProject.projectDir/gradle/publish_github.gradle"
+repositories {
+    flatDir {
+        dirs 'libs'
+    }
+    maven {
+        url "https://google.bintray.com/flexbox-layout"
+    }
+    maven {
+        url 'https://maven.google.com'
+    }
+    maven { url 'https://dl.bintray.com/guardian/android' }
+    google()
+    jcenter()
+}
+//apply from: "$rootProject.projectDir/gradle/publish_github.gradle"
