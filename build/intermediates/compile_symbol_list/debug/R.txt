@@ -374,7 +374,6 @@ int attr fastScrollHorizontalTrackDrawable 0x0
 int attr fastScrollVerticalThumbDrawable 0x0
 int attr fastScrollVerticalTrackDrawable 0x0
 int attr firstBaselineToTopHeight 0x0
-int attr fit 0x0
 int attr flash 0x0
 int attr floatingActionButtonStyle 0x0
 int attr font 0x0
@@ -425,10 +424,7 @@ int attr iconStartPadding 0x0
 int attr iconTint 0x0
 int attr iconTintMode 0x0
 int attr iconifiedByDefault 0x0
-int attr image 0x0
 int attr imageButtonStyle 0x0
-int attr imageHeight 0x0
-int attr imageWidth 0x0
 int attr indeterminateProgressStyle 0x0
 int attr indicator_color 0x0
 int attr indicator_height 0x0
@@ -471,9 +467,6 @@ int attr layoutManager 0x0
 int attr layout_anchor 0x0
 int attr layout_anchorGravity 0x0
 int attr layout_behavior 0x0
-int attr layout_bottom 0x0
-int attr layout_centerX 0x0
-int attr layout_centerY 0x0
 int attr layout_collapseMode 0x0
 int attr layout_collapseParallaxMultiplier 0x0
 int attr layout_constrainedHeight 0x0
@@ -526,18 +519,11 @@ int attr layout_goneMarginLeft 0x0
 int attr layout_goneMarginRight 0x0
 int attr layout_goneMarginStart 0x0
 int attr layout_goneMarginTop 0x0
-int attr layout_height 0x0
 int attr layout_insetEdge 0x0
 int attr layout_keyline 0x0
-int attr layout_left 0x0
-int attr layout_maxHeight 0x0
-int attr layout_maxWidth 0x0
 int attr layout_optimizationLevel 0x0
-int attr layout_right 0x0
 int attr layout_scrollFlags 0x0
 int attr layout_scrollInterpolator 0x0
-int attr layout_top 0x0
-int attr layout_width 0x0
 int attr lensFacing 0x0
 int attr liftOnScroll 0x0
 int attr liftOnScrollTargetViewId 0x0
@@ -3928,23 +3914,6 @@ int styleable GradientColor_android_type 11
 int[] styleable GradientColorItem { 0x10101a5, 0x1010514 }
 int styleable GradientColorItem_android_color 0
 int styleable GradientColorItem_android_offset 1
-int[] styleable ImageLayout { 0x10100af, 0x0, 0x0, 0x0, 0x0 }
-int styleable ImageLayout_android_gravity 0
-int styleable ImageLayout_fit 1
-int styleable ImageLayout_image 2
-int styleable ImageLayout_imageHeight 3
-int styleable ImageLayout_imageWidth 4
-int[] styleable ImageLayout_Layout { 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0 }
-int styleable ImageLayout_Layout_layout_bottom 0
-int styleable ImageLayout_Layout_layout_centerX 1
-int styleable ImageLayout_Layout_layout_centerY 2
-int styleable ImageLayout_Layout_layout_height 3
-int styleable ImageLayout_Layout_layout_left 4
-int styleable ImageLayout_Layout_layout_maxHeight 5
-int styleable ImageLayout_Layout_layout_maxWidth 6
-int styleable ImageLayout_Layout_layout_right 7
-int styleable ImageLayout_Layout_layout_top 8
-int styleable ImageLayout_Layout_layout_width 9
 int[] styleable Insets { 0x0, 0x0, 0x0 }
 int styleable Insets_paddingBottomSystemWindowInsets 0
 int styleable Insets_paddingLeftSystemWindowInsets 1

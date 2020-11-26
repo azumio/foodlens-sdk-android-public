@@ -249,63 +249,6 @@
         <attr format="color" name="fab_background_color"/>
         <attr format="color" name="fab_background_color_pressed"/>
     </declare-styleable>
-    <declare-styleable name="ImageLayout">
-
-        <!-- The drawable to be used as the background for the view -->
-        <attr format="reference" name="image"/>
-
-        <!-- The width of the image in which the layout coordinates of the children are expressed -->
-        <attr format="integer" name="imageWidth"/>
-
-        <!-- The height of the image in which the layout coordinates of the children are expressed -->
-        <attr format="integer" name="imageHeight"/>
-
-        <!-- Determines how the background image is drawn -->
-        <attr name="fit">
-
-            <!--
-                 The image is made to fill the available vertical space, and may be cropped 
-                 horizontal if there is not enough space. If there is too much horizontal space,
-                 it is left blank. The horizontal position of the image is controlled by the 
-                 android:gravity attribute
-            -->
-            <flag name="vertical" value="0"/>
-            <!--
-                 The image fills the available horizontal space, and may be cropped 
-                 vertically if there is not enough space. If there is too much vertical space,
-                 it is left blank. The vertical position of the image is controlled by the 
-                 android:gravity attribute
-            -->
-            <flag name="horizontal" value="1"/>
-            <!--
-                 The image fills the available space both vertically and horizontally. If the
-                 aspect ratio of the image does not match exactly the aspect ratio of the available
-                 space, the image is cropped either vertically or horizontally, depending of which
-                 provides the best fit
-            -->
-            <flag name="both" value="2"/>
-            <!--
-                 This is the default value. The image fills the available space 
-                 vertically in portrait mode and horizontally in landscape. Note that the
-                 library does not determine the orientation based on the actual device 
-                 orientation, but on the relative aspect ratios of the image and the view
-            -->
-            <flag name="auto" value="3"/>
-        </attr>
-        <attr name="android:gravity"/>
-    </declare-styleable>
-    <declare-styleable name="ImageLayout_Layout">
-        <attr format="integer" name="layout_width"/>
-        <attr format="integer" name="layout_height"/>
-        <attr format="integer" name="layout_maxWidth"/>
-        <attr format="integer" name="layout_maxHeight"/>
-        <attr format="integer" name="layout_centerX"/>
-        <attr format="integer" name="layout_centerY"/>
-        <attr format="integer" name="layout_left"/>
-        <attr format="integer" name="layout_top"/>
-        <attr format="integer" name="layout_right"/>
-        <attr format="integer" name="layout_bottom"/>
-    </declare-styleable>
     <declare-styleable name="SimpleAmountView">
         <attr format="dimension" name="simpleCoinIconSize"/>
         <attr format="dimension" name="simpleAmountTextSize"/>

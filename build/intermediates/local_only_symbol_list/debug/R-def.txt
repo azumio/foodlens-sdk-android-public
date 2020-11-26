@@ -20,26 +20,12 @@ attr? fab_icon_color
 attr? fab_icon_color_pressed
 attr? fab_icon_rotate_angle
 attr? fab_icon_scale
-attr? fit
 attr? fontPath
 attr? fontPathChecked
 attr? fromColor
 attr? iconNameArgus
-attr? image
-attr? imageHeight
-attr? imageWidth
 attr? indicator_color
 attr? indicator_height
-attr? layout_bottom
-attr? layout_centerX
-attr? layout_centerY
-attr? layout_height
-attr? layout_left
-attr? layout_maxHeight
-attr? layout_maxWidth
-attr? layout_right
-attr? layout_top
-attr? layout_width
 attr? lowerTextSize
 attr? metaButtonBarButtonStyle
 attr? metaButtonBarStyle
@@ -541,8 +527,6 @@ styleable CheckableTextWithIcon custom_text
 styleable CheckablesGroup android:checkedButton android:orientation nestedCheckables
 styleable CircleProgress fromColor toColor upperTextSize lowerTextSize thicknessFraction
 styleable FloatingActionButton fab_icon fab_icon_color fab_icon_color_pressed fab_icon_rotate_angle fab_icon_scale fab_background_color fab_background_color_pressed
-styleable ImageLayout image imageWidth imageHeight fit android:gravity
-styleable ImageLayout_Layout layout_width layout_height layout_maxWidth layout_maxHeight layout_centerX layout_centerY layout_left layout_top layout_right layout_bottom
 styleable SimpleAmountView simpleCoinIconSize simpleAmountTextSize simplePrefixTextSize coinColor amountColor prefixColor amountTypeface amountText iconNameArgus
 styleable TextBubbleWidget bubbleText bubbleSubText showTopArrow showBottomArrow showNext nextButtonText textVisibility bottomArrowPosition
 styleable ViewPagerTabView indicator_color indicator_height tab_text_color tab_text_size text_all_caps

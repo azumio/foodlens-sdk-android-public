@@ -12,7 +12,7 @@
         "splits": [],
         "versionCode": 1,
         "versionName": "1.0",
-        "outputFile": "foodLensLibrary-debug.aar",
+        "outputFile": "foodlens-sdk-android-public-debug.aar",
         "fullName": "debug",
         "baseName": "debug",
         "dirName": ""

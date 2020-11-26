@@ -375,7 +375,6 @@ attr fastScrollHorizontalTrackDrawable
 attr fastScrollVerticalThumbDrawable
 attr fastScrollVerticalTrackDrawable
 attr firstBaselineToTopHeight
-attr fit
 attr flash
 attr floatingActionButtonStyle
 attr font
@@ -426,10 +425,7 @@ attr iconStartPadding
 attr iconTint
 attr iconTintMode
 attr iconifiedByDefault
-attr image
 attr imageButtonStyle
-attr imageHeight
-attr imageWidth
 attr indeterminateProgressStyle
 attr indicator_color
 attr indicator_height
@@ -472,9 +468,6 @@ attr layoutManager
 attr layout_anchor
 attr layout_anchorGravity
 attr layout_behavior
-attr layout_bottom
-attr layout_centerX
-attr layout_centerY
 attr layout_collapseMode
 attr layout_collapseParallaxMultiplier
 attr layout_constrainedHeight
@@ -527,18 +520,11 @@ attr layout_goneMarginLeft
 attr layout_goneMarginRight
 attr layout_goneMarginStart
 attr layout_goneMarginTop
-attr layout_height
 attr layout_insetEdge
 attr layout_keyline
-attr layout_left
-attr layout_maxHeight
-attr layout_maxWidth
 attr layout_optimizationLevel
-attr layout_right
 attr layout_scrollFlags
 attr layout_scrollInterpolator
-attr layout_top
-attr layout_width
 attr lensFacing
 attr liftOnScroll
 attr liftOnScrollTargetViewId
@@ -3294,8 +3280,6 @@ styleable FragmentContainerView android_name android_tag
 styleable FragmentNavigator android_name
 styleable GradientColor android_centerColor android_centerX android_centerY android_endColor android_endX android_endY android_gradientRadius android_startColor android_startX android_startY android_tileMode android_type
 styleable GradientColorItem android_color android_offset
-styleable ImageLayout android_gravity fit image imageHeight imageWidth
-styleable ImageLayout_Layout layout_bottom layout_centerX layout_centerY layout_height layout_left layout_maxHeight layout_maxWidth layout_right layout_top layout_width
 styleable Insets paddingBottomSystemWindowInsets paddingLeftSystemWindowInsets paddingRightSystemWindowInsets
 styleable LinearConstraintLayout android_orientation
 styleable LinearLayoutCompat android_baselineAligned android_baselineAlignedChildIndex android_gravity android_orientation android_weightSum divider dividerPadding measureWithLargestChild showDividers
