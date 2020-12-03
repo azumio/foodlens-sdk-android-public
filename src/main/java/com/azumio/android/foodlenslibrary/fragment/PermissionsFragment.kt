@@ -4,6 +4,7 @@ import android.Manifest
 import android.content.Context
 import android.content.pm.PackageManager
 import android.os.Bundle
+import android.util.Log
 import android.widget.Toast
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
@@ -23,11 +24,14 @@ class PermissionsFragment : Fragment() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        Log.d("PermissionsFragment", "onCreate")
 
         if (!hasPermissions(requireContext())) {
+            Log.d("PermissionsFragment", "no permissions, requesting")
             // Request camera-related permissions
             requestPermissions(PERMISSIONS_REQUIRED, PERMISSIONS_REQUEST_CODE)
         } else {
+            Log.d("PermissionsFragment", "permissions granted, redirecting")
             // If permissions have already been granted, proceed
          //   Navigation.findNavController(requireActivity(), R.id.fragment_container).navigate(
           //      PermissionsFragmentDirections.actionPermissionsToCamera())

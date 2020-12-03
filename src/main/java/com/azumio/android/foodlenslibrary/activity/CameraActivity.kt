@@ -4,6 +4,7 @@ import android.app.Activity
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.android.material.snackbar.Snackbar
 import androidx.appcompat.app.AppCompatActivity
@@ -18,17 +19,16 @@ import java.lang.Exception
 
 class CameraActivity : AppCompatActivity() {
 
-    private lateinit var container: FragmentContainerView
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        Log.d("CameraActivity", "onCreate")
         setContentView(R.layout.activity_camera)
-        container = fragment_container
         FoodLens.renewTokenIfExpired()
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
+        Log.d("CameraActivity", "onActivityResult")
         if(requestCode == FoodLens.FOODLENS_IMAGE_ACTIVITY_RESULT_CODE && resultCode == Activity.RESULT_OK)
         {
             setResult(FoodLens.FOODLENS_CAMERA_ACTIVITY_RESULT_CODE,data)

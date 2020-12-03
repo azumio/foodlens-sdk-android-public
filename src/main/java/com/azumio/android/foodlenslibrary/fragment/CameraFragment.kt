@@ -135,6 +135,7 @@ class CameraFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        Log.d("CameraFragment", "onViewCreated")
         container = view as ConstraintLayout
         viewFinder = container.findViewById(R.id.view_finder)
 
