@@ -34,7 +34,7 @@ import androidx.navigation.Navigation
 import com.azumio.android.foodlenslibrary.FoodLens
 import com.azumio.android.foodlenslibrary.R
 import com.azumio.android.foodlenslibrary.activity.AddFoodActivity
-import com.azumio.android.foodlenslibrary.activity.CameraActivity
+import com.azumio.android.foodlenslibrary.activity.FoodLensCameraActivity
 import com.azumio.android.foodlenslibrary.activity.ResultActivity
 import com.azumio.android.foodlenslibrary.common.DataWrapper
 import com.azumio.android.foodlenslibrary.core.FoodLensConfig
@@ -103,7 +103,7 @@ class CameraFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? =
-        inflater.inflate(R.layout.fragment_camera, container, false)
+        inflater.inflate(R.layout.foodlens_fragment_camera, container, false)
 
 
     private fun setGalleryThumbnail(uri: Uri) {
@@ -145,7 +145,7 @@ class CameraFragment : Fragment() {
         broadcastManager = LocalBroadcastManager.getInstance(view.context)
 
         // Determine the output directory
-        outputDirectory = CameraActivity.getOutputDirectory(requireContext())
+        outputDirectory = FoodLensCameraActivity.getOutputDirectory(requireContext())
 
         // Wait for the views to be properly laid out
         viewFinder.post {

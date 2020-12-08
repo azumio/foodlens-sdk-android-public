@@ -11,9 +11,10 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.camera.core.SurfaceRequest
 import androidx.fragment.app.FragmentContainer
 import androidx.fragment.app.FragmentContainerView
+import androidx.navigation.findNavController
+import androidx.navigation.fragment.NavHostFragment
 import com.azumio.android.foodlenslibrary.FoodLens
 import com.azumio.android.foodlenslibrary.R
-import kotlinx.android.synthetic.main.activity_camera.*
 import java.io.File
 import java.lang.Exception
 
@@ -21,14 +22,12 @@ class CameraActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        Log.d("CameraActivity", "onCreate")
-        setContentView(R.layout.activity_camera)
+        setContentView(R.layout.foodlens_activity_camera)
         FoodLens.renewTokenIfExpired()
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
-        Log.d("CameraActivity", "onActivityResult")
         if(requestCode == FoodLens.FOODLENS_IMAGE_ACTIVITY_RESULT_CODE && resultCode == Activity.RESULT_OK)
         {
             setResult(FoodLens.FOODLENS_CAMERA_ACTIVITY_RESULT_CODE,data)
