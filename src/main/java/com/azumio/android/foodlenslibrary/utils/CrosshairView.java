@@ -66,9 +66,9 @@ public class CrosshairView extends FrameLayout
 
 	private void init()
 	{
-		setBackgroundColor(ContextCompat.getColor(getContext(), R.color.transparent));
+		setBackgroundColor(ContextCompat.getColor(getContext(), R.color.foodlens_transparent));
 		crossWidth = UiUtils.px(getContext(), 65);
-		int color = ContextCompat.getColor(getContext(), R.color.white);
+		int color = ContextCompat.getColor(getContext(), R.color.foodlens_white);
 		paint = new Paint();
 		paint.setStyle(Paint.Style.STROKE);
 		paint.setColor(color);

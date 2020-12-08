@@ -18,8 +18,6 @@ import com.azumio.android.foodlenslibrary.utils.ColorUtils;
 import com.azumio.android.foodlenslibrary.views.CenteredCustomFontView;
 import com.azumio.android.foodlenslibrary.views.FillingView;
 
-import java.io.IOException;
-
 
 public class QuickAddActivity extends BaseFragmentActivity
 {
@@ -30,7 +28,7 @@ public class QuickAddActivity extends BaseFragmentActivity
 	protected void onCreate(Bundle savedInstance)
 	{
 		super.onCreate(savedInstance);
-		setContentView(R.layout.activity_edit_quick_food);
+		setContentView(R.layout.foodlens_activity_edit_quick_food);
 
 		TextView textView = (TextView) findViewById(R.id.activity_with_fragment_toolbar_textview);
 		final TextView save = (TextView) findViewById(R.id.activity_save);
@@ -40,9 +38,9 @@ public class QuickAddActivity extends BaseFragmentActivity
 		initBackArrow();
 		mToolbar = (FillingView) findViewById(R.id.main_menu_toolbars);
 		mToolbar.setVisibility(View.VISIBLE);
-		mToolbar.setBackgroundColor(ContextCompat.getColor(this, R.color.calories_color));
-		ColorUtils.setStatusBarColor(this, ContextCompat.getColor(this, R.color.calories_statusbar_color), ContextCompat.getColor(this, R.color.calories_color));
-		textView.setText(getString(R.string.quick_add));
+		mToolbar.setBackgroundColor(ContextCompat.getColor(this, R.color.foodlens_calories_color));
+		ColorUtils.setStatusBarColor(this, ContextCompat.getColor(this, R.color.foodlens_foodlens_calories_statusbar_color), ContextCompat.getColor(this, R.color.foodlens_calories_color));
+		textView.setText(getString(R.string.foodlens_quick_add));
 		Bundle extras = getIntent().getExtras();
 		if (extras.getString(CaloriesManager.PROPERTY_DATA) != null)
 		{

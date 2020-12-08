@@ -11,5 +11,5 @@
     app:defaultNavHost="true"
     android:configChanges="orientation"
     android:screenOrientation="portrait"
-    app:navGraph="@navigation/nav_graph"
+    app:navGraph="@navigation/foodlens_nav_graph"
     tools:context=".activity.CameraActivity"/>

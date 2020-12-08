@@ -100,25 +100,25 @@ public class CenteredCustomFontView extends View implements Checkable
 
 	protected void loadXmlVariables(Context context, AttributeSet attrs, int defStyleAttr)
 	{
-		TypedArray typedArray = context.obtainStyledAttributes(attrs, R.styleable.CenteredCustomFontView, defStyleAttr, 0);
+		TypedArray typedArray = context.obtainStyledAttributes(attrs, R.styleable.FoodLensCenteredCustomFontView, defStyleAttr, 0);
 
 		float scaledDensity = context.getResources().getDisplayMetrics().scaledDensity;
 
-		paint.setTextSize(typedArray.getDimensionPixelSize(R.styleable.CenteredCustomFontView_android_textSize, (int) (25 * scaledDensity)));
-		textColor = typedArray.getColorStateList(R.styleable.CenteredCustomFontView_android_textColor);
+		paint.setTextSize(typedArray.getDimensionPixelSize(R.styleable.FoodLensCenteredCustomFontView_android_textSize, (int) (25 * scaledDensity)));
+		textColor = typedArray.getColorStateList(R.styleable.FoodLensCenteredCustomFontView_android_textColor);
 
 		textColor = textColor != null ? textColor : ColorStateList.valueOf(DEFAULT_TEXT_COLOR);
 		paint.setColor(textColor.getColorForState(getDrawableState(), DEFAULT_TEXT_COLOR));
 
-		setChecked(typedArray.getBoolean(R.styleable.CenteredCustomFontView_android_checked, false));
-		setClickable(typedArray.getBoolean(R.styleable.CenteredCustomFontView_android_clickable, true));
+		setChecked(typedArray.getBoolean(R.styleable.FoodLensCenteredCustomFontView_android_checked, false));
+		setClickable(typedArray.getBoolean(R.styleable.FoodLensCenteredCustomFontView_android_clickable, true));
 
-		String fontPath = typedArray.getString(R.styleable.CenteredCustomFontView_fontPath);
-		String fontPathChecked = typedArray.getString(R.styleable.CenteredCustomFontView_fontPathChecked);
+		String fontPath = typedArray.getString(R.styleable.FoodLensCenteredCustomFontView_foodlens_fontPath);
+		String fontPathChecked = typedArray.getString(R.styleable.FoodLensCenteredCustomFontView_foodlens_fontPathChecked);
 
-		String argusIconMapKey = typedArray.getString(R.styleable.CenteredCustomFontView_argusIconMapKey);
+		String argusIconMapKey = typedArray.getString(R.styleable.FoodLensCenteredCustomFontView_foodlens_argusIconMapKey);
 
-		texAlign = typedArray.getInteger(R.styleable.CenteredCustomFontView_android_textAlignment, TextAlign.CENTER.ordinal());
+		texAlign = typedArray.getInteger(R.styleable.FoodLensCenteredCustomFontView_android_textAlignment, TextAlign.CENTER.ordinal());
 
 		if (!TextUtils.isEmpty(argusIconMapKey))
 		{
@@ -128,7 +128,7 @@ public class CenteredCustomFontView extends View implements Checkable
 
 		if (TextUtils.isEmpty(fontPath))
 		{
-			fontPath = getResources().getString(R.string.font_path_argus_set);
+			fontPath = getResources().getString(R.string.foodlens_font_path_argus_set);
 		}
 
 		if (TextUtils.isEmpty(fontPathChecked))
@@ -148,7 +148,7 @@ public class CenteredCustomFontView extends View implements Checkable
 			}
 		}
 
-		String tmpText = typedArray.getString(R.styleable.CenteredCustomFontView_android_text);
+		String tmpText = typedArray.getString(R.styleable.FoodLensCenteredCustomFontView_android_text);
 
 		if (tmpText != null)
 		{

@@ -66,7 +66,7 @@ public class CalorieFoodItemWrapper {
     public void populateFrom(FoodSearchData foodItem) {
         showNextCell().setVisibility(View.VISIBLE);
         showNextCell().setText(ArgusIconMap.getInstance().get(ArgusIconMap.NEXT).toString());
-        showNextCell().setTextColor(ContextCompat.getColor(activity, R.color.spinner_color));
+        showNextCell().setTextColor(ContextCompat.getColor(activity, R.color.foodlens_spinner_color));
         getRecentCalories().setVisibility(View.VISIBLE);
         getLunchDetails().setVisibility(View.VISIBLE);
 
@@ -121,7 +121,7 @@ public class CalorieFoodItemWrapper {
             checkBox.setCompoundDrawablesWithIntrinsicBounds(null, null, drawable, null);
             if (!showCheckBox) {
                 checkBox.setVisibility(View.GONE);
-                getRightLayout().setPadding(activity.getResources().getDimensionPixelOffset(R.dimen.calories_padding), 0, 0, 0);
+                getRightLayout().setPadding(activity.getResources().getDimensionPixelOffset(R.dimen.foodlens_calories_padding), 0, 0, 0);
             }
         }
         return (checkBox);

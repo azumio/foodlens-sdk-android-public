@@ -34,7 +34,7 @@ import androidx.navigation.Navigation
 import com.azumio.android.foodlenslibrary.FoodLens
 import com.azumio.android.foodlenslibrary.R
 import com.azumio.android.foodlenslibrary.activity.AddFoodActivity
-import com.azumio.android.foodlenslibrary.activity.FoodLensCameraActivity
+import com.azumio.android.foodlenslibrary.activity.CameraActivity
 import com.azumio.android.foodlenslibrary.activity.ResultActivity
 import com.azumio.android.foodlenslibrary.common.DataWrapper
 import com.azumio.android.foodlenslibrary.core.FoodLensConfig
@@ -44,7 +44,7 @@ import com.azumio.android.foodlenslibrary.utils.*
 import com.azumio.android.foodlenslibrary.utils.datetime.MealTimeHelper
 import com.azumio.android.foodlenslibrary.utils.reachability.InternetReachabilityManager
 import com.azumio.android.foodlenslibrary.views.CenteredCustomFontView
-import kotlinx.android.synthetic.main.fragment_camera.*
+import kotlinx.android.synthetic.main.foodlens_fragment_camera.*
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import java.io.*
@@ -145,7 +145,7 @@ class CameraFragment : Fragment() {
         broadcastManager = LocalBroadcastManager.getInstance(view.context)
 
         // Determine the output directory
-        outputDirectory = FoodLensCameraActivity.getOutputDirectory(requireContext())
+        outputDirectory = CameraActivity.getOutputDirectory(requireContext())
 
         // Wait for the views to be properly laid out
         viewFinder.post {
@@ -312,7 +312,7 @@ class CameraFragment : Fragment() {
         }
 
         // Inflate a new view containing all UI for controlling the camera
-        val controls = View.inflate(requireContext(), R.layout.camera_ui_container, container)
+        val controls = View.inflate(requireContext(), R.layout.foodlens_camera_ui_container, container)
 
         // In the background, load latest photo taken (if any) for gallery thumbnail
         lifecycleScope.launch(Dispatchers.IO) {
@@ -367,7 +367,7 @@ class CameraFragment : Fragment() {
 
                             if(DeviceUtil.isEmulator())
                             {
-                                copyFiletoExternalStorage(R.raw.test_food_image,savedUri.toFile())
+                                copyFiletoExternalStorage(R.raw.foodlens_test_food_image,savedUri.toFile())
                             }
 
 
@@ -487,7 +487,7 @@ class CameraFragment : Fragment() {
             requireActivity().runOnUiThread {
                 Toast.makeText(
                     requireContext(),
-                    requireContext().getString(R.string.no_internet),
+                    requireContext().getString(R.string.foodlens_no_internet),
                     Toast.LENGTH_LONG
                 ).show()
             }

@@ -1,16 +1,11 @@
 package com.azumio.android.foodlenslibrary.fragment;
 
 import android.app.Activity;
-import android.graphics.Point;
 import android.os.Bundle;
-import android.text.Html;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 
 import com.azumio.android.foodlenslibrary.R;
 import com.azumio.android.foodlenslibrary.api.APIClient;
@@ -97,7 +92,7 @@ public class SearchSuggestionFragment extends  SearchRecentFragment {
                                     mAdapter.isSearching = false;
                                     if (response.body().getResults().size() < 1) {
                                         FoodSearchData foodSearchData = new FoodSearchData();
-                                        foodSearchData.setType(getString(R.string.no_result));
+                                        foodSearchData.setType(getString(R.string.foodlens_no_result));
                                         ArrayList<FoodSearchData> emptyResult = new ArrayList<FoodSearchData>();
                                         emptyResult.add(foodSearchData);
                                         updateData(emptyResult, SEARCH_GROUP_POSITION);

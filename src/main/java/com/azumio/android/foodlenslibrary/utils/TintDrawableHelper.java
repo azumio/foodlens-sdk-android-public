@@ -84,7 +84,7 @@ public class TintDrawableHelper
 
 	public void setupToolbarBackgroundFromTheme(@NonNull Toolbar toolbar)
 	{
-		int toolbarColor = getThemeAttrColor(R.attr.toolbarColor);
+		int toolbarColor = getThemeAttrColor(R.attr.foodlens_toolbarColor);
 		if (toolbar != null)
 		{
 			Drawable drawable = new ColorDrawable(toolbarColor);
@@ -106,7 +106,7 @@ public class TintDrawableHelper
 		Window window = activity.getWindow();
 		if (window != null)
 		{
-			int statusBarColor = getThemeAttrColor(R.attr.statusBarColor);
+			int statusBarColor = getThemeAttrColor(R.attr.foodlens_statusBarColor);
 			window.setStatusBarColor(statusBarColor);
 		}
 	}
@@ -205,15 +205,15 @@ public class TintDrawableHelper
 	{
 		if (disabledColor == null)
 		{
-			disabledColor = getThemeAttrColor(R.attr.toolbarNormalColor);
+			disabledColor = getThemeAttrColor(R.attr.foodlens_toolbarNormalColor);
 		}
 		if (normalColor == null)
 		{
-			normalColor = getThemeAttrColor(R.attr.toolbarNormalColor);
+			normalColor = getThemeAttrColor(R.attr.foodlens_toolbarNormalColor);
 		}
 		if (activatedColor == null)
 		{
-			activatedColor = getThemeAttrColor(R.attr.toolbarActiveColor);
+			activatedColor = getThemeAttrColor(R.attr.foodlens_toolbarActiveColor);
 			if (activatedColor == 0)
 			{
 				activatedColor = getDefaultActivatedColor();

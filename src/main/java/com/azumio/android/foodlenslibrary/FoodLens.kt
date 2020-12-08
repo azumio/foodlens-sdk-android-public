@@ -5,7 +5,7 @@ import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
-import com.azumio.android.foodlenslibrary.activity.FoodLensCameraActivity
+import com.azumio.android.foodlenslibrary.activity.CameraActivity
 import com.azumio.android.foodlenslibrary.activity.ResultActivity
 import com.azumio.android.foodlenslibrary.api.APIClient
 import com.azumio.android.foodlenslibrary.api.FoodLensService
@@ -72,7 +72,7 @@ class FoodLens private constructor() {
         requestCode: Int = FOODLENS_CAMERA_ACTIVITY_RESULT_CODE,
         options: Bundle = Bundle()
     ) {
-        val intent = Intent(activity, FoodLensCameraActivity::class.java)
+        val intent = Intent(activity, CameraActivity::class.java)
         intent.putExtras(options)
         activity.startActivityForResult(intent, requestCode)
     }

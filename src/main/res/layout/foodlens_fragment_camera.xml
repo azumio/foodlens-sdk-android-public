@@ -50,8 +50,8 @@
                 android:layout_alignParentLeft="true"
                 android:layout_marginRight="15dp"
                 android:text="&#8592;"
-                android:textColor="@color/white"
-                android:textSize="@dimen/arrow_text_size"
+                android:textColor="@color/foodlens_white"
+                android:textSize="@dimen/foodlens_arrow_text_size"
                 app:fontPath="@string/font_path_material_design_set"
                 />
         </RelativeLayout>

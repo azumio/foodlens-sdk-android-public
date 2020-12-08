@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="35dp"
+              android:background="@color/foodlens_white"
+              android:orientation="vertical"
+	>
+
+	<RelativeLayout
+		android:layout_width="match_parent"
+		android:layout_height="35dp"
+		>
+
+		<com.azumio.android.foodlenslibrary.views.XMLTypefaceTextView
+			android:id="@+id/cell_text_label"
+			android:layout_width="wrap_content"
+			android:layout_height="match_parent"
+			android:layout_alignParentLeft="true"
+			android:layout_centerInParent="true"
+			android:layout_marginLeft="17dip"
+			android:gravity="center_vertical|center"
+			android:singleLine="true"
+			android:text=""
+			android:textColor="@color/foodlens_blue_color"
+			android:textSize="14sp"
+			app:typeface="@string/font_path_roboto_regular"
+			/>
+
+		<com.azumio.android.foodlenslibrary.views.XMLTypefaceTextView
+			android:id="@+id/cell_text_value"
+			android:layout_width="wrap_content"
+			android:layout_height="match_parent"
+			android:layout_alignParentRight="true"
+			android:layout_centerInParent="true"
+			android:layout_marginLeft="17dip"
+			android:gravity="center_vertical|center"
+			android:paddingRight="20dp"
+			android:singleLine="true"
+			android:text="0 cal"
+			android:textSize="14sp"
+			android:textColor="@color/foodlens_blue_color"
+			android:background="@null"
+			app:typeface="@string/font_path_roboto_regular"
+			/>
+	</RelativeLayout>
+
+	<LinearLayout
+		android:id="@+id/separater"
+		android:layout_width="match_parent"
+		android:layout_height="0.5dp"
+		android:layout_below="@+id/proteinLayout"
+		android:layout_marginLeft="20dp"
+		android:background="@color/foodlens_text_gray"
+		android:orientation="horizontal"
+		/>
+
+	<com.azumio.android.foodlenslibrary.views.XMLTypefaceTextView
+		android:id="@+id/cell_value"
+		android:layout_width="wrap_content"
+		android:layout_height="match_parent"
+		android:layout_alignParentRight="true"
+		android:layout_centerInParent="true"
+		android:layout_marginLeft="17dip"
+		android:gravity="center_vertical|center"
+		android:paddingRight="20dp"
+		android:singleLine="true"
+		android:text="0 cal"
+		android:textSize="14sp"
+		android:textColor="@color/foodlens_blue_color"
+		android:background="@null"
+		android:visibility="gone"
+		app:typeface="@string/font_path_roboto_regular"
+		/>
+</LinearLayout>

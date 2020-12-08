@@ -119,7 +119,7 @@ public class SelectFoodFragment extends BaseFragment implements View.OnClickList
 	public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState)
 	{
 		super.onCreateView(inflater, container, savedInstanceState);
-		View mView = inflater.inflate(R.layout.fragment_select_food, null);
+		View mView = inflater.inflate(R.layout.foodlens_fragment_select_food, null);
 		String mealType[] = new String[4];
 		for (int i = 0; i < CaloriesManager.MEAL_ORDER.length; i++)
 		{
@@ -174,7 +174,7 @@ public class SelectFoodFragment extends BaseFragment implements View.OnClickList
 			if (convertView == null)
 			{
 				inflater = LayoutInflater.from(getActivity());
-				view = inflater.inflate(R.layout.cell_food_type, null);
+				view = inflater.inflate(R.layout.foodlens_cell_food_type, null);
 				holder = new ViewHolder();
 				holder.foodType = (TextView) view.findViewById(R.id.foot_type);
 				view.setTag(holder);
@@ -184,20 +184,20 @@ public class SelectFoodFragment extends BaseFragment implements View.OnClickList
 			holder.foodType.setText(mArrayValues.get(position));
 			if (position == selectedPosition)
 			{
-				holder.foodType.setTextColor(ContextCompat.getColor(getParent(), R.color.calories_color));
+				holder.foodType.setTextColor(ContextCompat.getColor(getParent(), R.color.foodlens_calories_color));
 			}
 			else
 			{
-				holder.foodType.setTextColor(ContextCompat.getColor(getParent(), R.color.edit_calories));
+				holder.foodType.setTextColor(ContextCompat.getColor(getParent(), R.color.foodlens_edit_calories));
 			}
-			holder.foodType.setBackgroundResource(R.drawable.ic_cell_gradient_middle_white);
+			holder.foodType.setBackgroundResource(R.drawable.foodlens_ic_cell_gradient_middle_white);
 			if (position == 0)
 			{
-				holder.foodType.setBackgroundResource(R.drawable.ic_cell_gradient_top);
+				holder.foodType.setBackgroundResource(R.drawable.foodlens_ic_cell_gradient_top);
 			}
 			if (position == 3)
 			{
-				holder.foodType.setBackgroundResource(R.drawable.ic_cell_gradient_bottom_white);
+				holder.foodType.setBackgroundResource(R.drawable.foodlens_ic_cell_gradient_bottom_white);
 			}
 			view.setOnClickListener(new OnItemClickListener(position));
 			return view;

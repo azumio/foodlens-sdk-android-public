@@ -71,9 +71,9 @@ public class XMLTypefaceTextView extends AppCompatTextView
 		}
 		String customTypeface;
 		final Resources.Theme theme = context.getTheme();
-		TypedArray a = theme.obtainStyledAttributes(attrs, R.styleable.XMLCustomTypefaceTextView, defStyleAttr, defStyleRes);
+		TypedArray a = theme.obtainStyledAttributes(attrs, R.styleable.FoodLensXMLCustomTypefaceTextView, defStyleAttr, defStyleRes);
 		// DO NOT CHANGE THIS LINE - by default we should use system default font - no hacks please!
-		customTypeface = a.getString(R.styleable.XMLCustomTypefaceTextView_typeface);
+		customTypeface = a.getString(R.styleable.FoodLensXMLCustomTypefaceTextView_foodlens_typeface);
 
 		a.recycle();
 		setTypefaceFromAssets(context, customTypeface);
