@@ -7,7 +7,6 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.azumio.android.foodlenslibrary.R
 import com.azumio.android.foodlenslibrary.model.FoodSuggestionCategory
-import com.azumio.android.foodlenslibrary.model.SegmentResponse
 
 
 class ResultListHeaderAdapter(private val children : List<FoodSuggestionCategory>, private val onclick: (FoodSuggestionCategory, Int) -> Unit, val selectedPosition:Int,private val onSearchClick: ( Int) -> Unit)
@@ -17,7 +16,7 @@ class ResultListHeaderAdapter(private val children : List<FoodSuggestionCategory
                                     viewType: Int): ViewHolder {
 
         val v =  LayoutInflater.from(parent.context)
-            .inflate(R.layout.layout_result_list_header_item,parent,false)
+            .inflate(R.layout.foodlens_layout_result_list_header_item,parent,false)
         return ViewHolder(v)
     }
 
@@ -38,7 +37,7 @@ class ResultListHeaderAdapter(private val children : List<FoodSuggestionCategory
         }
         else
         {
-            holder.groupButton.text = holder.groupButton.context.getString(R.string.search_more)
+            holder.groupButton.text = holder.groupButton.context.getString(R.string.foodlens_search_more)
             holder.groupButton.setOnClickListener { onSearchClick(holder.adapterPosition) }
             holder.groupButton.isSelected = position == selectedPosition
         }

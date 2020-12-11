@@ -7,13 +7,11 @@ import android.graphics.Canvas
 import android.graphics.Matrix
 import android.graphics.drawable.Drawable
 import android.net.Uri
-import android.os.Build
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
 import android.util.Log
 import android.view.LayoutInflater
-import android.view.MotionEvent
 import android.view.View
 import android.view.ViewGroup
 import android.view.animation.LinearInterpolator
@@ -44,18 +42,16 @@ import com.azumio.android.foodlenslibrary.utils.FileUtils
 import com.azumio.android.foodlenslibrary.utils.datetime.MealTimeHelper
 import com.azumio.android.foodlenslibrary.viewModel.ResultViewModel
 import com.azumio.android.foodlenslibrary.viewModel.ResultViewModelModelFactory
-import com.azumio.android.foodlenslibrary.views.ImageContainerLayout
 import com.azumio.android.foodlenslibrary.views.SegmentView
 import com.azumio.android.foodlenslibrary.views.SegmentViewMode
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.target.CustomTarget
 import com.bumptech.glide.request.transition.Transition
 import com.google.android.material.bottomsheet.BottomSheetBehavior
-import com.orhanobut.logger.Logger
 import com.orhanobut.logger.Logger.i
 import it.xabaras.android.recyclerview.swipedecorator.RecyclerViewSwipeDecorator
-import kotlinx.android.synthetic.main.result_bottom_sheet.*
-import kotlinx.android.synthetic.main.result_fragment.*
+import kotlinx.android.synthetic.main.foodlens_result_bottom_sheet.*
+import kotlinx.android.synthetic.main.foodlens_result_fragment.*
 
 
 
@@ -85,7 +81,7 @@ class ResultFragment constructor() : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         if(!this::root.isInitialized) {
-            root = inflater.inflate(R.layout.result_fragment, container, false)
+            root = inflater.inflate(R.layout.foodlens_result_fragment, container, false)
         }
         return root
     }
@@ -184,9 +180,9 @@ class ResultFragment constructor() : Fragment() {
             if((logs?.size ?: 0) <=0)
             {
                 val dialogBuilder = AlertDialog.Builder(requireActivity())
-                dialogBuilder.setMessage(requireActivity().getString( R.string.no_item_logged))
+                dialogBuilder.setMessage(requireActivity().getString( R.string.foodlens_no_item_logged))
                     .setCancelable(false)
-                    .setPositiveButton(requireActivity().getString( R.string.action_ok), DialogInterface.OnClickListener { dialog, id ->
+                    .setPositiveButton(requireActivity().getString( R.string.foodlens_action_ok), DialogInterface.OnClickListener { dialog, id ->
                         dialog.cancel()
                     })
 
@@ -206,10 +202,10 @@ class ResultFragment constructor() : Fragment() {
 
                 requireActivity().supportFragmentManager.commit {
                     setCustomAnimations(
-                        R.anim.slide_in,
-                        R.anim.fade_out,
-                        R.anim.fade_in,
-                        R.anim.slide_out
+                        R.anim.foodlens_slide_in,
+                        R.anim.foodlens_fade_out,
+                        R.anim.foodlens_fade_in,
+                        R.anim.foodlens_slide_out
                     )
                     replace(R.id.fragment_container, fragment)
                     addToBackStack(ReviewFragment.TAG)
@@ -374,10 +370,10 @@ class ResultFragment constructor() : Fragment() {
             ) {
 
                 RecyclerViewSwipeDecorator.Builder(c,recyclerView,viewHolder,dX,dY,actionState,isCurrentlyActive)
-                    .addSwipeLeftActionIcon(R.drawable.ic_food_log_delete)
-                    .addSwipeLeftBackgroundColor(recyclerView.context.getColor(R.color.food_log_delete_color))
-                    .addSwipeRightActionIcon(R.drawable.ic_food_log_check)
-                    .addSwipeRightBackgroundColor(recyclerView.context.getColor(R.color.food_log_swipe_color))
+                    .addSwipeLeftActionIcon(R.drawable.foodlens_ic_food_log_delete)
+                    .addSwipeLeftBackgroundColor(recyclerView.context.getColor(R.color.foodlens_food_log_delete_color))
+                    .addSwipeRightActionIcon(R.drawable.foodlens_ic_food_log_check)
+                    .addSwipeRightBackgroundColor(recyclerView.context.getColor(R.color.foodlens_food_log_swipe_color))
                     .create()
                     .decorate()
 
@@ -436,7 +432,7 @@ class ResultFragment constructor() : Fragment() {
 
     private  fun redrawSegments()
     {
-        val height = requireContext().resources.getDimension(R.dimen.segment_height)
+        val height = requireContext().resources.getDimension(R.dimen.foodlens_segment_height)
         val imageSizePixel = FileUtils.sizeOfImageAtPath(imageURI)
         (image_container as ViewGroup).children.iterator().forEach {
             (it as? SegmentView)?.let { view ->
@@ -503,7 +499,7 @@ class ResultFragment constructor() : Fragment() {
         })
 
         viewModel.allSegmentsDeleted.observe(requireActivity(), Observer {
-            adapter.setData(listOf(ResultListFooterItem(title = requireContext().getString(R.string.nothing_was_logged))))
+            adapter.setData(listOf(ResultListFooterItem(title = requireContext().getString(R.string.foodlens_nothing_was_logged))))
             adapter.notifyDataSetChanged()
         })
 
@@ -541,7 +537,7 @@ class ResultFragment constructor() : Fragment() {
 
         when (resource.status) {
             Status.SUCCESS -> {
-                bottomSheetBehavior.setPeekHeight(requireContext().resources.getDimension(R.dimen.result_bottom_sheet_peek_height).toInt() ,true)
+                bottomSheetBehavior.setPeekHeight(requireContext().resources.getDimension(R.dimen.foodlens_result_bottom_sheet_peek_height).toInt() ,true)
                 bottomSheetBehavior.state = BottomSheetBehavior.STATE_EXPANDED
                 recgonized_list.visibility = View.VISIBLE
                 image_container.isEnabled = true
@@ -550,7 +546,7 @@ class ResultFragment constructor() : Fragment() {
                 save_button_container.visibility = saveButtonVisibility
             }
             Status.ERROR -> {
-                bottomSheetBehavior.setPeekHeight(requireContext().resources.getDimension(R.dimen.result_bottom_sheet_peek_height).toInt() ,true)
+                bottomSheetBehavior.setPeekHeight(requireContext().resources.getDimension(R.dimen.foodlens_result_bottom_sheet_peek_height).toInt() ,true)
                 bottomSheetBehavior.state = BottomSheetBehavior.STATE_EXPANDED
                 progressBar.visibility = View.GONE
                 recgonized_list.visibility = View.VISIBLE
@@ -561,7 +557,7 @@ class ResultFragment constructor() : Fragment() {
             }
             Status.LOADING -> {
                 bottomSheetBehavior.state = BottomSheetBehavior.STATE_COLLAPSED
-                bottomSheetBehavior.setPeekHeight(requireContext().resources.getDimension(R.dimen.result_bottom_sheet_loading_peek_height).toInt() ,true)
+                bottomSheetBehavior.setPeekHeight(requireContext().resources.getDimension(R.dimen.foodlens_result_bottom_sheet_loading_peek_height).toInt() ,true)
                 progressBar.visibility = View.VISIBLE
                 recgonized_list.visibility = View.GONE
                 image_container.isEnabled = false
@@ -574,14 +570,14 @@ class ResultFragment constructor() : Fragment() {
 
     private fun showNotFoodDialogue() {
         val dialogBuilder = AlertDialog.Builder(requireActivity())
-        dialogBuilder.setMessage(requireActivity().getString( R.string.not_food_message))
+        dialogBuilder.setMessage(requireActivity().getString( R.string.foodlens_not_food_message))
             .setCancelable(false)
-            .setPositiveButton(requireActivity().getString( R.string.continue_anyway), DialogInterface.OnClickListener { dialog, id ->
+            .setPositiveButton(requireActivity().getString( R.string.foodlens_continue_anyway), DialogInterface.OnClickListener { dialog, id ->
                 dialog.cancel()
                 viewModel.loadFoodSegments()
             })
             // negative button text and action
-            .setNegativeButton(requireActivity().getString( R.string.retake_photo), DialogInterface.OnClickListener { dialog, id ->
+            .setNegativeButton(requireActivity().getString( R.string.foodlens_retake_photo), DialogInterface.OnClickListener { dialog, id ->
                 activity?.finish()
             })
         val alert = dialogBuilder.create()
@@ -592,13 +588,13 @@ class ResultFragment constructor() : Fragment() {
 
     private fun showDeleteDialogue(seg:FoodSegment) {
         val dialogBuilder = AlertDialog.Builder(requireActivity())
-        dialogBuilder.setMessage(requireActivity().getString( R.string.delete_segment_message))
+        dialogBuilder.setMessage(requireActivity().getString( R.string.foodlens_delete_segment_message))
             .setCancelable(false)
-            .setPositiveButton(requireActivity().getString(R.string.yes), DialogInterface.OnClickListener { dialog, id ->
+            .setPositiveButton(requireActivity().getString(R.string.foodlens_yes), DialogInterface.OnClickListener { dialog, id ->
                 viewModel.deleteSegment(seg)
             })
             // negative button text and action
-            .setNegativeButton(requireActivity().getString(R.string.no), DialogInterface.OnClickListener { dialog, id ->
+            .setNegativeButton(requireActivity().getString(R.string.foodlens_no), DialogInterface.OnClickListener { dialog, id ->
 
             })
         val alert = dialogBuilder.create()
@@ -664,7 +660,7 @@ class ResultFragment constructor() : Fragment() {
             adapter.data.filterIsInstance<ResultListSelectedFoodItem>().let {
                 datalist.addAll(it)
             }
-            datalist.add(ResultListFooterItem(title = requireContext().getString(R.string.all_items_logged)))
+            datalist.add(ResultListFooterItem(title = requireContext().getString(R.string.foodlens_all_items_logged)))
             adapter.setData(datalist)
             adapter.notifyDataSetChanged()
         }
@@ -709,8 +705,8 @@ class ResultFragment constructor() : Fragment() {
 
         bottomSheetBehavior.state = BottomSheetBehavior.STATE_EXPANDED
 
-        val height = requireContext().resources.getDimension(R.dimen.segment_height)
-        val width = requireContext().resources.getDimension(R.dimen.segment_width)
+        val height = requireContext().resources.getDimension(R.dimen.foodlens_segment_height)
+        val width = requireContext().resources.getDimension(R.dimen.foodlens_segment_width)
 
         val imageSizePixel = FileUtils.sizeOfImageAtPath(imageURI)
         val parentLayout = image_container as ConstraintLayout

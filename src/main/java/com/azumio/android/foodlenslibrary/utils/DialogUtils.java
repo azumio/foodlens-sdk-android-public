@@ -29,7 +29,7 @@ public class DialogUtils
 
 	public void showLoadingDialog(Context context)
 	{
-		showDialog(context, R.string.loading);
+		showDialog(context, R.string.foodlens_loading);
 	}
 
 
@@ -70,7 +70,7 @@ public class DialogUtils
 		final AlertDialog.Builder builder = new AlertDialog.Builder(context);
 		applyTitleIfNotEmpty(builder, title);
 		builder.setMessage(message)
-				.setNegativeButton(R.string.action_ok, (dialog, id) ->
+				.setNegativeButton(R.string.foodlens_action_ok, (dialog, id) ->
 				{
 					negativeAction.run();
 					dialog.cancel();

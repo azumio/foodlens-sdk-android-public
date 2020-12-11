@@ -4,12 +4,10 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
-import android.graphics.Point;
 import android.graphics.PointF;
 import android.os.Bundle;
 import android.util.Log;
 import android.util.Pair;
-import android.util.SizeF;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.WindowManager;
@@ -50,7 +48,6 @@ import com.azumio.android.foodlenslibrary.utils.CaloriesSearchLogger;
 import com.azumio.android.foodlenslibrary.utils.ColorUtils;
 import com.azumio.android.foodlenslibrary.utils.DialogUtils;
 import com.azumio.android.foodlenslibrary.utils.KeyboardUtils;
-import com.azumio.android.foodlenslibrary.utils.PremiumStatus;
 import com.azumio.android.foodlenslibrary.utils.TextUtils;
 import com.azumio.android.foodlenslibrary.utils.datetime.MealTimeHelper;
 import com.azumio.android.foodlenslibrary.views.FillingView;
@@ -59,20 +56,15 @@ import com.google.gson.Gson;
 
 import org.jetbrains.annotations.NotNull;
 
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
-import java.util.concurrent.TimeUnit;
 
-import kotlin.Unit;
 import kotlin.coroutines.CoroutineContext;
 import kotlin.coroutines.EmptyCoroutineContext;
-import kotlin.jvm.functions.Function2;
 import kotlinx.coroutines.BuildersKt;
-import kotlinx.coroutines.CoroutineScope;
 import kotlinx.coroutines.CoroutineStart;
 import kotlinx.coroutines.Dispatchers;
 import kotlinx.coroutines.GlobalScope;
@@ -80,7 +72,6 @@ import retrofit2.Response;
 
 import static com.azumio.android.foodlenslibrary.utils.ContextUtils.isGoneOrFinishing;
 import static com.azumio.android.foodlenslibrary.utils.ContextUtils.isNotFinishing;
-import static com.azumio.android.foodlenslibrary.utils.PremiumStatus.isPremium;
 
 
 public class AddFoodActivity extends BaseFragmentActivity {
@@ -247,7 +238,7 @@ public class AddFoodActivity extends BaseFragmentActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         this.getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
-        setContentView(R.layout.activity_addfood_calories);
+        setContentView(R.layout.foodlens_activity_addfood_calories);
        // ButterKnife.bind(this);
 
           searchView = findViewById(R.id.searchtext);
@@ -273,7 +264,7 @@ public class AddFoodActivity extends BaseFragmentActivity {
         dialogUtils = new DialogUtils(this);
         toolbar.setNavigationIcon(R.drawable.abc_ic_ab_back_material);
         toolbar.setNavigationOnClickListener(v -> finish());
-        textView.setText(getString(R.string.add_breakfast));
+        textView.setText(getString(R.string.foodlens_add_breakfast));
         closeBtn.setBackgroundResource(R.drawable.abc_ic_clear_material);
         RelativeLayout foodLayout = (RelativeLayout) findViewById(R.id.foodLayout);
         ImageView barcodeScanner = (ImageView) findViewById(R.id.barcodeScanner);
@@ -314,7 +305,7 @@ public class AddFoodActivity extends BaseFragmentActivity {
 
         search_close_btn.setOnClickListener(view ->
         {
-            searchView.setQueryHint(getString(R.string.search_food));
+            searchView.setQueryHint(getString(R.string.foodlens_search_food));
             searchView.clearFocus();
             searchView.setQuery("", false);
         });
@@ -324,8 +315,8 @@ public class AddFoodActivity extends BaseFragmentActivity {
         }
 
 
-            ColorUtils.setToolbarTextAndIconColors(toolbar, ContextCompat.getColor(this, R.color.white));
-            ColorUtils.setStatusBarColor(this, ContextCompat.getColor(this, R.color.calories_statusbar_color), ContextCompat.getColor(this, R.color.calories_color));
+            ColorUtils.setToolbarTextAndIconColors(toolbar, ContextCompat.getColor(this, R.color.foodlens_white));
+            ColorUtils.setStatusBarColor(this, ContextCompat.getColor(this, R.color.foodlens_foodlens_calories_statusbar_color), ContextCompat.getColor(this, R.color.foodlens_calories_color));
 
         isClicked = false;
         Bundle bundle = getIntent().getExtras();
@@ -342,12 +333,12 @@ public class AddFoodActivity extends BaseFragmentActivity {
                 showRecipe = false;
                 foodLayout.setVisibility(View.GONE);
                 textView.setVisibility(View.VISIBLE);
-                textView.setText(getString(R.string.add_ingredients_label));
-                addLog.setText(getString(R.string.add));
+                textView.setText(getString(R.string.foodlens_add_ingredients_label));
+                addLog.setText(getString(R.string.foodlens_add));
                 setType(INGREDIENTS_KEY);
             } else if (bundle.containsKey(FOOD_TYPE_EXTRA_KEY)) {
                 setType(bundle.getString(FOOD_TYPE_EXTRA_KEY).toLowerCase());
-                mTitle.setText(getString(R.string.add_label) + " " + getType().toLowerCase());
+                mTitle.setText(getString(R.string.foodlens_add_label) + " " + getType().toLowerCase());
             }
 
             if(bundle.containsKey(ADDITIONAL_POINT_EXTRA_KEY))
@@ -362,8 +353,8 @@ public class AddFoodActivity extends BaseFragmentActivity {
             bundle.clear();
 
         } else {
-            setType(getString(R.string.breakfast));
-            addLog.setText(getString(R.string.log));
+            setType(getString(R.string.foodlens_breakfast));
+            addLog.setText(getString(R.string.foodlens_log));
         }
 
         openSearchView();
@@ -378,7 +369,7 @@ public class AddFoodActivity extends BaseFragmentActivity {
             } else {
                 RelativeLayout.LayoutParams params = new RelativeLayout.LayoutParams(RelativeLayout.LayoutParams.MATCH_PARENT, RelativeLayout.LayoutParams.MATCH_PARENT);
                 LinearLayout.LayoutParams params1 = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.MATCH_PARENT);
-                params.setMargins(0, getResources().getDimensionPixelOffset(R.dimen.calories_margin), 0, 0);
+                params.setMargins(0, getResources().getDimensionPixelOffset(R.dimen.foodlens_calories_margin), 0, 0);
                 params.addRule(RelativeLayout.ALIGN_PARENT_TOP);
                 listView.setVisibility(View.VISIBLE);
                 bottomView.setLayoutParams(params);
@@ -443,7 +434,7 @@ public class AddFoodActivity extends BaseFragmentActivity {
 
         fragment.setAdapterListener((position, value) ->
         {
-            mTitle.setText(getString(R.string.add_label) + " " + value.toLowerCase());
+            mTitle.setText(getString(R.string.foodlens_add_label) + " " + value.toLowerCase());
             fragment.setFoodType(value.toLowerCase());
             setType(value.toLowerCase());
             if (checkActiveFragment() != null) {
@@ -451,7 +442,7 @@ public class AddFoodActivity extends BaseFragmentActivity {
             }
         });
 
-        setSearchViewEditTextBackgroundColor(this, searchView, R.color.white);
+        setSearchViewEditTextBackgroundColor(this, searchView, R.color.foodlens_white);
     }
 
     private void initViewPager() {
@@ -475,24 +466,24 @@ public class AddFoodActivity extends BaseFragmentActivity {
 
             }
         });
-        fillingView.setBackgroundColor(ContextCompat.getColor(this, R.color.white));
+        fillingView.setBackgroundColor(ContextCompat.getColor(this, R.color.foodlens_white));
     }
 
     private BasicFragmentsViewPagerAdapter.FragmentDefinition newRecentFragmentDefinition() {
         Bundle arguments = new Bundle();
-        return new BasicFragmentsViewPagerAdapter.FragmentDefinition(getString(R.string.recent), SearchRecentFragment.class, arguments);
+        return new BasicFragmentsViewPagerAdapter.FragmentDefinition(getString(R.string.foodlens_recent), SearchRecentFragment.class, arguments);
     }
 
     private BasicFragmentsViewPagerAdapter.FragmentDefinition newQuickAddFragmentDefinition() {
         Bundle arguments = new Bundle();
-        return new BasicFragmentsViewPagerAdapter.FragmentDefinition(getString(R.string.quick_add), SearchQuickFragment.class, arguments);
+        return new BasicFragmentsViewPagerAdapter.FragmentDefinition(getString(R.string.foodlens_quick_add), SearchQuickFragment.class, arguments);
     }
 
     private BasicFragmentsViewPagerAdapter.FragmentDefinition newSuggestionFragmentDefinition() {
         Bundle arguments = new Bundle();
         arguments.putString(ADDITIONAL_POINT_EXTRA_KEY,this.additionalPoint);
         arguments.putString(IMAGE_CACHE_ID_EXTRA_KEY,this.imageCacheId);
-        return new BasicFragmentsViewPagerAdapter.FragmentDefinition(getString(R.string.suggestions), SearchSuggestionFragment.class, arguments);
+        return new BasicFragmentsViewPagerAdapter.FragmentDefinition(getString(R.string.foodlens_suggestions), SearchSuggestionFragment.class, arguments);
     }
 
 
@@ -623,7 +614,7 @@ public class AddFoodActivity extends BaseFragmentActivity {
         }
 
         if (selectedData.isEmpty()) {
-            dialogUtils.showAlertDialog(getString(R.string.select_fooditem), this);
+            dialogUtils.showAlertDialog(getString(R.string.foodlens_select_fooditem), this);
             return;
         }
 
@@ -806,15 +797,15 @@ public class AddFoodActivity extends BaseFragmentActivity {
             }
         }
 
-        lblTotalItems.setText(String.format("%d %s " + getString(R.string.selected), totalItems, totalItems > 1 ? CaloriesManager.ITEMS : CaloriesManager.ITEM));
-        lblTotalCals.setText(String.format("%d " + getString(R.string.cal_total), (long) totalCal));
+        lblTotalItems.setText(String.format("%d %s " + getString(R.string.foodlens_selected), totalItems, totalItems > 1 ? CaloriesManager.ITEMS : CaloriesManager.ITEM));
+        lblTotalCals.setText(String.format("%d " + getString(R.string.foodlens_cal_total), (long) totalCal));
         if (totalItems > 0) {
             countView.setVisibility(View.VISIBLE);
             loggedCount.setText(totalItems + "");
-            loggedCount.setTextColor(ContextCompat.getColor(this, R.color.calories_color));
+            loggedCount.setTextColor(ContextCompat.getColor(this, R.color.foodlens_calories_color));
         } else {
             countView.setVisibility(View.INVISIBLE);
-            addLog.setText(R.string.log_value);
+            addLog.setText(R.string.foodlens_log_value);
         }
     }
 

@@ -68,12 +68,12 @@ public class ViewPagerTabView extends LinearLayout
 	{
 		textSize = (int) (getResources().getDisplayMetrics().scaledDensity * DEFAULT_TEXT_SIZE_SP);
 
-		TypedArray typedArray = context.obtainStyledAttributes(attrs, R.styleable.ViewPagerTabView, defStyleAttr, 0);
-		int indicatorColor = typedArray.getColor(R.styleable.ViewPagerTabView_indicator_color, Color.BLACK);
-		int indicatorHeight = typedArray.getDimensionPixelSize(R.styleable.ViewPagerTabView_indicator_height, 25);
-		textColor = typedArray.getColor(R.styleable.ViewPagerTabView_tab_text_color, Color.BLACK);
-		textSize = typedArray.getDimensionPixelSize(R.styleable.ViewPagerTabView_tab_text_size, textSize);
-		textAllCaps = typedArray.getBoolean(R.styleable.ViewPagerTabView_text_all_caps, true);
+		TypedArray typedArray = context.obtainStyledAttributes(attrs, R.styleable.FoodLensViewPagerTabView, defStyleAttr, 0);
+		int indicatorColor = typedArray.getColor(R.styleable.FoodLensViewPagerTabView_foodlens_indicator_color, Color.BLACK);
+		int indicatorHeight = typedArray.getDimensionPixelSize(R.styleable.FoodLensViewPagerTabView_foodlens_indicator_height, 25);
+		textColor = typedArray.getColor(R.styleable.FoodLensViewPagerTabView_foodlens_tab_text_color, Color.BLACK);
+		textSize = typedArray.getDimensionPixelSize(R.styleable.FoodLensViewPagerTabView_foodlens_tab_text_size, textSize);
+		textAllCaps = typedArray.getBoolean(R.styleable.FoodLensViewPagerTabView_foodlens_text_all_caps, true);
 		typedArray.recycle();
 
 		selectedIndicatorPaint.setColor(indicatorColor);
@@ -172,7 +172,7 @@ public class ViewPagerTabView extends LinearLayout
 		CenteredCustomFontView textView = new CenteredCustomFontView(context);
 		textView.setLayoutParams(new LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.MATCH_PARENT));
 
-		textView.setTextSize(getResources().getDimensionPixelOffset(R.dimen.viewpager_textsize));
+		textView.setTextSize(getResources().getDimensionPixelOffset(R.dimen.foodlens_viewpager_textsize));
 
 		textView.setAlpha(MIN_ALPHA);
 

@@ -47,7 +47,7 @@ public class BottomSelectedListAdapter extends BaseExpandableListAdapter
 		mKeys = new ArrayList<>();
 		if (isIngredientMode)
 		{
-			mKeys.add(mActivity.getString(R.string.ingredients));
+			mKeys.add(mActivity.getString(R.string.foodlens_ingredients));
 		}
 		else
 		{
@@ -120,14 +120,14 @@ public class BottomSelectedListAdapter extends BaseExpandableListAdapter
 		if (row == null)
 		{
 			LayoutInflater inflater = LayoutInflater.from(mActivity);
-			row = inflater.inflate(R.layout.cell_group_recent_list, null);
+			row = inflater.inflate(R.layout.foodlens_cell_group_recent_list, null);
 		}
 
 		String key = mKeys.get(groupPosition);
 		TextView title = (TextView) row.findViewById(R.id.cell_recent_lunch_type);
 		RelativeLayout layout = (RelativeLayout) row.findViewById(R.id.menulist);
 		title.setText(key.toUpperCase());
-		layout.setBackgroundColor(ContextCompat.getColor(mActivity, R.color.white));
+		layout.setBackgroundColor(ContextCompat.getColor(mActivity, R.color.foodlens_white));
 		RelativeLayout verifiedLayout = (RelativeLayout) row.findViewById(R.id.verifiedLayout);
 		verifiedLayout.setVisibility(View.GONE);
 		return row;
@@ -153,7 +153,7 @@ public class BottomSelectedListAdapter extends BaseExpandableListAdapter
 		if (row == null)
 		{
 			LayoutInflater inflater = LayoutInflater.from(mActivity);
-			row = inflater.inflate(R.layout.cell_child_recent_list, null);
+			row = inflater.inflate(R.layout.foodlens_cell_child_recent_list, null);
 			wrapper = new CalorieFoodItemWrapper(row, mActivity, true);
 			wrapper.setChecked(true);
 			wrapper.setIItemCheckChangedListener((compoundButton, b, foodItem) -> {

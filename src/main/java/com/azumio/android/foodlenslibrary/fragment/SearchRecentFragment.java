@@ -171,9 +171,9 @@ public class SearchRecentFragment extends BaseFragment implements OnSearchListen
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
 	{
-		mView = inflater.inflate(R.layout.fragment_search_recent, container, false);
+		mView = inflater.inflate(R.layout.foodlens_fragment_search_recent, container, false);
 		mMainView = mView.findViewById(R.id.recent_list_view);
-		View footerView = ((LayoutInflater) getParent().getSystemService(Context.LAYOUT_INFLATER_SERVICE)).inflate(R.layout.calories_footer_layout, null, false);
+		View footerView = ((LayoutInflater) getParent().getSystemService(Context.LAYOUT_INFLATER_SERVICE)).inflate(R.layout.foodlens_calories_footer_layout, null, false);
 		mMainView.addFooterView(footerView);
 		mApplicationContext = getActivity().getApplicationContext();
 		mFoodActivity = (AddFoodActivity) getActivity();
@@ -202,7 +202,7 @@ public class SearchRecentFragment extends BaseFragment implements OnSearchListen
 					if (foodItem != null)
 					{
 						String mType = foodItem.getType() == null ? "" : foodItem.getType();
-						if (mType.equalsIgnoreCase(getString(R.string.no_result)))
+						if (mType.equalsIgnoreCase(getString(R.string.foodlens_no_result)))
 						{
 							return true;
 						}
@@ -391,7 +391,7 @@ public class SearchRecentFragment extends BaseFragment implements OnSearchListen
 								mAdapter.isSearching = false;
 								if (response.body().getResults().size() < 1) {
 									FoodSearchData foodSearchData = new FoodSearchData();
-									foodSearchData.setType(getString(R.string.no_result));
+									foodSearchData.setType(getString(R.string.foodlens_no_result));
 									ArrayList<FoodSearchData> emptyResult = new ArrayList<FoodSearchData>();
 									emptyResult.add(foodSearchData);
 									updateData(emptyResult, SEARCH_GROUP_POSITION);
@@ -554,12 +554,12 @@ public class SearchRecentFragment extends BaseFragment implements OnSearchListen
 			if (row == null)
 			{
 				LayoutInflater inflater = LayoutInflater.from(getActivity());
-				row = inflater.inflate(R.layout.cell_group_recent_list, null);
+				row = inflater.inflate(R.layout.foodlens_cell_group_recent_list, null);
 			}
 			else if (row.findViewById(R.id.cell_recent_lunch_type) == null)
 			{
 				LayoutInflater inflater = (LayoutInflater) getActivity().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-				row = inflater.inflate(R.layout.cell_group_recent_list, null);
+				row = inflater.inflate(R.layout.foodlens_cell_group_recent_list, null);
 			}
 
 			TextView title = (TextView) row.findViewById(R.id.cell_recent_lunch_type);
@@ -567,18 +567,18 @@ public class SearchRecentFragment extends BaseFragment implements OnSearchListen
 			verifiedLayout.setVisibility(View.GONE);
 			if (groupPosition == RECENT_GROUP_POSITION)
 			{
-				title.setText(getString(R.string.my_recent) + " " + ((AddFoodActivity) getParent()).getType().toUpperCase());
+				title.setText(getString(R.string.foodlens_my_recent) + " " + ((AddFoodActivity) getParent()).getType().toUpperCase());
 			}
 			else
 			{
 				if ( this.searchText.length() > 0)
 				{
 					if(isSearching) {
-						title.setText(getString(R.string.searching_for) + " " + this.searchText);
+						title.setText(getString(R.string.foodlens_searching_for) + " " + this.searchText);
 					}
 					else
 					{
-						title.setText(getString(R.string.search_results) + " " + this.searchText);
+						title.setText(getString(R.string.foodlens_search_results) + " " + this.searchText);
 					}
 				}
 
@@ -608,7 +608,7 @@ public class SearchRecentFragment extends BaseFragment implements OnSearchListen
 			if (row == null)
 			{
 				LayoutInflater inflater = LayoutInflater.from(getActivity());
-				row = inflater.inflate(R.layout.cell_child_recent_list, null);
+				row = inflater.inflate(R.layout.foodlens_cell_child_recent_list, null);
 				wrapper = new CalorieFoodItemWrapper(row, getActivity(), true);
 				wrapper.setIItemCheckChangedListener((compoundButton, b, foodItem) ->
 				{
@@ -646,7 +646,7 @@ public class SearchRecentFragment extends BaseFragment implements OnSearchListen
 				wrapper.setChecked(mFoodActivity.containsFoodItem(mFoodSearchData.get(groupPosition).get(childPosition), mFoodActivity.getType()));
 				foodLayout.setVisibility(View.VISIBLE);
 				String mType = mFoodSearchData.get(groupPosition).get(childPosition).getType() == null ? "" : mFoodSearchData.get(groupPosition).get(childPosition).getType();
-				if (mType.equalsIgnoreCase(getString(R.string.no_result)))
+				if (mType.equalsIgnoreCase(getString(R.string.foodlens_no_result)))
 				{
 					mNoresult.setVisibility(View.VISIBLE);
 					foodLayout.setVisibility(View.GONE);
@@ -657,7 +657,7 @@ public class SearchRecentFragment extends BaseFragment implements OnSearchListen
 				}
 			}
 
-			row.setBackgroundResource(R.drawable.ic_cell_gradient_middle);
+			row.setBackgroundResource(R.drawable.foodlens_ic_cell_gradient_middle);
 			return (row);
 		}
 	}

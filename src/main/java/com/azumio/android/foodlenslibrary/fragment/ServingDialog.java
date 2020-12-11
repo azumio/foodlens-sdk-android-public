@@ -76,8 +76,8 @@ public class ServingDialog extends DialogFragment
 	@Override
 	public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState)
 	{
-		View mView = inflater.inflate(R.layout.cell_serving_view, null);
-		SpinnerAdapter spinnerAdapter = new SpinnerAdapter(getActivity(), R.layout.custom_spinner_item, mServingSizeDataList);
+		View mView = inflater.inflate(R.layout.foodlens_cell_serving_view, null);
+		SpinnerAdapter spinnerAdapter = new SpinnerAdapter(getActivity(), R.layout.foodlens_custom_spinner_item, mServingSizeDataList);
 
 		SetTextWatcher textWatcher = new SetTextWatcher();
 		mServingCountText = (EditText) mView.findViewById(R.id.cell_numberserving_count);
@@ -108,7 +108,7 @@ public class ServingDialog extends DialogFragment
 
 			}
 		});
-		getDialog().setTitle(getString(R.string.how_much));
+		getDialog().setTitle(getString(R.string.foodlens_how_much));
 		final Button Set = (Button) mView.findViewById(R.id.buttonSet);
 		final Button Cancel = (Button) mView.findViewById(R.id.buttonCancel);
 
@@ -200,7 +200,7 @@ public class ServingDialog extends DialogFragment
 		public View getCustomView(int position, View convertView, ViewGroup parent)
 		{
 			LayoutInflater inflater = LayoutInflater.from(context);
-			View row = inflater.inflate(R.layout.custom_spinner_item, parent, false);
+			View row = inflater.inflate(R.layout.foodlens_custom_spinner_item, parent, false);
 			TextView label = (TextView) row.findViewById(R.id.item);
 			label.setText(mSizeDatas.get(position).getUnit());
 			return row;

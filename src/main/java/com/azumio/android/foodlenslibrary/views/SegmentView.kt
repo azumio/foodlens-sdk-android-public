@@ -20,7 +20,7 @@ import androidx.core.widget.TextViewCompat
 import com.azumio.android.foodlenslibrary.R
 import com.azumio.android.foodlenslibrary.adapter.ResultListBaseItem
 import com.azumio.android.foodlenslibrary.model.FoodSegment
-import kotlinx.android.synthetic.main.segment_layout.view.*
+import kotlinx.android.synthetic.main.foodlens_segment_layout.view.*
 
 
 enum class SegmentViewMode(value: Int) {
@@ -39,7 +39,7 @@ class SegmentView: ConstraintLayout {
     )
 
     init {
-        val view = LayoutInflater.from(context).inflate(R.layout.segment_layout, this, false)
+        val view = LayoutInflater.from(context).inflate(R.layout.foodlens_segment_layout, this, false)
         view.id = View.generateViewId()
         val set = ConstraintSet()
         addView(view)
@@ -154,7 +154,7 @@ class StackAdapter internal constructor(context: Context, private var foodList: 
         var convertView = p1
         val holder: ViewHolder
         if (convertView == null) {
-            convertView = inflater.inflate(R.layout.layout_stack_item, p2, false)
+            convertView = inflater.inflate(R.layout.foodlens_layout_stack_item, p2, false)
             holder = ViewHolder()
             holder.textView = convertView!!.findViewById(R.id.food_name)
             convertView.tag = holder

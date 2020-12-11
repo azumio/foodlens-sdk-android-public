@@ -51,7 +51,6 @@ import com.azumio.android.foodlenslibrary.views.FillingView;
 
 import org.jetbrains.annotations.NotNull;
 
-import java.io.IOException;
 import java.text.NumberFormat;
 import java.util.Arrays;
 import java.util.HashMap;
@@ -102,10 +101,10 @@ public class EditEntryActivity extends BaseFragmentActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         UiUtils.setupFullscreen(this);
-        setContentView(R.layout.activity_edit_calorie_entry);
+        setContentView(R.layout.foodlens_activity_edit_calorie_entry);
         mToolbar = findViewById(R.id.main_menu_toolbars);
-        mToolbar.setBackgroundColor(ContextCompat.getColor(this, R.color.calories_color));
-        ColorUtils.setStatusBarColor(this, ContextCompat.getColor(this, R.color.calories_statusbar_color), ContextCompat.getColor(this, R.color.calories_color));
+        mToolbar.setBackgroundColor(ContextCompat.getColor(this, R.color.foodlens_calories_color));
+        ColorUtils.setStatusBarColor(this, ContextCompat.getColor(this, R.color.foodlens_foodlens_calories_statusbar_color), ContextCompat.getColor(this, R.color.foodlens_calories_color));
         initBackArrow();
         dialogUtils = new DialogUtils(this);
         mLblTotalCalories = findViewById(R.id.lblTotalCalories);
@@ -113,7 +112,7 @@ public class EditEntryActivity extends BaseFragmentActivity {
         mLblTotalFats = findViewById(R.id.lblTotalFat);
         mLblTotalProteins = findViewById(R.id.lblTotalProtien);
         mMainView = findViewById(R.id.recent_list_view);
-        View footerView = ((LayoutInflater) getSystemService(Context.LAYOUT_INFLATER_SERVICE)).inflate(R.layout.calories_footer_layout, null, false);
+        View footerView = ((LayoutInflater) getSystemService(Context.LAYOUT_INFLATER_SERVICE)).inflate(R.layout.foodlens_calories_footer_layout, null, false);
         mMainView.addFooterView(footerView);
         mAdd = mToolbar.findViewById(R.id.toolbar_done);
 
@@ -145,10 +144,10 @@ public class EditEntryActivity extends BaseFragmentActivity {
         mAdd.setOnClickListener(view ->
         {
             if (mCurrentNumberOfServing == null) {
-                dialogUtils.showAlertDialog(getString(R.string.add_servings), EditEntryActivity.this);
+                dialogUtils.showAlertDialog(getString(R.string.foodlens_add_servings), EditEntryActivity.this);
                 return;
             } else if (mCurrentNumberOfServing == 0) {
-                dialogUtils.showAlertDialog(getString(R.string.add_valid_servings), EditEntryActivity.this);
+                dialogUtils.showAlertDialog(getString(R.string.foodlens_add_valid_servings), EditEntryActivity.this);
                 return;
             }
             Intent intent = new Intent();
@@ -412,13 +411,13 @@ public class EditEntryActivity extends BaseFragmentActivity {
         SpannableStringBuilder sb = new SpannableStringBuilder();
         int start = sb.length();
         sb.append(caption);
-        sb.setSpan(new TextAppearanceSpan(null, Typeface.BOLD, getResources().getDimensionPixelSize(R.dimen.serving_unit_text), null, null), start, start + caption.length(),
+        sb.setSpan(new TextAppearanceSpan(null, Typeface.BOLD, getResources().getDimensionPixelSize(R.dimen.foodlens_serving_unit_text), null, null), start, start + caption.length(),
                 Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
         String sedText = "\n" + description;
         start = sb.length();
         if (description.length() > 0) {
             sb.append(sedText);
-            sb.setSpan(new TextAppearanceSpan(null, Typeface.NORMAL, getResources().getDimensionPixelSize(R.dimen.serving_unit_textsize), null, null), start,
+            sb.setSpan(new TextAppearanceSpan(null, Typeface.NORMAL, getResources().getDimensionPixelSize(R.dimen.foodlens_serving_unit_textsize), null, null), start,
                     start + sedText.length(), Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
             numberOfServings.setText(sb);
         } else {
@@ -462,7 +461,7 @@ public class EditEntryActivity extends BaseFragmentActivity {
             View row = convertView;
             if (row == null) {
                 LayoutInflater inflater = LayoutInflater.from(EditEntryActivity.this);
-                row = inflater.inflate(R.layout.cell_edit_group_recent_list, null);
+                row = inflater.inflate(R.layout.foodlens_cell_edit_group_recent_list, null);
             }
 
             TextView title = row.findViewById(R.id.cell_recent_lunch_type);
@@ -478,18 +477,18 @@ public class EditEntryActivity extends BaseFragmentActivity {
             if (mCalorieData != null) {
                 if (groupPosition == 0) {
                     ViewGroup.LayoutParams params = headerLayout.getLayoutParams();
-                    params.height = getResources().getDimensionPixelOffset(R.dimen.layout_group_height);
+                    params.height = getResources().getDimensionPixelOffset(R.dimen.foodlens_layout_group_height);
                     params.width = ViewGroup.LayoutParams.MATCH_PARENT;
                     headerLayout.setLayoutParams(params);
                     downarrow.setVisibility(View.GONE);
                     ViewGroup.LayoutParams params1 = innerView.getLayoutParams();
-                    params1.height = getResources().getDimensionPixelOffset(R.dimen.layout_group_height);
+                    params1.height = getResources().getDimensionPixelOffset(R.dimen.foodlens_layout_group_height);
                     params1.width = ViewGroup.LayoutParams.MATCH_PARENT;
                     innerView.setLayoutParams(params1);
-                    headerLayout.setBackgroundColor(ContextCompat.getColor(EditEntryActivity.this, R.color.background_color));
+                    headerLayout.setBackgroundColor(ContextCompat.getColor(EditEntryActivity.this, R.color.foodlens_background_color));
                     title.setText(mCalorieData.getName());
                     title.setTextSize(20.0f);
-                    title.setTextColor(ContextCompat.getColor(EditEntryActivity.this, R.color.text_color));
+                    title.setTextColor(ContextCompat.getColor(EditEntryActivity.this, R.color.foodlens_text_color));
 
                         if (mCalorieData.getValidated()) {
                             verifiedLayout.setVisibility(View.VISIBLE);
@@ -511,24 +510,24 @@ public class EditEntryActivity extends BaseFragmentActivity {
                     }
                 } else if (groupPosition == 1) {
                     ViewGroup.LayoutParams params = headerLayout.getLayoutParams();
-                    params.height = getResources().getDimensionPixelOffset(R.dimen.layout_height);
+                    params.height = getResources().getDimensionPixelOffset(R.dimen.foodlens_layout_height);
                     params.width = ViewGroup.LayoutParams.MATCH_PARENT;
                     headerLayout.setLayoutParams(params);
 
                     ViewGroup.LayoutParams params1 = innerView.getLayoutParams();
-                    params1.height = getResources().getDimensionPixelOffset(R.dimen.layout_height);
+                    params1.height = getResources().getDimensionPixelOffset(R.dimen.foodlens_layout_height);
                     params1.width = ViewGroup.LayoutParams.MATCH_PARENT;
                     innerView.setLayoutParams(params1);
                     downarrow.setVisibility(View.VISIBLE);
                     if (!groupExpanded) {
-                        downarrow.setBackgroundResource(R.drawable.downarrow);
+                        downarrow.setBackgroundResource(R.drawable.foodlens_downarrow);
                     } else {
-                        downarrow.setBackgroundResource(R.drawable.uparrow);
+                        downarrow.setBackgroundResource(R.drawable.foodlens_uparrow);
                     }
-                    headerLayout.setBackgroundColor(ContextCompat.getColor(EditEntryActivity.this, R.color.white));
-                    title.setText(getString(R.string.nutrition_facts));
+                    headerLayout.setBackgroundColor(ContextCompat.getColor(EditEntryActivity.this, R.color.foodlens_white));
+                    title.setText(getString(R.string.foodlens_nutrition_facts));
                     title.setTextSize(15.0f);
-                    title.setTextColor(ContextCompat.getColor(EditEntryActivity.this, R.color.text_color));
+                    title.setTextColor(ContextCompat.getColor(EditEntryActivity.this, R.color.foodlens_text_color));
                     textVerified.setVisibility(View.GONE);
                     verifiedLayout.setVisibility(View.GONE);
                     editRecipe.setVisibility(View.GONE);
@@ -556,14 +555,14 @@ public class EditEntryActivity extends BaseFragmentActivity {
             switch (groupPosition) {
                 case 0:
                     LayoutInflater inflater = LayoutInflater.from(EditEntryActivity.this);
-                    row = inflater.inflate(R.layout.cell_calories_servings, null);
+                    row = inflater.inflate(R.layout.foodlens_cell_calories_servings, null);
                     mTextServingcount = row.findViewById(R.id.cell_serving_count);
                     mNumberServingCount = row.findViewById(R.id.cell_numberserving_count);
                     wrapper1 = new EditEntryRecyclerViewWrapper(row);
                     break;
                 case 1:
                     LayoutInflater inflater1 = LayoutInflater.from(EditEntryActivity.this);
-                    row = inflater1.inflate(R.layout.cell_calories_nutritions, null);
+                    row = inflater1.inflate(R.layout.foodlens_cell_calories_nutritions, null);
                     wrapper = new EditEntryItemsWrapper(row);
                     break;
             }
@@ -689,7 +688,7 @@ public class EditEntryActivity extends BaseFragmentActivity {
             if (nutritionData.getBold() > -1) {
                 boolean isBold = nutritionData.getBold() == 1;
                 float textSize = isBold ? 15.0f : 12.0f;
-                int color = ContextCompat.getColor(EditEntryActivity.this, isBold ? R.color.edit_calories : R.color.edit_calories_light_color);
+                int color = ContextCompat.getColor(EditEntryActivity.this, isBold ? R.color.foodlens_edit_calories : R.color.foodlens_edit_calories_light_color);
                 if (getCellTextLabel() != null && getCellTextValue() != null) {
                     if (isBold) {
                         getCellTextLabel().setTypeface(Typeface.createFromAsset(getAssets(), "fonts/roboto_medium.ttf"));
@@ -777,7 +776,7 @@ public class EditEntryActivity extends BaseFragmentActivity {
 
         @Override
         public HorizontalAdapter.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-            View itemView = LayoutInflater.from(parent.getContext()).inflate(R.layout.horizontal_item_view, parent, false);
+            View itemView = LayoutInflater.from(parent.getContext()).inflate(R.layout.foodlens_horizontal_item_view, parent, false);
             mViewHolder = new HorizontalAdapter.ViewHolder(itemView);
             return mViewHolder;
         }
@@ -800,7 +799,7 @@ public class EditEntryActivity extends BaseFragmentActivity {
         private void onServingUnitClick(ViewHolder holder, int position, SegmentResponse.FoodItem.ServingSize sizeData) {
             holder.servingUnit.setOnClickListener(v ->
             {
-                holder.servingUnit.setTextColor(ContextCompat.getColor(EditEntryActivity.this, R.color.selected_text_color));
+                holder.servingUnit.setTextColor(ContextCompat.getColor(EditEntryActivity.this, R.color.foodlens_selected_text_color));
                 notifyItemChanged(selected_position);
                 selected_position = position;
                 mCurrentServingUnit = sizeData.getUnit();
@@ -818,14 +817,14 @@ public class EditEntryActivity extends BaseFragmentActivity {
             if (mCurrentServingUnit.equalsIgnoreCase(sizeData.getUnit())) {
                 selected_position = position;
 
-                holder.mainView.setBackgroundResource(R.drawable.orange_rect_border);
-                holder.servingUnit.setTextColor(ContextCompat.getColor(EditEntryActivity.this, R.color.selected_text_color));
+                holder.mainView.setBackgroundResource(R.drawable.foodlens_orange_rect_border);
+                holder.servingUnit.setTextColor(ContextCompat.getColor(EditEntryActivity.this, R.color.foodlens_selected_text_color));
                 if (mSizeDatas.get(position).getServingWeight() > 0) {
                     mCurrentServingWeight = Double.valueOf(sizeData.getServingWeight());
                 }
             } else {
-                holder.mainView.setBackgroundResource(R.drawable.corner_radius_rect_border);
-                holder.servingUnit.setTextColor(ContextCompat.getColor(EditEntryActivity.this, R.color.text_color));
+                holder.mainView.setBackgroundResource(R.drawable.foodlens_corner_radius_rect_border);
+                holder.servingUnit.setTextColor(ContextCompat.getColor(EditEntryActivity.this, R.color.foodlens_text_color));
             }
         }
 

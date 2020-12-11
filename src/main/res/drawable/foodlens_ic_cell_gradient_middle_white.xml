@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+	<item>
+		<shape>
+			<solid android:color="@color/foodlens_white"/>
+
+		</shape>
+	</item>
+
+
+	<item>
+		<shape>
+			<gradient
+				android:startColor="@android:color/white"
+				android:endColor="@android:color/white"
+				android:angle="-90"
+				/>
+			<!--<stroke android:width="0.5dp" android:color="#ADADAD" />-->
+		</shape>
+	</item>
+</selector>

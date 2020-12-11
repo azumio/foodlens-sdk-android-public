@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/foodlens_background_color"
+                android:orientation="vertical"
+	>
+
+
+	<com.azumio.android.foodlenslibrary.views.FillingView
+		android:id="@+id/main_menu_toolbars"
+		android:layout_width="match_parent"
+		android:layout_height="?attr/actionBarSize"
+		android:elevation="@dimen/foodlens_action_bar_elevation"
+		android:background="?attr/colorPrimary"
+		android:minHeight="?attr/actionBarSize"
+		android:visibility="visible"
+		>
+
+		<RelativeLayout
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			>
+
+			<com.azumio.android.foodlenslibrary.views.CenteredCustomFontView
+				android:id="@+id/activity_with_fragment_arrow"
+				android:layout_width="30dp"
+				android:layout_height="match_parent"
+				android:layout_marginRight="15dp"
+				android:textColor="@android:color/white"
+				android:textSize="30dp"
+				app:fontPath="@string/font_path_material_design_set"
+				/>
+
+			<com.azumio.android.foodlenslibrary.views.XMLTypefaceTextView
+				android:id="@+id/activity_with_fragment_toolbar_textview"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_centerVertical="true"
+				android:layout_marginLeft="10dp"
+				android:layout_toRightOf="@+id/activity_with_fragment_arrow"
+				android:ellipsize="end"
+				android:singleLine="true"
+				android:text="@string/foodlens_edit_entry"
+				android:textColor="@android:color/white"
+				android:textSize="20dp"
+				app:typeface="@string/font_path_roboto_regular"
+				/>
+
+			<com.azumio.android.foodlenslibrary.views.CenteredCustomFontView
+				android:id="@+id/toolbar_done"
+				android:layout_width="30dp"
+				android:layout_height="match_parent"
+				android:layout_alignParentRight="true"
+				android:layout_marginLeft="15dp"
+				android:layout_marginRight="10dp"
+				android:text="@string/foodlens_font_material_design_set_character_check"
+				android:textColor="@color/foodlens_white"
+				android:textSize="@dimen/foodlens_arrow_text_size"
+				app:fontPath="@string/font_path_material_design_set"
+				/>
+
+			<ProgressBar
+				android:id="@+id/progressView"
+				style="@android:style/Widget.Holo.ProgressBar"
+				android:layout_width="25dp"
+				android:layout_height="25dp"
+				android:layout_alignParentRight="true"
+				android:layout_centerVertical="true"
+				android:layout_marginRight="25dp"
+				android:indeterminate="true"
+				android:visibility="gone"
+				/>
+		</RelativeLayout>
+
+	</com.azumio.android.foodlenslibrary.views.FillingView>
+
+
+	<ExpandableListView
+		android:id="@+id/recent_list_view"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_below="@+id/main_menu_toolbars"
+		android:background="@color/foodlens_background_color"
+		android:childDivider="@android:color/transparent"
+		android:choiceMode="singleChoice"
+		android:clickable="true"
+		android:divider="@null"
+		android:dividerHeight="0dp"
+		android:groupIndicator="@null"
+		android:scrollingCache="false"
+		/>
+
+	<LinearLayout
+		android:id="@+id/pickerView"
+		android:layout_width="match_parent"
+		android:layout_height="250dp"
+		android:layout_alignParentBottom="true"
+		android:layout_gravity="center_vertical"
+		android:background="#EAEDF0"
+		android:gravity="center"
+		android:orientation="horizontal"
+		android:visibility="gone"
+		>
+
+		<NumberPicker
+			android:id="@+id/numberPicker"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			/>
+
+		<NumberPicker
+			android:id="@+id/numberPicker1"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			/>
+	</LinearLayout>
+
+	<LinearLayout
+		android:id="@+id/bottomLayout"
+		android:layout_width="match_parent"
+		android:layout_height="56dp"
+		android:layout_alignParentBottom="true"
+		android:background="@color/foodlens_background_color"
+		android:orientation="vertical"
+		android:weightSum="4"
+		>
+
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="0.5dp"
+			android:background="@color/foodlens_text_gray"
+			android:orientation="horizontal"
+			/>
+
+		<LinearLayout
+			android:id="@+id/bottomview"
+			android:layout_width="match_parent"
+			android:layout_height="56dp"
+			android:layout_alignParentBottom="true"
+			android:orientation="horizontal"
+			android:weightSum="4"
+			>
+
+			<LinearLayout
+				android:layout_width="match_parent"
+				android:layout_height="35dp"
+				android:layout_gravity="center_vertical"
+				android:gravity="center"
+				>
+
+				<RelativeLayout
+					android:layout_width="0dp"
+					android:layout_height="30dp"
+					android:layout_gravity="center_vertical"
+					android:layout_weight="0.005"
+					android:background="@color/foodlens_label"
+					/>
+
+				<RelativeLayout
+					android:layout_width="0dp"
+					android:layout_height="35dp"
+					android:layout_weight="1"
+					android:gravity="center"
+					>
+
+					<com.azumio.android.foodlenslibrary.views.XMLTypefaceTextView
+						android:id="@+id/lblTotalCalories"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:layout_alignParentTop="true"
+						android:layout_centerVertical="true"
+						android:gravity="center_horizontal"
+						android:text="0 "
+						android:textColor="@color/foodlens_blue_color"
+						android:textSize="15sp"
+						android:textStyle="bold"
+						app:typeface="@string/font_path_roboto_regular"
+						/>
+
+					<com.azumio.android.foodlenslibrary.views.XMLTypefaceTextView
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:layout_alignParentBottom="true"
+						android:layout_below="@+id/lblTotalCalories"
+						android:gravity="center"
+						android:text="@string/foodlens_cal"
+						android:textColor="@color/foodlens_light_gray_text_color"
+						android:textSize="12sp"
+						app:typeface="@string/font_path_roboto_regular"
+						/>
+				</RelativeLayout>
+
+				<RelativeLayout
+					android:layout_width="0dp"
+					android:layout_height="30dp"
+					android:layout_gravity="center_vertical"
+					android:layout_weight="0.005"
+					android:background="@color/foodlens_label"
+					/>
+
+				<RelativeLayout
+					android:layout_width="0dp"
+					android:layout_height="35dp"
+					android:layout_weight="1"
+					android:gravity="center"
+					>
+
+					<com.azumio.android.foodlenslibrary.views.XMLTypefaceTextView
+						android:id="@+id/lblTotalCarbs"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:layout_alignParentTop="true"
+						android:layout_centerVertical="true"
+						android:gravity="center_horizontal"
+						android:text="0 g"
+						android:textColor="@color/foodlens_blue_color"
+						android:textSize="15sp"
+						android:textStyle="bold"
+						app:typeface="@string/font_path_roboto_regular"
+						/>
+
+					<com.azumio.android.foodlenslibrary.views.XMLTypefaceTextView
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:layout_alignParentBottom="true"
+						android:layout_below="@+id/lblTotalCarbs"
+						android:gravity="center"
+						android:text="@string/foodlens_carb"
+						android:textColor="@color/foodlens_light_gray_text_color"
+						android:textSize="12sp"
+						app:typeface="@string/font_path_roboto_regular"
+						/>
+				</RelativeLayout>
+
+				<RelativeLayout
+					android:layout_width="0dp"
+					android:layout_height="30dp"
+					android:layout_gravity="center_vertical"
+					android:layout_weight="0.005"
+					android:background="@color/foodlens_label"
+					/>
+
+				<RelativeLayout
+					android:layout_width="0dp"
+					android:layout_height="35dp"
+					android:layout_weight="1"
+					android:gravity="center"
+					>
+
+					<com.azumio.android.foodlenslibrary.views.XMLTypefaceTextView
+						android:id="@+id/lblTotalFat"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:layout_alignParentTop="true"
+						android:gravity="center_horizontal"
+						android:text="0 g"
+						android:textColor="@color/foodlens_blue_color"
+						android:textSize="15sp"
+						android:textStyle="bold"
+						app:typeface="@string/font_path_roboto_regular"
+						/>
+
+					<com.azumio.android.foodlenslibrary.views.XMLTypefaceTextView
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:layout_alignParentBottom="true"
+						android:gravity="center_horizontal"
+						android:text="@string/foodlens_fat"
+						android:textColor="@color/foodlens_light_gray_text_color"
+						android:textSize="12sp"
+						app:typeface="@string/font_path_roboto_regular"
+						/>
+				</RelativeLayout>
+
+				<RelativeLayout
+					android:layout_width="0dp"
+					android:layout_height="30dp"
+					android:layout_gravity="center_vertical"
+					android:layout_weight="0.005"
+					android:background="@color/foodlens_label"
+					/>
+
+				<RelativeLayout
+					android:layout_width="0dp"
+					android:layout_height="35dp"
+					android:layout_weight="1"
+					android:gravity="center"
+					>
+
+					<com.azumio.android.foodlenslibrary.views.XMLTypefaceTextView
+						android:id="@+id/lblTotalProtien"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:layout_alignParentTop="true"
+						android:gravity="center_horizontal"
+						android:text="0 g"
+						android:textColor="@color/foodlens_blue_color"
+						android:textSize="15sp"
+						android:textStyle="bold"
+						app:typeface="@string/font_path_roboto_regular"
+						/>
+
+					<com.azumio.android.foodlenslibrary.views.XMLTypefaceTextView
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:layout_alignParentBottom="true"
+						android:gravity="center_horizontal"
+						android:text="@string/foodlens_protein"
+						android:textColor="@color/foodlens_light_gray_text_color"
+						android:textSize="12sp"
+						app:typeface="@string/font_path_roboto_regular"
+						/>
+				</RelativeLayout>
+			</LinearLayout>
+		</LinearLayout>
+	</LinearLayout>
+
+
+</RelativeLayout>

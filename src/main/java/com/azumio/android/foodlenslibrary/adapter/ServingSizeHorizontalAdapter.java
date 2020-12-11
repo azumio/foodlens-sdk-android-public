@@ -36,7 +36,7 @@ public class ServingSizeHorizontalAdapter extends RecyclerView.Adapter<ServingSi
 
     @Override
     public ServingSizeHorizontalAdapter.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View itemView = LayoutInflater.from(parent.getContext()).inflate(R.layout.list_item_serving_size, parent, false);
+        View itemView = LayoutInflater.from(parent.getContext()).inflate(R.layout.foodlens_list_item_serving_size, parent, false);
        return new ServingSizeHorizontalAdapter.ViewHolder(itemView);
 
     }
@@ -59,7 +59,7 @@ public class ServingSizeHorizontalAdapter extends RecyclerView.Adapter<ServingSi
     private void onServingUnitClick(ViewHolder holder, int position, SegmentResponse.FoodItem.ServingSize sizeData) {
         holder.servingUnit.setOnClickListener(v ->
         {
-            holder.servingUnit.setTextColor(ContextCompat.getColor(context, R.color.serving_selected_text_color));
+            holder.servingUnit.setTextColor(ContextCompat.getColor(context, R.color.foodlens_serving_selected_text_color));
 
             selected_position = position;
             mCurrentServing = sizeData;
@@ -73,12 +73,12 @@ public class ServingSizeHorizontalAdapter extends RecyclerView.Adapter<ServingSi
         if (mCurrentServing.getUnit().equalsIgnoreCase(sizeData.getUnit())) {
             selected_position = position;
 
-            holder.mainView.setBackgroundResource(R.drawable.orange_rect_border);
-            holder.servingUnit.setTextColor(ContextCompat.getColor(context, R.color.serving_selected_text_color));
+            holder.mainView.setBackgroundResource(R.drawable.foodlens_orange_rect_border);
+            holder.servingUnit.setTextColor(ContextCompat.getColor(context, R.color.foodlens_serving_selected_text_color));
 
         } else {
-            holder.mainView.setBackgroundResource(R.drawable.corner_radius_rect_border);
-            holder.servingUnit.setTextColor(ContextCompat.getColor(context, R.color.serving_text_color));
+            holder.mainView.setBackgroundResource(R.drawable.foodlens_corner_radius_rect_border);
+            holder.servingUnit.setTextColor(ContextCompat.getColor(context, R.color.foodlens_serving_text_color));
         }
     }
 
@@ -102,13 +102,13 @@ public class ServingSizeHorizontalAdapter extends RecyclerView.Adapter<ServingSi
         SpannableStringBuilder sb = new SpannableStringBuilder();
         int start = sb.length();
         sb.append(caption);
-        sb.setSpan(new TextAppearanceSpan(null, Typeface.BOLD, context.getResources().getDimensionPixelSize(R.dimen.serving_unit_text), null, null), start, start + caption.length(),
+        sb.setSpan(new TextAppearanceSpan(null, Typeface.BOLD, context.getResources().getDimensionPixelSize(R.dimen.foodlens_serving_unit_text), null, null), start, start + caption.length(),
                 Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
         String sedText = "\n" + description;
         start = sb.length();
         if (description.length() > 0) {
             sb.append(sedText);
-            sb.setSpan(new TextAppearanceSpan(null, Typeface.NORMAL, context.getResources().getDimensionPixelSize(R.dimen.serving_unit_textsize), null, null), start,
+            sb.setSpan(new TextAppearanceSpan(null, Typeface.NORMAL, context.getResources().getDimensionPixelSize(R.dimen.foodlens_serving_unit_textsize), null, null), start,
                     start + sedText.length(), Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
             numberOfServings.setText(sb);
         } else {

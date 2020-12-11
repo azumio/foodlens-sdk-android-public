@@ -16,7 +16,6 @@ import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.constraintlayout.widget.ConstraintSet
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
-import com.azumio.android.foodlenslibrary.FoodLens
 import com.azumio.android.foodlenslibrary.FoodLens.Companion.FOODLENS_FOOD_CHECKIN
 import com.azumio.android.foodlenslibrary.R
 import com.azumio.android.foodlenslibrary.model.FoodSegment
@@ -29,9 +28,9 @@ import com.azumio.android.foodlenslibrary.views.SegmentViewMode
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.target.CustomTarget
 import com.bumptech.glide.request.transition.Transition
-import kotlinx.android.synthetic.main.fragment_review.*
-import kotlinx.android.synthetic.main.result_fragment.food_image
-import kotlinx.android.synthetic.main.result_fragment.image_container
+import kotlinx.android.synthetic.main.foodlens_fragment_review.*
+import kotlinx.android.synthetic.main.foodlens_result_fragment.food_image
+import kotlinx.android.synthetic.main.foodlens_result_fragment.image_container
 import kotlinx.coroutines.*
 
 class ReviewFragment constructor() : Fragment() {
@@ -62,7 +61,7 @@ class ReviewFragment constructor() : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.fragment_review, container, false)
+        return inflater.inflate(R.layout.foodlens_fragment_review, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -149,8 +148,8 @@ class ReviewFragment constructor() : Fragment() {
     }
 
     private fun loadUIWithSegments(segments: List<FoodSegment>) {
-        val height = requireContext().resources.getDimension(R.dimen.segment_height)
-        val width = requireContext().resources.getDimension(R.dimen.segment_width)
+        val height = requireContext().resources.getDimension(R.dimen.foodlens_segment_height)
+        val width = requireContext().resources.getDimension(R.dimen.foodlens_segment_width)
 
         val imageSizePixel = FileUtils.sizeOfImageAtPath(imageURI)
         val parentLayout = image_container as ConstraintLayout

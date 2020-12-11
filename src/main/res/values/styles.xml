@@ -1,16 +1,16 @@
 <resources>
 
-    <style name="AppTheme" parent="Theme.MaterialComponents.Light" />
+    <style name="FoodLensAppTheme" parent="Theme.MaterialComponents.Light" />
 
-    <style name="AppTheme.NoActionBar">
+    <style name="FoodLensAppTheme.NoActionBar">
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
     </style>
 
-    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+    <style name="FoodLensAppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
 
-    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
-    <style name="listviewplain">
+    <style name="FoodLensAppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+    <style name="foodlens_listviewplain">
         <item name="android:layout_width">fill_parent</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:dividerHeight">1dp</item>

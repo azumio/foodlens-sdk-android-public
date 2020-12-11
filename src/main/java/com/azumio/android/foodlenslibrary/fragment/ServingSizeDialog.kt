@@ -16,7 +16,7 @@ import com.azumio.android.foodlenslibrary.R
 import com.azumio.android.foodlenslibrary.adapter.ServingSizeHorizontalAdapter
 import com.azumio.android.foodlenslibrary.model.SegmentResponse
 import com.azumio.android.foodlenslibrary.utils.CaloriesManager
-import kotlinx.android.synthetic.main.fragment_serving_size_dialog.*
+import kotlinx.android.synthetic.main.foodlens_fragment_serving_size_dialog.*
 
 class ServingSizeDialog constructor() : DialogFragment() {
      lateinit var listener: ServingSizeDialogListener
@@ -72,7 +72,7 @@ class ServingSizeDialog constructor() : DialogFragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.fragment_serving_size_dialog, container, false)
+        return inflater.inflate(R.layout.foodlens_fragment_serving_size_dialog, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {

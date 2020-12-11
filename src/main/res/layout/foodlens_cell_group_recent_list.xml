@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical"
+	>
+
+	<RelativeLayout
+		android:id="@+id/menulist"
+		android:layout_width="match_parent"
+		android:layout_height="56dp"
+		android:background="@color/foodlens_progress_circumference_blank"
+		>
+
+		<RelativeLayout
+			android:id="@+id/view"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_alignParentBottom="true"
+			android:orientation="horizontal"
+			>
+
+			<LinearLayout
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:orientation="vertical"
+				>
+
+				<com.azumio.android.foodlenslibrary.views.XMLTypefaceTextView
+					android:id="@+id/cell_recent_lunch_type"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_alignParentLeft="true"
+					android:layout_marginLeft="15dp"
+					android:gravity="center_vertical|bottom"
+					android:singleLine="true"
+					android:textColor="@color/foodlens_calories_label"
+					android:textSize="14sp"
+					android:textStyle="normal"
+					android:layout_above="@+id/cell_verified_text"
+					android:text="Nutrition"
+					app:typeface="@string/font_path_roboto_regular"
+					/>
+
+				<RelativeLayout
+					android:id="@+id/verifiedLayout"
+					android:layout_width="500dp"
+					android:layout_height="20dp"
+					android:orientation="horizontal"
+					android:visibility="invisible"
+					>
+
+					<TextView
+						android:id="@+id/icon_important"
+						android:layout_width="10dp"
+						android:layout_height="10dp"
+						android:layout_marginLeft="15dp"
+						android:layout_alignParentLeft="true"
+						android:layout_marginTop="10dp"
+						android:layout_centerVertical="true"
+						android:textSize="30dp"
+						android:background="@drawable/foodlens_check"
+						/>
+
+					<com.azumio.android.foodlenslibrary.views.XMLTypefaceTextView
+						android:id="@+id/cell_verified_text"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:layout_marginLeft="5dp"
+						android:layout_alignParentBottom="true"
+						android:layout_toRightOf="@+id/icon_important"
+						android:gravity="center_vertical|bottom"
+						android:singleLine="true"
+						android:textColor="#04BB05"
+						android:textSize="11sp"
+						android:paddingBottom="2dp"
+						android:textStyle="italic"
+						android:text="@string/foodlens_nutrition_info_text"
+						app:typeface="@string/font_path_roboto_regular"
+						/>
+				</RelativeLayout>
+			</LinearLayout>
+
+			<com.azumio.android.foodlenslibrary.views.CenteredCustomFontView
+				android:id="@+id/edit_recipe"
+				android:layout_width="30dp"
+				android:layout_height="30dp"
+				android:layout_alignParentRight="true"
+				android:layout_marginRight="15dp"
+				android:textSize="30dp"
+				android:visibility="invisible"
+				android:textColor="@color/foodlens_calories_color"
+				/>
+		</RelativeLayout>
+
+	</RelativeLayout>
+
+</LinearLayout>

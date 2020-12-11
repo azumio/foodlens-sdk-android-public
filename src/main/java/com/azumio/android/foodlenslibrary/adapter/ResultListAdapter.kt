@@ -3,7 +3,6 @@ package com.azumio.android.foodlenslibrary.adapter
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
 import android.widget.ImageButton
 import android.widget.TextView
 import androidx.appcompat.widget.AppCompatTextView
@@ -11,7 +10,6 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.azumio.android.foodlenslibrary.R
 import com.azumio.android.foodlenslibrary.model.FoodSuggestionCategory
-import com.azumio.android.foodlenslibrary.model.SegmentResponse
 import com.azumio.android.foodlenslibrary.utils.FoodUnitFormatter
 
 
@@ -84,22 +82,22 @@ onHeaderClick: (FoodSuggestionCategory) -> Unit, private  val onEditServingClick
         return when (viewType) {
             ResultListItemType.ITEM.ordinal -> {
                 view = LayoutInflater.from(parent.context)
-                    .inflate(R.layout.layout_result_list_item, parent,false)
+                    .inflate(R.layout.foodlens_layout_result_list_item, parent,false)
                 ItemViewHolder(view)
             }
             ResultListItemType.SELECTEDITEM.ordinal -> {
                 view = LayoutInflater.from(parent.context)
-                    .inflate(R.layout.layout_result_selected_list_item, parent,false)
+                    .inflate(R.layout.foodlens_layout_result_selected_list_item, parent,false)
                 SelectedItemViewHolder(view)
             }
             ResultListItemType.HEADER.ordinal -> {
                 view = LayoutInflater.from(parent.context)
-                    .inflate(R.layout.layout_result_list_header, parent,false)
+                    .inflate(R.layout.foodlens_layout_result_list_header, parent,false)
                 HeaderViewHolder(view)
             }
             ResultListItemType.FOOTER.ordinal -> {
                 view = LayoutInflater.from(parent.context)
-                    .inflate(R.layout.layout_result_list_footer, parent,false)
+                    .inflate(R.layout.foodlens_layout_result_list_footer, parent,false)
                 FooterViewHolder(view)
             }
             else -> throw WrongViewType()
@@ -181,11 +179,11 @@ onHeaderClick: (FoodSuggestionCategory) -> Unit, private  val onEditServingClick
 
 
             if(nextItem) {
-                holder.header_title.text = holder.header_title.context.getString(R.string.confirm_next_food_item)
+                holder.header_title.text = holder.header_title.context.getString(R.string.foodlens_confirm_next_food_item)
             }
             else
             {
-                holder.header_title.text = holder.header_title.context.getString(R.string.confirm_first_food_item)
+                holder.header_title.text = holder.header_title.context.getString(R.string.foodlens_confirm_first_food_item)
             }
 
     }

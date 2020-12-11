@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical"
+	>
+
+
+	<RelativeLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:paddingTop="10dp"
+		>
+
+		<EditText
+			android:id="@+id/cell_numberserving_count"
+			android:layout_width="140dp"
+			android:layout_height="50dp"
+			android:layout_alignParentLeft="true"
+			android:paddingLeft="10dp"
+			android:singleLine="true"
+			android:text="1"
+			android:textColor="@color/foodlens_calories_color"
+			android:textSize="16sp"
+			android:textStyle="normal"
+			android:inputType="numberDecimal"
+			android:maxLength="6"
+			/>
+
+		<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="50dp"
+			android:gravity="center_vertical|center"
+			android:text="Serving(s) of"
+			android:textSize="18sp"
+			android:layout_toRightOf="@+id/cell_numberserving_count"
+			/>
+	</RelativeLayout>
+
+	<Spinner
+		android:id="@+id/cell_serving_count"
+		android:layout_width="260dp"
+		android:layout_height="wrap_content"
+		android:layout_alignParentRight="true"
+		android:layout_centerInParent="true"
+		android:paddingTop="10dp"
+		></Spinner>
+
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="52dp"
+		android:layout_gravity="center"
+		android:background="@color/foodlens_white"
+		android:orientation="horizontal"
+		android:weightSum="1"
+		>
+
+		<Button
+			android:id="@+id/buttonCancel"
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:layout_marginRight="0.5dp"
+			android:layout_weight="0.5"
+			android:gravity="center"
+			android:text="Cancel"
+			/>
+
+
+		<Button
+			android:id="@+id/buttonSet"
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:layout_weight="0.5"
+			android:gravity="center"
+			android:text="Save"
+			/>
+	</LinearLayout>
+</LinearLayout>

@@ -57,7 +57,7 @@ public class SearchQuickFragment extends BaseFragment implements OnSearchListene
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        mView = inflater.inflate(R.layout.fragment_quick_search, null);
+        mView = inflater.inflate(R.layout.foodlens_fragment_quick_search, null);
         mName = mView.findViewById(R.id.cell_name);
         mCalories = mView.findViewById(R.id.cell_calories);
         mCarb = mView.findViewById(R.id.cell_carbohydrates);
@@ -86,12 +86,12 @@ public class SearchQuickFragment extends BaseFragment implements OnSearchListene
             mapFood.setId(uniqueId);
 
             if (mName.getText().length() < 1) {
-                mapFood.setName(getString(R.string.quick_calories));
+                mapFood.setName(getString(R.string.foodlens_quick_calories));
             } else {
                 mapFood.setName(mName.getText().toString());
             }
             if (mCalories.getText().length() < 1) {
-                dialogUtils.showAlertDialog(getString(R.string.add_calories), getParent());
+                dialogUtils.showAlertDialog(getString(R.string.foodlens_add_calories), getParent());
                 return;
             } else {
                 mapNutrition.put(CaloriesManager.CALORIES, Double.valueOf(mCalories.getText().toString()));
@@ -228,7 +228,7 @@ public class SearchQuickFragment extends BaseFragment implements OnSearchListene
         try {
             HashMap<String, Double> mapNutrition = new HashMap<>();
             if (mCalories.getText().length() < 1) {
-                dialogUtils.showAlertDialog(getString(R.string.add_calories), getParent());
+                dialogUtils.showAlertDialog(getString(R.string.foodlens_add_calories), getParent());
                 return;
             } else {
                 mapNutrition.put(CaloriesManager.CALORIES, Double.valueOf(mCalories.getText().toString()));
