@@ -5,6 +5,7 @@ import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import androidx.fragment.app.Fragment
 import com.azumio.android.foodlenslibrary.FoodLens
 import com.azumio.android.foodlenslibrary.R
 import java.io.File
@@ -28,6 +29,22 @@ class CameraActivity : AppCompatActivity() {
     }
 
     companion object {
+
+        private const val MEAL_ARGUMENT_KEY = "meal"
+
+        fun startForResult(activity: Activity, meal: String, options: Bundle, requestCode: Int) {
+            val intent = Intent(activity, CameraActivity::class.java)
+            intent.putExtra(MEAL_ARGUMENT_KEY, meal)
+            intent.putExtras(options)
+            activity.startActivityForResult(intent, requestCode)
+        }
+
+        fun startForResult(fragment: Fragment, meal: String, options: Bundle, requestCode: Int) {
+            val intent = Intent(fragment.context, CameraActivity::class.java)
+            intent.putExtra(MEAL_ARGUMENT_KEY, meal)
+            intent.putExtras(options)
+            fragment.startActivityForResult(intent, requestCode)
+        }
 
         /** Use external media if it is available, our app's file directory otherwise */
         fun getOutputDirectory(context: Context): File {

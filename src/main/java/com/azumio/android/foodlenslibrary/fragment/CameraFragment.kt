@@ -42,7 +42,6 @@ import com.azumio.android.foodlenslibrary.model.FoodCheckin
 import com.azumio.android.foodlenslibrary.model.FoodSearchData
 import com.azumio.android.foodlenslibrary.utils.*
 import com.azumio.android.foodlenslibrary.utils.datetime.MealTimeHelper
-import com.azumio.android.foodlenslibrary.utils.reachability.InternetReachabilityManager
 import com.azumio.android.foodlenslibrary.views.CenteredCustomFontView
 import kotlinx.android.synthetic.main.foodlens_fragment_camera.*
 import kotlinx.coroutines.Dispatchers
@@ -102,8 +101,18 @@ class CameraFragment : Fragment() {
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? =
-        inflater.inflate(R.layout.foodlens_fragment_camera, container, false)
+    ): View? {
+        loadArguments()
+        return inflater.inflate(R.layout.foodlens_fragment_camera, container, false)
+    }
+
+    private fun loadArguments() {
+        val extras = activity?.intent?.extras
+        if(extras != null) {
+            val args = CameraFragmentArgs.fromBundle(extras)
+            this.selectedMeal = args.meal ?: MealTimeHelper.getMealLabelByTimeOfDay()
+        }
+    }
 
 
     private fun setGalleryThumbnail(uri: Uri) {
@@ -195,7 +204,7 @@ class CameraFragment : Fragment() {
 
         val timezone = TimeUnit.HOURS.convert(TimeZone.getDefault().rawOffset.toLong(), TimeUnit.MILLISECONDS).toDouble()
 
-        val foodlogs = logs.map { FoodCheckin.FoodLog(it.meal?:this.selectedMeal,it.name,it.numberOfServings,it.nutrition,it.parentId,
+        val foodlogs = logs.map { FoodCheckin.FoodLog(it.meal ?: this.selectedMeal, it.name,it.numberOfServings,it.nutrition,it.parentId,
             it.remoteid ?: UUID.randomUUID().toString() ,it.servingSize,it.statusId,null,null,
             Date().time,it.type ?: CaloriesManager.LOG_TYPE_FOOD,it.validated) }
 
@@ -481,21 +490,22 @@ class CameraFragment : Fragment() {
 
 
 
-        if(!InternetReachabilityManager.isOnline())
-        {
-
-            requireActivity().runOnUiThread {
-                Toast.makeText(
-                    requireContext(),
-                    requireContext().getString(R.string.foodlens_no_internet),
-                    Toast.LENGTH_LONG
-                ).show()
-            }
-            return
-        }
+//        if(!InternetReachabilityManager.isOnline())
+//        {
+//
+//            requireActivity().runOnUiThread {
+//                Toast.makeText(
+//                    requireContext(),
+//                    requireContext().getString(R.string.foodlens_no_internet),
+//                    Toast.LENGTH_LONG
+//                ).show()
+//            }
+//            return
+//        }
 
         val bundle = Bundle()
         bundle.putString(ResultActivity.IMAGE_FILE_KEY, savedUri.toString())
+        bundle.putString(ResultActivity.MEAL_KEY, selectedMeal)
         FoodLens.lastAuthorizedInstance?.let {
             it.launchImageRecognizationActivityForResult(
                 requireActivity(),

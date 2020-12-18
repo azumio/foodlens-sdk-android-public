@@ -629,17 +629,21 @@ public class AddFoodActivity extends BaseFragmentActivity {
         }
         searchLogger.logSearchToServer();
 
-        if (modeReturnFood || getType().equalsIgnoreCase(INGREDIENTS_KEY)) {
+        String type = getType();
+        if (modeReturnFood || type.equalsIgnoreCase(INGREDIENTS_KEY)) {
             Intent intent = new Intent();
             Bundle bundle = new Bundle();
             if (selectedData != null) {
-                if (selectedData.get(getType()) != null) {
+                if (selectedData.get(type) != null) {
 
-                    List<FoodSearchData> data = selectedData.get(getType());
+                    List<FoodSearchData> data = selectedData.get(type);
 
                     ArrayList<String> selectedJson = new ArrayList<>();
                     for (FoodSearchData d : data)
                     {
+                        if(!type.equalsIgnoreCase(INGREDIENTS_KEY)) {
+                            d.setMeal(type);
+                        }
                         selectedJson.add(d.jsonString());
                     }
 
@@ -651,7 +655,7 @@ public class AddFoodActivity extends BaseFragmentActivity {
                     intent.putExtra(SELECTED_MEAL_TYPE, fragment.getFoodType());
                 }
 
-                if (!getType().equalsIgnoreCase(INGREDIENTS_KEY)) {
+                if (!type.equalsIgnoreCase(INGREDIENTS_KEY)) {
                    // CleverTapEventsLogger cleverTapEventsHelper = new CleverTapEventsLogger();
                     //cleverTapEventsHelper.logCalorieFoodLogEvent(selectedData);
                 }
