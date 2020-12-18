@@ -50,8 +50,10 @@ class ReviewViewModel(val imageUri: Uri,val foodSegments: List<FoodSegment>,val 
         val traceSegments = foodSegments.map { FoodCheckin.FoodrecognitionTraceSegment(it.boundingBox,it.center,it.identifier,it.isFood,1) }
         val statusId = UUID.randomUUID().toString()
         val timezone = TimeUnit.HOURS.convert(TimeZone.getDefault().rawOffset.toLong(), TimeUnit.MILLISECONDS).toDouble()
-        val logs = segments.flatMap { seg -> seg.foodLogs.map { FoodCheckin.FoodLog(it.underlyingFoodLog.meal ?: meal,it.underlyingFoodLog.name,
-            it.underlyingFoodLog.numberOfServings,it.underlyingFoodLog.nutrition,it.underlyingFoodLog.foodId,it.underlyingFoodLog.id,it.underlyingFoodLog.servingSize,statusId,
+        val logs = segments.flatMap { seg -> seg.foodLogs.map {
+            val parentId = it.underlyingFoodLog.parentId
+            FoodCheckin.FoodLog(it.underlyingFoodLog.meal ?: meal,it.underlyingFoodLog.name,
+            it.underlyingFoodLog.numberOfServings,it.underlyingFoodLog.nutrition, parentId,it.underlyingFoodLog.id,it.underlyingFoodLog.servingSize,statusId,
             FoodCheckin.FoodLog.SuggestionGroup(it.underlyingFoodLog.group),
             listOf(FoodCheckin.FoodrecognitionTraceSegment(seg.boundingBox,seg.center,seg.identifier,seg.isFood,it.underlyingFoodLog.score)),Date().time,CaloriesManager.LOG_TYPE_FOOD,it.underlyingFoodLog.validated) } }
        val nutrients = CaloriesManager.getNutritionSummation(foodSegments.flatMap { log ->  log.foodLogs.map { it.underlyingFoodLog.toFoodSearchData() } })

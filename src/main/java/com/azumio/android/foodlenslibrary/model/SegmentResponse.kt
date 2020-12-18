@@ -119,6 +119,8 @@ data class SegmentResponse(
         val group: String,
         @SerializedName("id")
         val id: String,
+        @SerializedName("parent_id")
+        val parentId: String?,
         @SerializedName("ingredients")
         val ingredients: String,
         @SerializedName("label")
@@ -212,7 +214,7 @@ data class SegmentResponse(
         companion object {
 
              fun initWithSearchData(data:FoodSearchData): FoodItem {
-                return FoodItem(emptyList(),Date().time,data.id,true,"search",UUID.randomUUID().toString(),
+                return FoodItem(emptyList(),Date().time,data.id,true,"search",UUID.randomUUID().toString(), parentId = data.parentId,
                     data.name,data.name,Date().time,data.name,data.nutrition!!,"",100,true,data.servingSizes ?: emptyList(),data.source,
                     "","",data.validated,data.meal,data.servingSize,data.numberOfServings)
             }
