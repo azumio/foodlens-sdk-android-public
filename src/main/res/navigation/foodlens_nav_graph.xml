@@ -23,6 +23,12 @@
         android:name="com.azumio.android.foodlenslibrary.fragment.CameraFragment"
         android:label="CameraFragment" >
 
+        <argument
+            android:name="meal"
+            app:argType="string"
+            app:nullable="true"
+            android:defaultValue="@null" />
+
         <action
             android:id="@+id/action_camera_to_permissions"
             app:destination="@id/permissions_fragment"

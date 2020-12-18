@@ -19,6 +19,7 @@ import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.constraintlayout.widget.ConstraintSet
+import androidx.core.os.bundleOf
 import androidx.core.view.children
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.commit
@@ -55,10 +56,16 @@ import kotlinx.android.synthetic.main.foodlens_result_fragment.*
 
 
 
-class ResultFragment constructor() : Fragment() {
+class ResultFragment : Fragment() {
 
     companion object {
-        fun newInstance(imageURI: Uri) = ResultFragment(imageURI)
+        fun newInstance(imageURI: Uri, meal: String?): ResultFragment {
+            val resultFragment = ResultFragment()
+            resultFragment.arguments = bundleOf(Pair(IMAGE_URI_ARGUMENT, imageURI), Pair(MEAL_ARGUMENT, meal))
+            return resultFragment
+        }
+        private const val MEAL_ARGUMENT = "MEAL_ARGUMENT"
+        private const val IMAGE_URI_ARGUMENT = "IMAGE_URI_ARGUMENT"
         private const val TAG = "ResultFragment"
         private const val SERVING_SIZE_DIALOG_TAG = "SERVING_SIZE_DIALOG_TAG"
     }
@@ -68,9 +75,6 @@ class ResultFragment constructor() : Fragment() {
     private lateinit var bottomSheetBehavior: BottomSheetBehavior<ConstraintLayout>
     private lateinit var root : View
     var selectedMeal = MealTimeHelper.getMealLabelByTimeOfDay()
-    constructor(imageURI: Uri) : this() {
-        this.imageURI = imageURI
-    }
 
     private val viewModel by viewModels<ResultViewModel> {
         ResultViewModelModelFactory(this.imageURI)
@@ -80,10 +84,19 @@ class ResultFragment constructor() : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+
+        loadArguments()
+
         if(!this::root.isInitialized) {
             root = inflater.inflate(R.layout.foodlens_result_fragment, container, false)
         }
         return root
+    }
+
+    private fun loadArguments() {
+        this.imageURI = arguments?.getParcelable(IMAGE_URI_ARGUMENT) ?: Uri.EMPTY
+        val defaultMeal = MealTimeHelper.getMealLabelByTimeOfDay()
+        this.selectedMeal = arguments?.getString(MEAL_ARGUMENT, defaultMeal) ?: defaultMeal
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {

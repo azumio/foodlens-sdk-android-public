@@ -19,8 +19,9 @@ class ResultActivity : AppCompatActivity() {
 
           intent.getStringExtra(IMAGE_FILE_KEY)?.let {
 
+              val meal = intent.getStringExtra(MEAL_KEY)
               val uri = Uri.parse(it)
-              val resultFragment = ResultFragment.newInstance(uri)
+              val resultFragment = ResultFragment.newInstance(uri, meal)
               fragmentTransaction.replace(R.id.fragment_container, resultFragment)
               fragmentTransaction.commitAllowingStateLoss()
 
@@ -39,6 +40,7 @@ class ResultActivity : AppCompatActivity() {
     companion object {
         private const val TAG = "ResultActivity"
         const val IMAGE_FILE_KEY = "IMAGE_FILE"
+        const val MEAL_KEY = "MEAL_KEY"
     }
 }
 

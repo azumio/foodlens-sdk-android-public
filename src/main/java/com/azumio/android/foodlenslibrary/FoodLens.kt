@@ -5,6 +5,7 @@ import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
+import androidx.fragment.app.Fragment
 import com.azumio.android.foodlenslibrary.activity.CameraActivity
 import com.azumio.android.foodlenslibrary.activity.ResultActivity
 import com.azumio.android.foodlenslibrary.api.APIClient
@@ -14,6 +15,7 @@ import com.azumio.android.foodlenslibrary.core.ArgusJWTToken
 import com.azumio.android.foodlenslibrary.core.ArgusToken
 import com.azumio.android.foodlenslibrary.utils.ApplicationContextProvider
 import com.azumio.android.foodlenslibrary.utils.SharedPreferencesHelper
+import com.azumio.android.foodlenslibrary.utils.datetime.MealTimeHelper
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
@@ -70,11 +72,19 @@ class FoodLens private constructor() {
     fun launchCameraActivityForResult(
         activity: Activity,
         requestCode: Int = FOODLENS_CAMERA_ACTIVITY_RESULT_CODE,
+        meal: String = MealTimeHelper.getMealLabelByTimeOfDay(),
         options: Bundle = Bundle()
     ) {
-        val intent = Intent(activity, CameraActivity::class.java)
-        intent.putExtras(options)
-        activity.startActivityForResult(intent, requestCode)
+        CameraActivity.startForResult(activity, meal, options, requestCode)
+    }
+
+    fun launchCameraActivityForResult(
+            fragment: Fragment,
+            requestCode: Int = FOODLENS_CAMERA_ACTIVITY_RESULT_CODE,
+            meal: String = MealTimeHelper.getMealLabelByTimeOfDay(),
+            options: Bundle = Bundle()
+    ) {
+        CameraActivity.startForResult(fragment, meal, options, requestCode)
     }
 
     fun launchImageRecognizationActivityForResult(
