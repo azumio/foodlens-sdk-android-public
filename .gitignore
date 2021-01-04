@@ -13,3 +13,13 @@
 .externalNativeBuild
 .cxx
 /gradle.properties
+/.idea/dictionaries/pucha.xml
+/.idea/compiler.xml
+/.idea/gradle.xml
+/.idea/jarRepositories.xml
+/.idea/misc.xml
+/.idea/vcs.xml
+/gradle/wrapper/gradle-wrapper.jar
+/gradle/wrapper/gradle-wrapper.properties
+/gradlew
+/gradlew.bat

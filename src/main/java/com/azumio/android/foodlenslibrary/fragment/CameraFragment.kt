@@ -204,10 +204,24 @@ class CameraFragment : Fragment() {
 
         val timezone = TimeUnit.HOURS.convert(TimeZone.getDefault().rawOffset.toLong(), TimeUnit.MILLISECONDS).toDouble()
 
-        val foodlogs = logs.map { FoodCheckin.FoodLog(it.meal ?: this.selectedMeal, it.name,it.numberOfServings,it.nutrition,it.parentId,
-            it.remoteid ?: UUID.randomUUID().toString() ,it.servingSize,it.statusId,null,null,
-            Date().time,it.type ?: CaloriesManager.LOG_TYPE_FOOD,it.validated) }
-
+        val foodlogs = logs.map {
+            val meal = it.meal ?: this.selectedMeal
+            val remoteid = it.id ?: UUID.randomUUID().toString()
+            val type = it.type ?: CaloriesManager.LOG_TYPE_FOOD
+            FoodCheckin.FoodLog(meal,
+                it.name,
+                it.numberOfServings,
+                    it.nutrition,
+                    it.parentId,
+                    remoteid,
+                    it.servingSize,
+                    it.statusId,
+                    null,
+                    null,
+                    Date().time,
+                    type,
+                    it.validated)
+        }
         val nutrients = CaloriesManager.getNutritionSummation(logs)
 
         return FoodCheckin(foodlogs,null,null, FoodSearchData.nutritionFromMap(nutrients),null,UUID.randomUUID().toString(),Date().time,timezone,CaloriesManager.LOG_TYPE_FOOD)

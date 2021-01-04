@@ -4,9 +4,7 @@ import android.net.Uri
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
-import com.azumio.android.foodlenslibrary.fragment.ReviewFragment
 import com.azumio.android.foodlenslibrary.model.FoodCheckin
-import com.azumio.android.foodlenslibrary.model.FoodLog
 import com.azumio.android.foodlenslibrary.model.FoodSearchData
 import com.azumio.android.foodlenslibrary.model.FoodSegment
 import com.azumio.android.foodlenslibrary.utils.CaloriesManager
@@ -50,16 +48,41 @@ class ReviewViewModel(val imageUri: Uri,val foodSegments: List<FoodSegment>,val 
         val traceSegments = foodSegments.map { FoodCheckin.FoodrecognitionTraceSegment(it.boundingBox,it.center,it.identifier,it.isFood,1) }
         val statusId = UUID.randomUUID().toString()
         val timezone = TimeUnit.HOURS.convert(TimeZone.getDefault().rawOffset.toLong(), TimeUnit.MILLISECONDS).toDouble()
-        val logs = segments.flatMap { seg -> seg.foodLogs.map {
-            val parentId = it.underlyingFoodLog.parentId
-            FoodCheckin.FoodLog(it.underlyingFoodLog.meal ?: meal,it.underlyingFoodLog.name,
-            it.underlyingFoodLog.numberOfServings,it.underlyingFoodLog.nutrition, parentId,it.underlyingFoodLog.id,it.underlyingFoodLog.servingSize,statusId,
-            FoodCheckin.FoodLog.SuggestionGroup(it.underlyingFoodLog.group),
-            listOf(FoodCheckin.FoodrecognitionTraceSegment(seg.boundingBox,seg.center,seg.identifier,seg.isFood,it.underlyingFoodLog.score)),Date().time,CaloriesManager.LOG_TYPE_FOOD,it.underlyingFoodLog.validated) } }
-       val nutrients = CaloriesManager.getNutritionSummation(foodSegments.flatMap { log ->  log.foodLogs.map { it.underlyingFoodLog.toFoodSearchData() } })
+        val foodLogs = segments.flatMap {
+            seg -> seg.foodLogs.map {
+                val parentId = it.underlyingFoodLog.parentId
+                val suggestionSegments = listOf(FoodCheckin.FoodrecognitionTraceSegment(seg.boundingBox,
+                    seg.center,
+                    seg.identifier,
+                    seg.isFood,
+                    it.underlyingFoodLog.score))
+                FoodCheckin.FoodLog(it.underlyingFoodLog.meal ?: meal,
+                    it.underlyingFoodLog.name,
+                    it.underlyingFoodLog.numberOfServings,
+                    it.underlyingFoodLog.nutrition,
+                    parentId,
+                    it.underlyingFoodLog.id,
+                    it.underlyingFoodLog.servingSize,
+                    statusId,
+                    FoodCheckin.FoodLog.SuggestionGroup(it.underlyingFoodLog.group),
+                    suggestionSegments,
+                    Date().time,
+                    CaloriesManager.LOG_TYPE_FOOD,
+                    it.underlyingFoodLog.validated)
+            }
+        }
+        val foodSearchData = foodSegments.flatMap { log -> log.foodLogs.map { it.underlyingFoodLog.toFoodSearchData() } }
+        val nutrients = CaloriesManager.getNutritionSummation(foodSearchData)
 
-        val checkin = FoodCheckin(logs,this.imageCacheId,traceSegments,FoodSearchData.nutritionFromMap(nutrients),
-            listOf (FoodCheckin.Photo(imageUri.toString()) ) ,UUID.randomUUID().toString(),Date().time,timezone,CaloriesManager.LOG_TYPE_FOOD)
+        val checkin = FoodCheckin(foodLogs,
+                this.imageCacheId,
+                traceSegments,
+                FoodSearchData.nutritionFromMap(nutrients),
+                listOf(FoodCheckin.Photo(imageUri.toString())),
+                UUID.randomUUID().toString(),
+                Date().time,
+                timezone,
+                CaloriesManager.LOG_TYPE_FOOD)
 
         this.checkin.postValue(checkin)
     }

@@ -10,7 +10,7 @@ import com.google.gson.annotations.SerializedName
 import com.google.gson.reflect.TypeToken
 import java.util.*
 
-open class FoodSearchData
+open class FoodSearchData()
  {
      @SerializedName("calories")
      var calories: Double =0.0
