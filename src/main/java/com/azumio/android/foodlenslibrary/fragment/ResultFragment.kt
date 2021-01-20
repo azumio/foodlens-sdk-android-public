@@ -472,7 +472,7 @@ class ResultFragment : Fragment() {
         viewModel.isNotFood.observe(
             requireActivity(),
             Observer { if (it == true) showNotFoodDialogue() })
-        viewModel.foodSegments.observe(requireActivity(), Observer {
+        viewModel.foodSegments.observe(viewLifecycleOwner, Observer {
             if(!segmentsLoaded) {
                 loadUIWithSegments(it)
                 segmentsLoaded = true
@@ -480,19 +480,19 @@ class ResultFragment : Fragment() {
 
         })
 
-        viewModel.selectedSegment.observe(requireActivity(), Observer {
+        viewModel.selectedSegment.observe(viewLifecycleOwner, Observer {
             it?.let { food -> selectUISegment(food) }
         })
 
-        viewModel.selectedItemState.observe(requireActivity(), Observer {
+        viewModel.selectedItemState.observe(viewLifecycleOwner, Observer {
             onItemUpdated()
         })
 
-        viewModel.segmentDeleted.observe(requireActivity(), Observer {
+        viewModel.segmentDeleted.observe(viewLifecycleOwner, Observer {
            it?.let { seg -> removeUISegment(seg) }
         })
 
-        viewModel.newSegment.observe(requireActivity(), Observer {
+        viewModel.newSegment.observe(viewLifecycleOwner, Observer {
             it?.let { foodSegment ->
 
                 i("newSegment.observe")
@@ -503,7 +503,7 @@ class ResultFragment : Fragment() {
                 else
                 {
                     loadUIWithSegments(listOf(foodSegment))
-                    viewModel.recognizeSegment(foodSegment).observe(requireActivity(), Observer {res ->
+                    viewModel.recognizeSegment(foodSegment).observe(viewLifecycleOwner, Observer {res ->
                         setupLoadingResource(res)
                     })
                 }
@@ -511,7 +511,7 @@ class ResultFragment : Fragment() {
 
         })
 
-        viewModel.allSegmentsDeleted.observe(requireActivity(), Observer {
+        viewModel.allSegmentsDeleted.observe(viewLifecycleOwner, Observer {
             adapter.setData(listOf(ResultListFooterItem(title = requireContext().getString(R.string.foodlens_nothing_was_logged))))
             adapter.notifyDataSetChanged()
         })
@@ -529,7 +529,7 @@ class ResultFragment : Fragment() {
 
     }
     private fun setupLoadingSegmentsObserver() {
-        viewModel.recognizeImage().observe(requireActivity(), Observer { it ->
+        viewModel.recognizeImage().observe(viewLifecycleOwner, Observer { it ->
             it?.let { resource ->
                 setupLoadingResource(resource)
                 when (resource.status) {

@@ -135,4 +135,4 @@ repositories {
     google()
     jcenter()
 }
-//apply from: "$rootProject.projectDir/gradle/publish_github.gradle"
+apply from: "$rootProject.projectDir/gradle/publish_github.gradle"
