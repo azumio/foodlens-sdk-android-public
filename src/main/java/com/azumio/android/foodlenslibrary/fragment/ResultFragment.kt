@@ -24,6 +24,7 @@ import androidx.core.view.children
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.commit
 import androidx.fragment.app.viewModels
+import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.ItemTouchHelper
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -178,10 +179,12 @@ class ResultFragment : Fragment() {
             image_container.alpha = 0.5f
 
             Handler(Looper.getMainLooper()).postDelayed({
-                if(image_container.alpha <= 0.5f) {
-                    add_more_container.visibility = View.GONE
-                    save_button_container.visibility = View.VISIBLE
-                    image_container.alpha = 1.0f
+                if(lifecycle.currentState.isAtLeast(Lifecycle.State.CREATED)) {
+                    if(image_container.alpha <= 0.5f) {
+                        add_more_container.visibility = View.GONE
+                        save_button_container.visibility = View.VISIBLE
+                        image_container.alpha = 1.0f
+                    }
                 }
 
             }, 5000) //millis
@@ -777,8 +780,10 @@ class ResultFragment : Fragment() {
 
        viewModel.selectedSegment.postValue(segments.firstOrNull())
         bottomSheet.postDelayed({
-            setSegmentsMode(SegmentViewMode.NORMAL)
-            adapter.unselectHeaders()
+            if(lifecycle.currentState.isAtLeast(Lifecycle.State.CREATED)) {
+                setSegmentsMode(SegmentViewMode.NORMAL)
+                adapter.unselectHeaders()
+            }
         },50)
 
     }
