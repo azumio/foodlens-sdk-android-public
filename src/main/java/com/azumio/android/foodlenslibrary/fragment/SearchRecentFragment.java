@@ -177,6 +177,7 @@ public class SearchRecentFragment extends BaseFragment implements OnSearchListen
 		mMainView.addFooterView(footerView);
 		mApplicationContext = getActivity().getApplicationContext();
 		mFoodActivity = (AddFoodActivity) getActivity();
+		Toast.makeText(getActivity(), "foodlens side branch", Toast.LENGTH_SHORT).show();
 
 		int flags = Context.BIND_AUTO_CREATE | Context.BIND_ABOVE_CLIENT | Context.BIND_IMPORTANT;
 
