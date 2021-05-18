@@ -1,6 +1,5 @@
 package com.azumio.android.foodlenslibrary.fragment
 
-import android.content.Context
 import android.os.Bundle
 import android.view.KeyEvent
 import android.view.LayoutInflater
@@ -9,6 +8,7 @@ import android.view.ViewGroup
 import android.view.inputmethod.EditorInfo
 import android.widget.TextView
 import android.widget.TextView.OnEditorActionListener
+import android.widget.Toast
 import androidx.fragment.app.DialogFragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -50,9 +50,6 @@ class ServingSizeDialog constructor() : DialogFragment() {
             editText_number_of_serving.setOnEditorActionListener(OnEditorActionListener { v: TextView?, actionId: Int, event: KeyEvent? ->
                 if (event != null && event.keyCode == KeyEvent.KEYCODE_ENTER || actionId == EditorInfo.IME_ACTION_DONE) {
                     editText_number_of_serving.clearFocus()
-
-
-
                 }
                 false
             })
@@ -61,7 +58,9 @@ class ServingSizeDialog constructor() : DialogFragment() {
 
         done_button.setOnClickListener {
             currentServing = adapter.mCurrentServing
-            listener.onSelect(currentServing, editText_number_of_serving.text.toString().toDouble())
+            if(editText_number_of_serving.text.toString().isNotEmpty()) {
+                listener.onSelect(currentServing, editText_number_of_serving.text.toString().toDouble())
+            }
             dismiss()
         }
 
@@ -77,7 +76,7 @@ class ServingSizeDialog constructor() : DialogFragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-       setupUI()
+        setupUI()
        // setupClickListeners(view)
     }
 
