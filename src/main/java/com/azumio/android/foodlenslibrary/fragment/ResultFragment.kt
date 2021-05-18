@@ -588,10 +588,6 @@ class ResultFragment : Fragment() {
         val dialogBuilder = AlertDialog.Builder(requireActivity())
         dialogBuilder.setMessage(requireActivity().getString( R.string.foodlens_not_food_message))
             .setCancelable(false)
-//            .setPositiveButton(requireActivity().getString( R.string.foodlens_continue_anyway), DialogInterface.OnClickListener { dialog, id ->
-//                dialog.cancel()
-//                viewModel.loadFoodSegments()
-//            })
             // negative button text and action
             .setNegativeButton(requireActivity().getString( R.string.foodlens_retake_photo), DialogInterface.OnClickListener { dialog, id ->
                 activity?.finish()
