@@ -569,7 +569,8 @@ class ResultFragment : Fragment() {
                 image_container.isEnabled = true
                 image_container.isClickable = true
                 save_button_container.visibility = saveButtonVisibility
-                    Toast.makeText(requireActivity(), resource.msg, Toast.LENGTH_LONG).show()
+                showNotFoodDialogue()
+                  //  Toast.makeText(requireActivity(), resource.msg, Toast.LENGTH_LONG).show()
             }
             Status.LOADING -> {
                 bottomSheetBehavior.state = BottomSheetBehavior.STATE_COLLAPSED
