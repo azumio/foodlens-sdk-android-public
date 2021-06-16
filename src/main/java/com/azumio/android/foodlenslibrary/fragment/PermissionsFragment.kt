@@ -10,6 +10,7 @@ import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import androidx.navigation.NavDirections
 import androidx.navigation.Navigation
+import androidx.navigation.fragment.findNavController
 import com.azumio.android.foodlenslibrary.R
 import java.security.Permissions
 
@@ -22,9 +23,9 @@ private val PERMISSIONS_REQUIRED = arrayOf(Manifest.permission.CAMERA)
  */
 class PermissionsFragment : Fragment() {
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        Log.d("PermissionsFragment", "onCreate")
+    override fun onStart() {
+        super.onStart()
+        Log.d("PermissionsFragment", "onStart")
 
         if (!hasPermissions(requireContext())) {
             Log.d("PermissionsFragment", "no permissions, requesting")
@@ -33,11 +34,12 @@ class PermissionsFragment : Fragment() {
         } else {
             Log.d("PermissionsFragment", "permissions granted, redirecting")
             // If permissions have already been granted, proceed
-         //   Navigation.findNavController(requireActivity(), R.id.fragment_container).navigate(
-          //      PermissionsFragmentDirections.actionPermissionsToCamera())
-         Navigation.findNavController(requireActivity(),R.id.fragment_container).navigate(R.id.action_permissions_to_camera)
+            //   Navigation.findNavController(requireActivity(), R.id.fragment_container).navigate(
+            //      PermissionsFragmentDirections.actionPermissionsToCamera())
+            Navigation.findNavController(requireActivity(),R.id.fragment_container).navigate(R.id.action_permissions_to_camera)
         }
     }
+
 
     override fun onRequestPermissionsResult(
         requestCode: Int, permissions: Array<String>, grantResults: IntArray) {
