@@ -30,7 +30,7 @@
 				android:layout_marginRight="15dp"
 				android:textColor="@android:color/white"
 				android:textSize="30dp"
-				app:fontPath="@string/font_path_material_design_set"
+				app:fontPath="@string/foodlens_font_path_material_design_set"
 				/>
 
 			<com.azumio.android.foodlenslibrary.views.XMLTypefaceTextView
@@ -58,7 +58,7 @@
 				android:text="@string/foodlens_font_material_design_set_character_check"
 				android:textColor="@color/foodlens_white"
 				android:textSize="@dimen/foodlens_arrow_text_size"
-				app:fontPath="@string/font_path_material_design_set"
+				app:fontPath="@string/foodlens_font_path_material_design_set"
 				/>
 
 			<ProgressBar
