@@ -23,6 +23,7 @@ import android.widget.ExpandableListView;
 import android.widget.ProgressBar;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.core.content.ContextCompat;
 import androidx.fragment.app.FragmentManager;
@@ -115,7 +116,7 @@ public class EditEntryActivity extends BaseFragmentActivity {
         View footerView = ((LayoutInflater) getSystemService(Context.LAYOUT_INFLATER_SERVICE)).inflate(R.layout.foodlens_calories_footer_layout, null, false);
         mMainView.addFooterView(footerView);
         mAdd = mToolbar.findViewById(R.id.toolbar_done);
-
+        Toast.makeText(this, "Inside Edit entry", Toast.LENGTH_SHORT).show();
         Bundle extras = getIntent().getExtras();
         if (extras.getString(CaloriesManager.PROPERTY_DATA) != null) {
             FoodSearchData dataItem;
