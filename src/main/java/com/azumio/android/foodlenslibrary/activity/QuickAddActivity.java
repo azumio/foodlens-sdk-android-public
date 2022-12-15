@@ -5,9 +5,6 @@ import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 
-import androidx.core.content.ContextCompat;
-
-
 import com.azumio.android.foodlenslibrary.R;
 import com.azumio.android.foodlenslibrary.fragment.OnSaveListener;
 import com.azumio.android.foodlenslibrary.fragment.SearchQuickFragment;
@@ -17,6 +14,8 @@ import com.azumio.android.foodlenslibrary.utils.CaloriesManager;
 import com.azumio.android.foodlenslibrary.utils.ColorUtils;
 import com.azumio.android.foodlenslibrary.views.CenteredCustomFontView;
 import com.azumio.android.foodlenslibrary.views.FillingView;
+
+import androidx.core.content.ContextCompat;
 
 
 public class QuickAddActivity extends BaseFragmentActivity
@@ -30,13 +29,13 @@ public class QuickAddActivity extends BaseFragmentActivity
 		super.onCreate(savedInstance);
 		setContentView(R.layout.foodlens_activity_edit_quick_food);
 
-		TextView textView = (TextView) findViewById(R.id.activity_with_fragment_toolbar_textview);
-		final TextView save = (TextView) findViewById(R.id.activity_save);
+		TextView textView = findViewById(R.id.activity_with_fragment_toolbar_textview);
+		final TextView save = findViewById(R.id.activity_save);
 		save.setOnClickListener(view -> {
 			if (getActiveFragment() instanceof OnSaveListener) { ((OnSaveListener) getActiveFragment()).save(save, null); }
 		});
 		initBackArrow();
-		mToolbar = (FillingView) findViewById(R.id.main_menu_toolbars);
+		mToolbar = findViewById(R.id.main_menu_toolbars);
 		mToolbar.setVisibility(View.VISIBLE);
 		mToolbar.setBackgroundColor(ContextCompat.getColor(this, R.color.foodlens_calories_color));
 		ColorUtils.setStatusBarColor(this, ContextCompat.getColor(this, R.color.foodlens_foodlens_calories_statusbar_color), ContextCompat.getColor(this, R.color.foodlens_calories_color));
@@ -62,7 +61,9 @@ public class QuickAddActivity extends BaseFragmentActivity
 
 	private void initBackArrow()
 	{
-		CenteredCustomFontView arrow = (CenteredCustomFontView) findViewById(R.id.toolbar_back_arrow);
+		CenteredCustomFontView arrow = findViewById(R.id.toolbar_back_arrow);
+		String iconPath = this.getString(R.string.foodlens_font_path_material_design_set);
+		arrow.setFontPath(iconPath);
 		arrow.setText(ArgusIconMap.getInstance().get(ArgusIconMap.ARROW_LEFT));
 		arrow.setOnClickListener(v -> finish());
 	}

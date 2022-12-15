@@ -137,6 +137,8 @@ class CameraFragment : Fragment() {
     }
     private fun initBackArrow() {
         val arrow: CenteredCustomFontView = container.findViewById(R.id.back_arrow)
+        val iconPath = this.getString(R.string.foodlens_font_path_material_design_set)
+        arrow.setFontPath(iconPath)
         arrow.setText(ArgusIconMap.getInstance()[ArgusIconMap.ARROW_LEFT])
         arrow.setOnClickListener { view: View? -> activity?.finish() }
     }

@@ -1,9 +1,9 @@
 package com.azumio.android.foodlenslibrary.activity
 
 import android.net.Uri
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import androidx.appcompat.app.AppCompatActivity
 import com.azumio.android.foodlenslibrary.R
 import com.azumio.android.foodlenslibrary.fragment.ResultFragment
 import com.azumio.android.foodlenslibrary.utils.ArgusIconMap
@@ -33,6 +33,8 @@ class ResultActivity : AppCompatActivity() {
 
     private fun initBackArrow() {
         val arrow: CenteredCustomFontView = findViewById(R.id.back_arrow)
+        val iconPath = this.getString(R.string.foodlens_font_path_material_design_set)
+        arrow.setFontPath(iconPath)
         arrow.setText(ArgusIconMap.getInstance()[ArgusIconMap.ARROW_LEFT])
         arrow.setOnClickListener { view: View? -> onBackPressed() }
     }

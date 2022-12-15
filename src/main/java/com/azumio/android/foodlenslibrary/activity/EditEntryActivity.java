@@ -23,7 +23,6 @@ import android.widget.ExpandableListView;
 import android.widget.ProgressBar;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.core.content.ContextCompat;
 import androidx.fragment.app.FragmentManager;
@@ -116,7 +115,8 @@ public class EditEntryActivity extends BaseFragmentActivity {
         View footerView = ((LayoutInflater) getSystemService(Context.LAYOUT_INFLATER_SERVICE)).inflate(R.layout.foodlens_calories_footer_layout, null, false);
         mMainView.addFooterView(footerView);
         mAdd = mToolbar.findViewById(R.id.toolbar_done);
-        Toast.makeText(this, "Inside Edit entry", Toast.LENGTH_SHORT).show();
+        String iconPath = this.getString(R.string.foodlens_font_path_material_design_set);
+        mAdd.setFontPath(iconPath);
         Bundle extras = getIntent().getExtras();
         if (extras.getString(CaloriesManager.PROPERTY_DATA) != null) {
             FoodSearchData dataItem;
@@ -177,6 +177,8 @@ public class EditEntryActivity extends BaseFragmentActivity {
 
     private void initBackArrow() {
         CenteredCustomFontView arrow = mToolbar.findViewById(R.id.activity_with_fragment_arrow);
+        String iconPath = this.getString(R.string.foodlens_font_path_material_design_set);
+        arrow.setFontPath(iconPath);
         arrow.setText(ArgusIconMap.getInstance().get(ArgusIconMap.ARROW_LEFT));
         arrow.setOnClickListener(view -> finish());
     }
